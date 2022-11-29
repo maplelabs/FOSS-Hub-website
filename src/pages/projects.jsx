@@ -17,7 +17,7 @@ function projects() {
     <>
       <Layout
         title={`${siteConfig.title}`}
-        description="Description will go into a meta tag in <head />">
+        description="OpenSource @ MapleLabs: Get involved in open source communities, discover projects and learn about MapleLabs opensource program.">
 
         <main>
           <div className=" uk-section uk-section-muted uk-height-1-1">
