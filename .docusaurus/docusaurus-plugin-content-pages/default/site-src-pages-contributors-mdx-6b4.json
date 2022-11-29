@@ -1,0 +1,10 @@
+{
+  "type": "mdx",
+  "permalink": "/contributors",
+  "source": "@site/src/pages/contributors.mdx",
+  "title": "Top Contributors",
+  "description": "Top Contributors of Open Source at MapleLabs",
+  "frontMatter": {
+    "title": "Top Contributors"
+  }
+}

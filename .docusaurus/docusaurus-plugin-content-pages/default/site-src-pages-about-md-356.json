@@ -1,0 +1,11 @@
+{
+  "type": "mdx",
+  "permalink": "/about",
+  "source": "@site/src/pages/about.md",
+  "title": "About",
+  "description": "Docusaurus was designed from the ground up to be easily installed and used to get your website up and running quickly.",
+  "frontMatter": {
+    "id": "about",
+    "title": "About"
+  }
+}
