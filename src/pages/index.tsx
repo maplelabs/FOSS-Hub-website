@@ -53,7 +53,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Layout
-        //title={`${siteConfig.title}`}
+       // title={`${siteConfig.title}`}
         description="OpenSource @ MapleLabs: Get involved in open source communities, discover projects and learn about MapleLabs opensource program.">
         <HomepageHeader />
         <main className='uk-height-1-1'>

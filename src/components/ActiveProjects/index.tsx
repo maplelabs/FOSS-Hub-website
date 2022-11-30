@@ -1,11 +1,20 @@
+import getRepos from '../../services/services';
 import React, { useEffect, useState } from 'react';
 import ProjectCard from '../Project';
 
 export default function ActiveProjects(): JSX.Element {
     const [activeRepo, setActiveRepo] = useState([])
 
-    useEffect(  () => {
-        let repos = JSON.parse(localStorage.getItem('repos')) ||[]
+    useEffect(() => {
+        (async () =>{
+        let repos;
+        if(localStorage.getItem("repos")){
+            repos = JSON.parse(localStorage.getItem("repos"))
+           
+        } else {
+            repos = await getRepos();
+            localStorage.setItem('repos',JSON.stringify(repos));
+        }
         repos = repos.map((repo: any) => {
             return repo.name == "github-audit" ||
                 repo.name == "log-generator" ||
@@ -20,6 +29,7 @@ export default function ActiveProjects(): JSX.Element {
                 }
             });
         }
+    })();
     }, []);
     
     return (<>
@@ -44,31 +54,5 @@ export default function ActiveProjects(): JSX.Element {
 
             </div>
         </section>
-        {/* <div className="container">
-            <div className="row">
-                {activeRepo.length > 0 && activeRepo.map((props: any) => (
-
-
-                    <div className="col col--4" key={props.id}>
-                        <div className={clsx("col-demo card-demo")}>
-                            <div className={styles.card}>
-                                <div className="card__header">
-                                    <Link to={props.html_url} target="_blank" rel="noopener noreferrer" className={styles.heading}>{props.name.toUpperCase()}</Link>
-                                    {props.language &&
-                                    <p className={styles.language}>{props.language}</p>}
-                                </div>
-                                <div className="card__body">
-                                    <p className={styles.description}>
-                                        {props.description ? props.description : 'No Description'}
-                                        <br></br>
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div> */}
     </>)
 }

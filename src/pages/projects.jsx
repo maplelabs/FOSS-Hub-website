@@ -2,14 +2,23 @@ import React, { useEffect, useState } from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ProjectCard from "../components/Project";
+import getRepos from "../services/services";
+
 function projects() {
   const [repos, setRepos] = useState([]);
   const [filterList, setFilterList] = useState([]);
   const {siteConfig} = useDocusaurusContext();
-  useEffect(() => {
-    const repoList = JSON.parse(localStorage.getItem("repos")) || []
-    setRepos(repoList)
-    setFilterList([...new Set(repoList.map(i => i.language).filter(i => i))])
+  useEffect( async() => {
+    let repos
+    if(localStorage.getItem("repos")){
+      repos = JSON.parse(localStorage.getItem("repos"))
+     
+  } else {
+      repos = await getRepos();
+      localStorage.setItem('repos',JSON.stringify(repos));
+  }
+    setRepos(repos)
+    setFilterList([...new Set(repos.map(i => i.language).filter(i => i))])
 
   }, [])
 

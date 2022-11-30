@@ -25,8 +25,7 @@ export default function Blog(): JSX.Element {
                                         <h3 className="uk-card-title uk-link-heading">Improve Triaging And Reduce Log Management Spends</h3>
                                         <p>Automation of business process has radically changed</p>
                                     </div>
-                                    <div className="uk-position-bottom-left  uk-card-body">
-                                        <div className="uk-width-expand uk-padding-remove-horizontal">
+                                    <div className="uk-position-bottom-left uk-overlay uk-overlay-default uk-padding-small">
                                             <img
                                                 className="uk-comment-avatar uk-margin-right uk-border-cicle uk-box-shadow-medium"
                                                 uk-tooltip={`title: Pramod Murthy; pos: bottom`}
@@ -36,7 +35,6 @@ export default function Blog(): JSX.Element {
                                                 alt=""
                                             />
                                             <span>Pramod Murthy</span>
-                                        </div>
                                     </div>
                                     <div className="uk-position-bottom-right uk-overlay uk-overlay-default uk-padding-small">
                                         <span
@@ -58,10 +56,7 @@ export default function Blog(): JSX.Element {
                                         <h3 className="uk-card-title uk-link-heading">Tracing And Performance Analysis With SnappyFlow</h3>
                                         <p>This blog illustrates how to use SnappyFlow to analyze</p>
                                     </div>
-                                    <div className="uk-position-bottom-left  uk-card-body">
-                                        <div className="uk-width-expand uk-padding-remove-horizontal">
-
-
+                                    <div className="uk-position-bottom-left uk-overlay uk-overlay-default uk-padding-small">                           
                                             <img
                                                 className="uk-comment-avatar uk-margin-right uk-border-cicle uk-box-shadow-medium"
                                                 uk-tooltip={`title: Pramod Murthy; pos: bottom`}
@@ -70,8 +65,7 @@ export default function Blog(): JSX.Element {
                                                 height="40"
                                                 alt=""
                                             />
-                                            <span>Pramod Murthy</span>
-                                        </div>
+                                            <span>Pramod Murthy</span> 
                                     </div>
                                     <div className="uk-position-bottom-right uk-overlay uk-overlay-default uk-padding-small">
                                         <span
@@ -94,10 +88,7 @@ export default function Blog(): JSX.Element {
                                         <h3 className="uk-card-title uk-link-heading">JAVA Performance Troubleshooting - CPU And Memory Profiling</h3>
                                         <p>This blog explains CPU and Memory Profiling concepts </p>
                                     </div>
-                                    <div className="uk-position-bottom-left  uk-card-body ">
-                                        <div className="uk-width-expand uk-padding-remove-horizontal">
-
-
+                                    <div className="uk-position-bottom-left  uk-overlay uk-overlay-default uk-padding-small ">
                                             <img
                                                 className="uk-comment-avatar uk-margin-right uk-border-cicle uk-box-shadow-medium"
                                                 uk-tooltip={`title: Pramod Murthy; pos: bottom`}
@@ -107,7 +98,6 @@ export default function Blog(): JSX.Element {
                                                 alt=""
                                             />
                                             <span>Pramod Murthy</span>
-                                        </div>
                                     </div>
                                     <div className="uk-position-bottom-right uk-overlay uk-overlay-default uk-padding-small">
                                         <span

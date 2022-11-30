@@ -1,12 +1,21 @@
+import { getTopFiveContributors } from '../../services/services';
 import React, { useEffect, useState } from 'react';
 
 function contributors(): JSX.Element {
   
   const [sorted, setSorted] = useState([])
 
-
   useEffect(()=>{
-    setSorted(JSON.parse(localStorage.getItem("topFive")||''))
+    (async () =>{
+    let topFive
+    if(localStorage.getItem("topFive")){
+      topFive = JSON.parse(localStorage.getItem("topFive"))
+    } else {
+      topFive = await getTopFiveContributors();
+      localStorage.setItem('topFive', JSON.stringify(topFive))
+    }
+    setSorted(topFive)
+  })();
   },[])
 
   return (
