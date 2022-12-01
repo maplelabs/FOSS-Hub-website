@@ -14,6 +14,12 @@ async function fetchContributors(repository) {
     return data;
 }
 
+async function fetchLanguages(url) {
+    const response = await fetch(url)
+    const data = await response.json()
+    return Object.keys(data);
+}
+
 async function getRepos() {
     let repository = [];
     const response = await fetch("https://api.github.com/orgs/maplelabs/repos")
@@ -21,13 +27,16 @@ async function getRepos() {
     repository = data.filter((repo) =>
         repo.fork === false
     );
-
+    repository = repository.filter((repo)=>repo.topics.length)
     repository = ([...repository].sort((a, b) => new Date(b.pushed_at) > new Date(a.pushed_at) ? 1 : -1))
+    
     if (repository.length > 0) {
         let repos = await Promise.all(repository.map(async (repo) => {
             const data = await fetchContributors(repo.name)
             repo['contributors'] = data
             repo['top_contributors'] = [...data].sort((a, b) => b.contributions - a.contributions).slice(0, 3);
+            const lang = await fetchLanguages(repo.languages_url)
+            repo['languages'] = lang
             return repo
         }))
         return repos;
@@ -36,7 +45,6 @@ async function getRepos() {
 }
 
 export async function getTopFiveContributors() {
-   
     let repos
     let contributor = [];
     if (localStorage.getItem("repos")) {

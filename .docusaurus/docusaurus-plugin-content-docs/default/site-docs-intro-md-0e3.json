@@ -11,5 +11,9 @@
   "tags": [],
   "version": "current",
   "frontMatter": {},
-  "sidebar": "defaultSidebar"
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "blog3",
+    "permalink": "/docs/blog3"
+  }
 }

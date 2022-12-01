@@ -17,9 +17,11 @@ function projects() {
       repos = await getRepos();
       localStorage.setItem('repos',JSON.stringify(repos));
   }
+
     setRepos(repos)
     setFilterList([...new Set(repos.map(i => i.language).filter(i => i))])
-
+  //setFilterList([].concat(...repos.map(i=>[...new Set(i.languages.map(i=>i).filter(i=>i))])))
+   
   }, [])
 
   return (
@@ -41,9 +43,10 @@ function projects() {
                   {filterList.map(lang => <li key={lang} data-uk-filter-control={`[data-lang='${lang}']`}><a href="#">{lang}</a></li>)}
                 </ul>
 
-                <div className="js-filter uk-grid-large uk-child-width-1-3@l uk-child-width-1-3@m uk-child-width-1-1@s uk-text-left   uk-grid-row-large" data-uk-grid="masonry:true" >
+                <div className="js-filter uk-grid-large uk-child-width-1-3@l uk-child-width-1-3@m uk-child-width-1-1@s uk-text-left uk-grid-row-large" data-uk-grid="masonry:true" uk-height-match="target: > div > .uk-card; row: false">
                   {
                     repos?.map((project) => (
+                      
                       <div key={project.id} data-lang={project.language ?? ''} >
                                 <ProjectCard project={project} ></ProjectCard>
                       </div>

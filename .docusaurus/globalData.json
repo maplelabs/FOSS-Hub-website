@@ -8,8 +8,23 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "intro",
+          "mainDocId": "blog1",
           "docs": [
+            {
+              "id": "blog1",
+              "path": "/docs/blog1",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "blog2",
+              "path": "/docs/blog2",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "blog3",
+              "path": "/docs/blog3",
+              "sidebar": "defaultSidebar"
+            },
             {
               "id": "intro",
               "path": "/docs/intro",
@@ -20,8 +35,8 @@
           "sidebars": {
             "defaultSidebar": {
               "link": {
-                "path": "/docs/intro",
-                "label": "intro"
+                "path": "/docs/blog1",
+                "label": "blog1"
               }
             }
           }

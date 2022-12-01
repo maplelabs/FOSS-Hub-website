@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '../components/HomepageFeatures';
-import Services from '../services/services';
 
 function HomepageHeader() {
- // const { siteConfig } = useDocusaurusContext();
   return (
     <header>
       <div className="uk-background-fixed uk-background-cover uk-background-center-center bg">
@@ -48,8 +46,6 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
-  Services()
-
   return (
     <>
       <Layout

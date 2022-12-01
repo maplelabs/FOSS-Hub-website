@@ -27,8 +27,7 @@ export default {
       {
         "blog": {
           "showReadingTime": true,
-          "blogSidebarCount": 0,
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "blogSidebarCount": 0
         },
         "theme": {
           "customCss": [

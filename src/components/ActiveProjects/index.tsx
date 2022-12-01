@@ -14,21 +14,11 @@ export default function ActiveProjects(): JSX.Element {
         } else {
             repos = await getRepos();
             localStorage.setItem('repos',JSON.stringify(repos));
-        }
-        repos = repos.map((repo: any) => {
-            return repo.name == "github-audit" ||
-                repo.name == "log-generator" ||
-                repo.name == "FOSS-Projects"
-                ? { ...repo, active: true }
-                : { ...repo, active: false };
-        });
-        if (repos.length > 0) {
-            repos.map((repo: any) => {
-                if (repo.active) {
-                    setActiveRepo((prev) => [...prev, repo]);
-                }
-            });
-        }
+        }     
+        repos = repos.filter((repo: any) => 
+            repo.topics.includes('featured') || repo.topics.includes('contributions-welcome')
+        );
+        setActiveRepo(repos)
     })();
     }, []);
     

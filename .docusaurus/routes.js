@@ -74,8 +74,26 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'e0e'),
+    component: ComponentCreator('/docs', 'd53'),
     routes: [
+      {
+        path: '/docs/blog1',
+        component: ComponentCreator('/docs/blog1', '628'),
+        exact: true,
+        sidebar: "defaultSidebar"
+      },
+      {
+        path: '/docs/blog2',
+        component: ComponentCreator('/docs/blog2', '6b9'),
+        exact: true,
+        sidebar: "defaultSidebar"
+      },
+      {
+        path: '/docs/blog3',
+        component: ComponentCreator('/docs/blog3', '822'),
+        exact: true,
+        sidebar: "defaultSidebar"
+      },
       {
         path: '/docs/intro',
         component: ComponentCreator('/docs/intro', '5ba'),

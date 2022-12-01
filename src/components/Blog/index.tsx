@@ -13,17 +13,17 @@ export default function Blog(): JSX.Element {
 
                     <div className="uk-position-relative " tabIndex={-1}>
 
-                        <ul className="uk-slider-items uk-child-width-1 uk-child-width-1-3@m   uk-grid">
+                        <ul className="uk-slider-items uk-child-width-1 uk-child-width-1-3@m   uk-grid" uk-height-match="target: > li > .uk-card">
                             <li>
-                                <a className="uk-card uk-card-default uk-card-hover uk-card-body uk-link-toggle" target="_blank"
+                                <a className="uk-card uk-card-default uk-card-hover uk-card-body uk-link-toggle uk-padding-remove" target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://www.snappyflow.io/blog/improve-triaging">
+                                    href="docs/blog1">
                                     <div className="uk-card-media-top">
                                         <img src="https://uploads-ssl.webflow.com/62bd9427ec73a11840fe243a/62ecf98f10b3857a4968c8e6_Improve-Triaging.svg" alt="" />
                                     </div>
                                     <div className="uk-card-body">
                                         <h3 className="uk-card-title uk-link-heading">Improve Triaging And Reduce Log Management Spends</h3>
-                                        <p>Automation of business process has radically changed</p>
+                                        <p className='uk-margin-medium-bottom'>Automation of business process has radically changed</p>
                                     </div>
                                     <div className="uk-position-bottom-left uk-overlay uk-overlay-default uk-padding-small">
                                             <img
@@ -46,15 +46,15 @@ export default function Blog(): JSX.Element {
 
                             </li>
                             <li>
-                                <a className="uk-card uk-card-default uk-card-hover uk-card-body uk-link-toggle" target="_blank"
+                                <a className="uk-card uk-card-default uk-card-hover uk-card-body uk-link-toggle uk-padding-remove" target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://www.snappyflow.io/blog/unleaspoweroftracing">
+                                    href="docs/blog2">
                                     <div className="uk-card-media-top">
                                         <img src="https://uploads-ssl.webflow.com/62bd9427ec73a11840fe243a/62ecf6471cef282deb07214b_UnleasPoweroftracing.svg" alt="" />
                                     </div>
                                     <div className="uk-card-body">
                                         <h3 className="uk-card-title uk-link-heading">Tracing And Performance Analysis With SnappyFlow</h3>
-                                        <p>This blog illustrates how to use SnappyFlow to analyze</p>
+                                        <p className='uk-margin-medium-bottom'>This blog illustrates how to use SnappyFlow to analyze</p>
                                     </div>
                                     <div className="uk-position-bottom-left uk-overlay uk-overlay-default uk-padding-small">                           
                                             <img
@@ -78,15 +78,15 @@ export default function Blog(): JSX.Element {
 
                             </li>
                             <li>
-                                <a className="uk-card uk-card-default uk-card-hover uk-card-body uk-link-toggle" target="_blank"
+                                <a className="uk-card uk-card-default uk-card-hover uk-card-body uk-link-toggle uk-padding-remove" target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://www.snappyflow.io/blog/troubleshootingjavaapplications">
+                                    href="docs/blog3">
                                     <div className="uk-card-media-top">
                                         <img src="https://uploads-ssl.webflow.com/62bd9427ec73a11840fe243a/62ecef1cc8eb8347eb911176_JAVA-Performance-Troubleshooting-CPU-and-Memory-Profiling.svg" alt="" />
                                     </div>
                                     <div className="uk-card-body">
                                         <h3 className="uk-card-title uk-link-heading">JAVA Performance Troubleshooting - CPU And Memory Profiling</h3>
-                                        <p>This blog explains CPU and Memory Profiling concepts </p>
+                                        <p className='uk-margin-medium-bottom'>This blog explains CPU and Memory Profiling concepts </p>
                                     </div>
                                     <div className="uk-position-bottom-left  uk-overlay uk-overlay-default uk-padding-small ">
                                             <img
@@ -116,10 +116,9 @@ export default function Blog(): JSX.Element {
                     <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 
                 </div>
-            </div>
-
-            <div className='uk-align-right '>
-                <a className="uk-button uk-button-text uk-link-toggle" target="_blank" href="https://maplelabsblr.sharepoint.com/"><span className='uk-link-heading'>View All Blogs <span uk-icon="arrow-right"></span></span></a>
+                <div className='uk-align-right uk-margin-medium-top'>
+                    <a className="uk-button uk-button-text uk-link-toggle" target="_blank" href="https://maplelabsblr.sharepoint.com/"><span className='uk-link-heading'>View All Blogs <span uk-icon="arrow-right"></span></span></a>
+                </div>
             </div>
         </section>
     </>)

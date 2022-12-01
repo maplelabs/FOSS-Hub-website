@@ -17,6 +17,71 @@
           "contentPathLocalized": "/Users/aishik/Documents/GitHub/opensource-portal/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
+              "unversionedId": "blog1",
+              "id": "blog1",
+              "title": "blog1",
+              "description": "blog1",
+              "source": "@site/docs/blog1.md",
+              "sourceDirName": ".",
+              "slug": "/blog1",
+              "permalink": "/docs/blog1",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "defaultSidebar",
+              "next": {
+                "title": "blog2",
+                "permalink": "/docs/blog2"
+              }
+            },
+            {
+              "unversionedId": "blog2",
+              "id": "blog2",
+              "title": "blog2",
+              "description": "blog2",
+              "source": "@site/docs/blog2.md",
+              "sourceDirName": ".",
+              "slug": "/blog2",
+              "permalink": "/docs/blog2",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "defaultSidebar",
+              "previous": {
+                "title": "blog1",
+                "permalink": "/docs/blog1"
+              },
+              "next": {
+                "title": "blog3",
+                "permalink": "/docs/blog3"
+              }
+            },
+            {
+              "unversionedId": "blog3",
+              "id": "blog3",
+              "title": "blog3",
+              "description": "",
+              "source": "@site/docs/blog3.md",
+              "sourceDirName": ".",
+              "slug": "/blog3",
+              "permalink": "/docs/blog3",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "defaultSidebar",
+              "previous": {
+                "title": "blog2",
+                "permalink": "/docs/blog2"
+              },
+              "next": {
+                "title": "intro",
+                "permalink": "/docs/intro"
+              }
+            },
+            {
               "unversionedId": "intro",
               "id": "intro",
               "title": "intro",
@@ -29,12 +94,28 @@
               "tags": [],
               "version": "current",
               "frontMatter": {},
-              "sidebar": "defaultSidebar"
+              "sidebar": "defaultSidebar",
+              "previous": {
+                "title": "blog3",
+                "permalink": "/docs/blog3"
+              }
             }
           ],
           "drafts": [],
           "sidebars": {
             "defaultSidebar": [
+              {
+                "type": "doc",
+                "id": "blog1"
+              },
+              {
+                "type": "doc",
+                "id": "blog2"
+              },
+              {
+                "type": "doc",
+                "id": "blog3"
+              },
               {
                 "type": "doc",
                 "id": "intro"
@@ -53,19 +134,18 @@
           "id": "/blog",
           "metadata": {
             "permalink": "/blog/blog",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/blog.mdx",
             "source": "@site/blog/blog.mdx",
             "title": "blog",
             "description": "View All Blogs",
-            "date": "2022-11-29T11:40:31.366Z",
-            "formattedDate": "November 29, 2022",
+            "date": "2022-11-30T12:20:36.121Z",
+            "formattedDate": "November 30, 2022",
             "tags": [],
             "readingTime": 0.52,
             "hasTruncateMarker": false,
             "authors": [],
             "frontMatter": {}
           },
-          "content": "<main>\n          <div className=\" uk-section uk-section-muted uk-height-1-1\">\n            <div className=\"uk-container\">\n            <div className='uk-align-right '>\n                    <a className=\"uk-button uk-button-text uk-link-toggle\" target=\"_blank\" href=\"https://maplelabsblr.sharepoint.com/\"><span className='uk-link-heading'>View All Blogs <span uk-icon=\"arrow-right\"></span></span></a>\n                </div>\n              <div className=\"uk-heading-small uk-text-bolder uk-text-left\">\n                Latest Blogs\n              </div>\n              <div data-uk-filter=\"target: .js-filter\" className=\"uk-margin-large-top\">\n                <div className=\"uk-grid-large uk-child-width-expand@m uk-text-left  uk-grid-match uk-padding uk-padding-remove-horizontal\" data-uk-grid data-uk-scrollspy=\"cls: uk-animation-slide-bottom; target: .uk-card; delay: 0; repeat: true\" >\n                    <a href=\"https://www.snappyflow.io/blog/improve-triaging\">\n                    <div><img src=\"/img/blog/thumbnail.PNG\" alt=\"Italian Trulli\" />\n                        <h3>Improve Triaging And Reduce Log Management Spends</h3>\n                    </div>\n                    </a>\n                    <a href=\"https://www.snappyflow.io/blog/unleaspoweroftracing\">\n                    <div><img src=\"/img/blog/thumbnail3.PNG\" alt=\"Italian Trulli\" />\n                        <h3>Tracing And Performance Analysis With SnappyFlow</h3>\n                    </div>\n                    </a>\n                    <a href=\"https://www.snappyflow.io/blog/troubleshootingjavaapplications\">\n                    <div><img src=\"/img/blog/thumbnail2.PNG\" alt=\"Italian Trulli\" />\n                        <h3>JAVA Performance Troubleshooting - CPU And Memory Profiling</h3>\n                    </div>\n                    </a>\n                </div>\n              </div>\n            </div>\n          </div>\n        </main>"
+          "content": "<main>\n          <div className=\" uk-section uk-section-muted uk-height-1-1\">\n            <div className=\"uk-container\">\n            <div className='uk-align-right '>\n                    <a className=\"uk-button uk-button-text uk-link-toggle\" target=\"_blank\" href=\"https://maplelabsblr.sharepoint.com/\"><span className='uk-link-heading'>View All Blogs <span uk-icon=\"arrow-right\"></span></span></a>\n                </div>\n              <div className=\"uk-heading-small uk-text-bolder uk-text-left\">\n                Latest Blogs\n              </div>\n              <div data-uk-filter=\"target: .js-filter\" className=\"uk-margin-large-top\">\n                <div className=\"uk-grid-large uk-child-width-expand@m uk-text-left  uk-grid-match uk-padding uk-padding-remove-horizontal\" data-uk-grid data-uk-scrollspy=\"cls: uk-animation-slide-bottom; target: .uk-card; delay: 0; repeat: true\" >\n                    <a href=\"docs/blog1\">\n                    <div><img src=\"/img/blog/thumbnail.PNG\" alt=\"Italian Trulli\" />\n                        <h3>Improve Triaging And Reduce Log Management Spends</h3>\n                    </div>\n                    </a>\n                    <a href=\"docs/blog2\">\n                    <div><img src=\"/img/blog/thumbnail3.PNG\" alt=\"Italian Trulli\" />\n                        <h3>Tracing And Performance Analysis With SnappyFlow</h3>\n                    </div>\n                    </a>\n                    <a href=\"docs/blog3\">\n                    <div><img src=\"/img/blog/thumbnail2.PNG\" alt=\"Italian Trulli\" />\n                        <h3>JAVA Performance Troubleshooting - CPU And Memory Profiling</h3>\n                    </div>\n                    </a>\n                </div>\n              </div>\n            </div>\n          </div>\n        </main>"
         }
       ],
       "blogListPaginated": [
