@@ -8,8 +8,13 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "blog1",
+          "mainDocId": "blog",
           "docs": [
+            {
+              "id": "blog",
+              "path": "/docs/blog",
+              "sidebar": "defaultSidebar"
+            },
             {
               "id": "blog1",
               "path": "/docs/blog1",
@@ -35,8 +40,8 @@
           "sidebars": {
             "defaultSidebar": {
               "link": {
-                "path": "/docs/blog1",
-                "label": "blog1"
+                "path": "/docs/blog",
+                "label": "blog"
               }
             }
           }

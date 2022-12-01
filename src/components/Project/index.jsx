@@ -8,7 +8,7 @@ export default function ProjectCard({ project }) {
       <h3 className="uk-card-title uk-link-heading">
         {project.name}
       </h3>
-      <p className="uk-margin-remove-bottom">{project.description?.substring(0, 100)} {project.description?.length >= 100 && '...'}</p>
+      <p className="uk-margin-remove-bottom">{project.description}</p>
       {/* {project.topics.map((topic) => (
         <span className="uk-badge">{topic}</span>
       ))} */}

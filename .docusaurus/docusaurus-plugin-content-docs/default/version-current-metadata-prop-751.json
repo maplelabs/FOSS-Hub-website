@@ -11,6 +11,12 @@
     "defaultSidebar": [
       {
         "type": "link",
+        "label": "blog",
+        "href": "/docs/blog",
+        "docId": "blog"
+      },
+      {
+        "type": "link",
         "label": "blog1",
         "href": "/docs/blog1",
         "docId": "blog1"
@@ -36,6 +42,12 @@
     ]
   },
   "docs": {
+    "blog": {
+      "id": "blog",
+      "title": "blog",
+      "description": "View All Blogs",
+      "sidebar": "defaultSidebar"
+    },
     "blog1": {
       "id": "blog1",
       "title": "blog1",

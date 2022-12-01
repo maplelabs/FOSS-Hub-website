@@ -31,7 +31,7 @@ export default {
         },
         "theme": {
           "customCss": [
-            "/Users/aishik/Documents/GitHub/opensource-portal/src/css/custom.css"
+            "C:\\Users\\Tejaswini.TP\\Documents\\GitHub\\opensource-portal\\src\\css\\custom.css"
           ]
         }
       }

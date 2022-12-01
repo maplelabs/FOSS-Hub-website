@@ -3,11 +3,15 @@
   "source": "@site/blog/blog.mdx",
   "title": "blog",
   "description": "View All Blogs",
-  "date": "2022-11-30T12:20:36.121Z",
-  "formattedDate": "November 30, 2022",
+  "date": "2022-11-29T11:50:20.000Z",
+  "formattedDate": "November 29, 2022",
   "tags": [],
   "readingTime": 0.52,
   "hasTruncateMarker": false,
   "authors": [],
-  "frontMatter": {}
+  "frontMatter": {},
+  "prevItem": {
+    "title": "A Journey towards contributing to the open-source Project ",
+    "permalink": "/blog/openapi-generator"
+  }
 }

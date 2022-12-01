@@ -12,6 +12,10 @@
   "version": "current",
   "frontMatter": {},
   "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "blog",
+    "permalink": "/docs/blog"
+  },
   "next": {
     "title": "blog2",
     "permalink": "/docs/blog2"

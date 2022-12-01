@@ -1,0 +1,10 @@
+node_modules
+.docusaurus/client-modules.js
+.docusaurus/docusaurus-plugin-content-blog/default/blog-archive-80c.json
+.docusaurus/codeTranslations.json
+*.json
+.docusaurus/*.js
+.docusaurus/docusaurus.config.mjs
+.docusaurus/DONT-EDIT-THIS-FOLDER
+node_modules/*.js
+
