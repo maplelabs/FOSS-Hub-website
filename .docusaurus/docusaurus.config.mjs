@@ -54,6 +54,11 @@ export default {
           "to": "/projects",
           "position": "right",
           "label": "Projects"
+        },
+        {
+          "to": "/blog",
+          "label": "Blog",
+          "position": "right"
         }
       ],
       "hideOnScroll": false

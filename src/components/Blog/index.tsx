@@ -1,5 +1,4 @@
-
-import React from 'react';
+import * as React from 'react';
 import data from '../../data/blogs-data'
 
 export default function Blog(): JSX.Element {

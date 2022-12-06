@@ -1,7 +1,8 @@
-import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import * as React from 'react';
+//import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '../components/HomepageFeatures';
+import getRepos, { getTopFiveContributors } from '../services/services';
 
 function HomepageHeader() {
   return (
@@ -44,8 +45,13 @@ function HomepageHeader() {
   );
 }
 
-export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+export default function Home():JSX.Element {
+  //const { siteConfig } = useDocusaurusContext();     
+  setInterval(async()=>{
+    localStorage.clear();
+    localStorage.setItem('repos',JSON.stringify(await getRepos()));
+    localStorage.setItem('topFive', JSON.stringify(await getTopFiveContributors()))
+  }, 300000)
   return (
     <>
       <Layout

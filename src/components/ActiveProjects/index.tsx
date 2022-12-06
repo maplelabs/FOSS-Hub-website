@@ -14,7 +14,13 @@ export default function ActiveProjects(): JSX.Element {
         } else {
             repos = await getRepos();
             localStorage.setItem('repos',JSON.stringify(repos));
-        }     
+        } 
+        let time = ((new Date().getTime() - new Date(repos[0]._time).getTime())/60000) > 5
+        if(time){
+            localStorage.clear();
+            repos = await getRepos();
+            localStorage.setItem('repos',JSON.stringify(repos));
+        } 
         repos = repos.filter((repo: any) => 
             repo.topics.includes('featured') || repo.topics.includes('contributions-welcome')
         );
@@ -39,7 +45,6 @@ export default function ActiveProjects(): JSX.Element {
                 </div>
                 <div className='uk-align-right '>
                     <a className="uk-button uk-button-text uk-link-toggle" href="/projects"><span className='uk-link-heading'>View Projects <span uk-icon="arrow-right"></span></span></a>
-
                 </div>
 
             </div>

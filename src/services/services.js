@@ -11,6 +11,7 @@ async function fetchContributors(repository) {
     )
     const data = await response.json()
     data.forEach(i => i._repo = [repository])
+    data.forEach(i => i._time = new Date())
     return data;
 }
 
@@ -24,6 +25,7 @@ async function getRepos() {
     let repository = [];
     const response = await fetch("https://api.github.com/orgs/maplelabs/repos")
     const data = await response.json()
+    data.forEach(i => i._time = new Date())
     repository = data.filter((repo) =>
         repo.fork === false
     );
