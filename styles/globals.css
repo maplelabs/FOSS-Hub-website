@@ -38,7 +38,7 @@ a {
   color:#fff
 }
 .view-all{
-  background:url('images/cornered_btn.svg') 1px 3px no-repeat !important;
+  background:url('/public/images/cornered_btn.svg') 1px 3px no-repeat !important;
   width: 130px;
 }
 
