@@ -12,7 +12,6 @@ class GithibService {
     axios
     constructor(){
         this.axios=Axios.create({
-            headers:{Authorization: 'Bearer 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'}
         })
     }
 
