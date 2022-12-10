@@ -63,6 +63,36 @@ class GithibService {
         const {data} = await this.axios.get(url)
         return Object.keys(data);
     }
+
+    async getUserName(url){
+        const {data} = await this.axios.get(url)
+        return data.name
+    }
+
+    async getTopFiveContributors() {
+        let repos
+        let contributor = [];
+    
+        repos = await this.fetchProjects();
+        repos.map((repo) => { contributor.push(...repo.contributors) })
+    
+        const combinedContributors = contributor.reduce((obj, item) => {
+            obj[item.id] ? (obj[item.id].contributions = (obj[item.id].contributions + item.contributions), obj[item.id]._repo.push(...item._repo)) : (obj[item.id] = { ...item });
+            return obj;
+        }, {});
+    
+        contributor = [...Object.values(combinedContributors)].sort((a, b) => b.contributions - a.contributions).slice(0, 5);
+    
+        if (contributor.length === 5) {
+            let topFive=await Promise.all(contributor.map(async (data) => {
+                const name = await this.getUserName(data.url)
+                return {...data, name}
+            }))
+            return topFive;
+        }
+       
+    
+    }
 }
 
 export default new GithibService()

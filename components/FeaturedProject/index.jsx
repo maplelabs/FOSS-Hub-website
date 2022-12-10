@@ -12,7 +12,7 @@ export default function FeaturedProject({data}){
                 <div className="uk-h1 uk-text-bolder">
                     Featured Projects
                 </div> 
-                <div className="view-all">
+                <div className={styles.view_all}>
                   <button className="uk-button uk-button-link uk-padding-small uk-margin-small-left uk-margin-small-right uk-text-bolder">
                   VIEW ALL
                   </button>

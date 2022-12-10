@@ -4,7 +4,7 @@ export default function ProjectCard({ data }) {
     <div>
       <div className="uk-card uk-card-default uk-card-body">
         <div className="uk-margin-small-bottom uk-border-circle">
-          <img  className="uk-border-circle" src={data.icon_url} width="80" height={80}></img>
+          <img  className="uk-border-circle" src={data.icon_url} width="80" height={80} alt=""></img>
         </div>
         <div>
           <h3 className="uk-h3 uk-text-bolder">{data.name}</h3>

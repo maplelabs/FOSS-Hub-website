@@ -1,10 +1,18 @@
-import * as React from 'react';
+import  React, { useEffect } from 'react';
+import UIkit from 'uikit';
 import styles from "../../styles/Home.module.css";
 
 
 export default function IntroSection(){
+    useEffect(()=>{
+        // const el = UIkit.util.$('#intro-section')
+        // UIkit.scrollspy(el,{repeat: true, delay: 100});
+        // return ()=>{
+        //     UIkit.scrollspy.$destroy()
+        // }
+      },[])
     return (
-<div>
+<div >
           <div
             className={
               "uk-section uk-light uk-background-cover uk-height-1-1 " +
@@ -12,7 +20,7 @@ export default function IntroSection(){
             }
           >
             <div className="uk-container uk-container uk-flex">
-              <div
+              <div id="intro-section"
                 className="uk-flex uk-flex-column uk-flex-center uk-height-1-1 "
                 style={{ height: "70vh" }}
               >
@@ -33,7 +41,7 @@ export default function IntroSection(){
                     {" "}
                     <span
                       uk-icon="github"
-                      className="uk-margin-small-right"
+                      className="uk-margin-small-right uk-icon"
                     ></span>
                     Maplelabs on GitHub
                   </button>

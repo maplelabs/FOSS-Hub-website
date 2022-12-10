@@ -3,12 +3,15 @@ import Image from "next/image";
 import FeaturedProject from "../components/FeaturedProject";
 import IntroSection from "../components/IntroSection";
 import githubService from "../services/GithubService";
+import blogService from "../services/BlogService";
 import styles from "../styles/Home.module.css";
+import BlogsSection from "../components/BlogsSection";
+import TopContributors from "../components/TopContributors";
+
 // import 'uikit/dist/js/uikit.js'
 // import projectImg from '../public/images/favicon.ico'
 
-export default function Home({featuredProjects}) {
-  console.log(featuredProjects);
+export default function Home({featuredProjects,featuredBlogs,topContributors}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,26 +24,18 @@ export default function Home({featuredProjects}) {
       
         <IntroSection></IntroSection>
         <FeaturedProject data={featuredProjects}></FeaturedProject>
+        <BlogsSection data={featuredBlogs}></BlogsSection>
+        <TopContributors data={topContributors}></TopContributors>
       </main>
-
-      <footer className={styles.footer}>
-        {/* <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a> */}
-      </footer>
     </div>
   );
 }
 export async function getServerSideProps() {
   // Fetch data from external API
   const featuredProjects = await   githubService.fetchFeaturedProjects();
+ const featuredBlogs =  blogService.getFeaturedBlogs()
+ const topContributors = await   githubService.getTopFiveContributors();
+
   // Pass data to the page via props
-  return { props: {  featuredProjects } }
+  return { props: {  featuredProjects ,featuredBlogs,topContributors} }
 }
