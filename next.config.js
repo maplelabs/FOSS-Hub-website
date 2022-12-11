@@ -1,6 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol:'https',
+        hostname:'ui-avatars.com'
+      }
+    ],
+  },
 }
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
@@ -17,10 +29,7 @@ const withMDX = require('@next/mdx')({
 module.exports = withMDX({
   // Append the default value with md extensions
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  reactStrictMode:true,
-  experimental: { 
-    nftTracing: true 
-  }
+  ...nextConfig
 })
 
 // module.exports = nextConfig

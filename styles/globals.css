@@ -72,9 +72,18 @@ a {
   height:80px;
   position: absolute;
 }
-.uk-card-media-right{
-  border-top-right-radius: .75rem !important;
-  border-bottom-right-radius: .75rem !important;
+@media only screen and (min-width: 640px) {
+  .uk-card-media-right{
+    border-top-right-radius: .75rem !important;
+    border-bottom-right-radius: .75rem !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .uk-card-media-right{
+    border-top-right-radius: .75rem !important;
+    border-top-left-radius: .75rem !important;
+  }
 }
 
 .uk-card-media-top,.uk-card-media-top > img{

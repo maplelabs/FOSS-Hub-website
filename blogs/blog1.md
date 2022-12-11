@@ -1,8 +1,8 @@
 ---
 title: Improve Triaging And Reduce Log Management Spends
 description: Automation of business process has radically changed.
-featured: true
-starred: true
+featured: false
+starred: false
 banner: ''
 thumbnail: '/images/blogs/blog1.png'
 author: 'Pramod Murthy'

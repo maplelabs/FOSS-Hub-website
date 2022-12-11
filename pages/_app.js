@@ -6,37 +6,44 @@ import Script from "next/script";
 import Image from "next/image";
 import LOGO from "../public/images/maplelabs_dark.svg";
 import { useEffect } from "react";
+import Head from "next/head";
+import Link from "next/link";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const el = uikit.util.$("#intro-section");
     const nav = uikit.util.$("#nav");
-    var sticky = uikit.sticky(nav);
-    uikit.scrollspy(el, { repeat: true, delay: 100 });
-    uikit.util.on(el, "outview", function () {
-      console.log("out");
-      // uikit.toggle(nav,{cls:'nav-bg',target:'#nav',mode:'true'})
-      nav.classList.add("nav-bg");
-      // nav.classList.add('')
-    });
-    uikit.util.on(el, "inview", function () {
-      console.log("in");
-      nav.classList.remove("nav-bg");
-    });
+    // var sticky = uikit.sticky(nav);
+    // uikit.scrollspy(el, { repeat: true, delay: 100 });
+    // uikit.util.on(el, "outview", function () {
+    //   console.log("out");
+    //   // uikit.toggle(nav,{cls:'nav-bg',target:'#nav',mode:'true'})
+    //   nav.classList.add("nav-bg");
+    //   // nav.classList.add('')
+    // });
+    // uikit.util.on(el, "inview", function () {
+    //   console.log("in");
+    //   nav.classList.remove("nav-bg");
+    // });
   }, []);
   return (
     <>
       <UIkit>
-        <div id="nav" className="">
+      <Head>
+        <title>OpenSource @ Maplelabs </title>
+        <meta name="description" content="Embracing OpenSource..." />
+        <link rel="icon" href="/images/favicon.png" />
+      </Head>
+        <div data-uk-sticky="start: 70vh" id="nav" className="nav-bg">
           <nav className="uk-navbar-container uk-navbar-sticky uk-navbar-transparent uk-light uk-width-1-1">
             <div className=" uk-container ">
               <div className="uk-navbar-left">
-                <a href="" className="uk-navbar-item uk-logo">
+                <Link href="/" className="uk-navbar-item uk-logo">
                   <Image src={LOGO} width={120} height={50}></Image>
                   <hr className="uk-divider-vertical uk-margin-small-left"></hr>
                   <div className="uk-text-bolder uk-margin-small-left">
                     OPEN SOURCE
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="uk-navbar-center">
                 <ul className="uk-navbar-nav">

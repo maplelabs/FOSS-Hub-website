@@ -14,11 +14,7 @@ import TopContributors from "../components/TopContributors";
 export default function Home({featuredProjects,featuredBlogs,topContributors}) {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>OpenSource @ Maplelabs </title>
-        <meta name="description" content="Embracing OpenSource..." />
-        <link rel="icon" href="/images/favicon.png" />
-      </Head>
+      
 
       <main className={styles.main}>
       
@@ -30,12 +26,15 @@ export default function Home({featuredProjects,featuredBlogs,topContributors}) {
     </div>
   );
 }
-export async function getServerSideProps() {
-  // Fetch data from external API
+export async function getServerSideProps({res}) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=300, stale-while-revalidate=599'
+  )
   const featuredProjects = await   githubService.fetchFeaturedProjects();
- const featuredBlogs =  blogService.getFeaturedBlogs()
- const topContributors = await   githubService.getTopFiveContributors();
+  const featuredBlogs =  blogService.getFeaturedBlogs()
+  const topContributors = await   githubService.getTopFiveContributors();
 
   // Pass data to the page via props
-  return { props: {  featuredProjects ,featuredBlogs,topContributors} }
+  return { props: {  featuredProjects , featuredBlogs, topContributors} }
 }
