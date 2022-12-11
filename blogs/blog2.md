@@ -40,7 +40,7 @@ The bug fixes were like some of the changes were not tested properly for all the
 
 The feature development was like optimizing the build time for SDK generation and adding certain features for certain frameworks which were not present previously.
 
-![Using OpenAPI Generator](../static/img/blog/blog1.png)
+![Using OpenAPI Generator](/images/blogs/openapi-flow.png)
 
 
 ### Process of raising an issue

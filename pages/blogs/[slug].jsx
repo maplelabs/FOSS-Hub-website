@@ -51,7 +51,6 @@ export async function getStaticPaths() {
         setSections(sectionList)
         setHtml(renderedHtml)
     },[content])
-    console.log(frontmatter.author_avatar);
     return (
         <div className= {styles.blog_bg+' uk-padding-large uk-padding-remove-horizontal'}>
             <div className={`uk-container-small uk-container uk-position-relative uk-margin-top `}>
@@ -65,7 +64,7 @@ export async function getStaticPaths() {
                 </div>
                 <img src={frontmatter.banner} className='uk-width-1-1 uk-margin-top'></img>
                 <div className={styles.blog_content+' uk-margin-large-top'} dangerouslySetInnerHTML={{ __html: html }} />
-                <div className={styles.sidebar_right}>
+                <div className={styles.sidebar_right+' uk-visible@l'}>
                 <div data-uk-sticky="offset: 150" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">
                     <ul class="uk-nav uk-nav-default" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 120">
                         {sections.map(section=>(

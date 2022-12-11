@@ -17,7 +17,7 @@ class GithibService {
     }
 
     async fetchProjects(getExtras=true){
-        const {data} = await this.axios.get(`${this.baseURL}/orgs/${this.orgs}/repos`)
+        const {data} = await this.axios.get(`${this.baseURL}/orgs/${this.orgs}/repos?per_page=50`)
         const repositories = data.filter((repo) =>
             repo.fork === false 
         ).sort((a, b) => new Date(b.pushed_at) > new Date(a.pushed_at) ? 1 : -1);
