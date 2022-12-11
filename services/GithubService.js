@@ -12,6 +12,7 @@ class GithibService {
     axios
     constructor(){
         this.axios=Axios.create({
+            headers:{Authorization: process.env.GITHUB_API}
         })
     }
 
