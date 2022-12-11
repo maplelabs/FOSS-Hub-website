@@ -31,9 +31,9 @@ export async function getServerSideProps({res}) {
     'Cache-Control',
     'public, s-maxage=300, stale-while-revalidate=599'
   )
-  const featuredProjects = await   githubService.fetchFeaturedProjects();
   const featuredBlogs =  blogService.getFeaturedBlogs()
-  const topContributors = await   githubService.getTopFiveContributors();
+  const [featuredProjects,topContributors] = await githubService.getHomePageData();
+  // const topContributors = await   githubService.getTopFiveContributors();
 
   // Pass data to the page via props
   return { props: {  featuredProjects , featuredBlogs, topContributors} }
