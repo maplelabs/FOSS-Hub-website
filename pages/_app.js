@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Embracing OpenSource..." />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
-        <div data-uk-sticky="start: 70vh" id="nav" className="nav-bg">
+        <div data-uk-sticky="start: 0" id="nav" className="nav-bg">
           <nav className="uk-navbar-container uk-navbar-sticky uk-navbar-transparent uk-light uk-width-1-1">
             <div className=" uk-container ">
               <div className="uk-navbar-left">

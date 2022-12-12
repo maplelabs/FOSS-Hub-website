@@ -1,5 +1,6 @@
 import Axios from 'axios'
-
+import fs from 'fs'
+import path from 'path'
 const COLORS=[
     {bg:'F8C02F',fg:'4E2E07'},
     {bg:'0362A7',fg:'FFF'},
@@ -17,7 +18,7 @@ class GithibService {
     }
 
     async fetchProjects(getExtras=true){
-        const {data} = await this.axios.get(`${this.baseURL}/orgs/${this.orgs}/repos?per_page=50`)
+        const {data} = await this.axios.get(`${this.baseURL}/orgs/${this.orgs}/repos`)
         const repositories = data.filter((repo) =>
             repo.fork === false 
         ).sort((a, b) => new Date(b.pushed_at) > new Date(a.pushed_at) ? 1 : -1);
@@ -67,8 +68,9 @@ class GithibService {
             const name = await this.getUserName(data.url)
             return {...data, name}
         }))
-
-        return [repos,topFive]
+        const fileData={data:{repos,topFive},timestamp: Date.now()}
+        fs.writeFileSync(path.join(process.cwd(),`cache/gitHub.json`), JSON.stringify(fileData),('utf-8'));
+        return [repos,topFive,Date.now()]
 
     }
 
@@ -130,6 +132,31 @@ class GithibService {
        
     
     }
+
+    
+    async readHomePageData(){
+        try{
+            const readFile = fs.readFileSync(path.join(process.cwd(),`cache/gitHub.json`), 'utf-8');
+            const {repos , topFive} =JSON.parse(readFile).data
+            var date = new Date(JSON.parse(readFile).timestamp);
+            var now = new Date();
+            var diffInMS = now - date;
+            var msInHour = Math.floor(diffInMS/1000/60);
+            if (msInHour < 5) {
+                console.log('Within 5min');
+            } else {
+                this.getHomePageData()
+            }
+            return [repos, topFive,JSON.parse(readFile).timestamp]
+        }
+        catch(e){
+            return await this.getHomePageData()
+
+        }
+
+    }
+
+
 }
 
 export default new GithibService()

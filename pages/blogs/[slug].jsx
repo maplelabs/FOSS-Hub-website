@@ -65,10 +65,10 @@ export async function getStaticPaths() {
                 <img src={frontmatter.banner} className='uk-width-1-1 uk-margin-top'></img>
                 <div className={styles.blog_content+' uk-margin-large-top'} dangerouslySetInnerHTML={{ __html: html }} />
                 <div className={styles.sidebar_right+' uk-visible@l'}>
-                <div data-uk-sticky="offset: 150" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">
-                    <ul class="uk-nav uk-nav-default" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 120">
+                <div data-uk-sticky="offset: 150" className="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">
+                    <ul className="uk-nav uk-nav-default" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 120">
                         {sections.map(section=>(
-                            <li key={section}><a href={section.id}>{section.label}</a></li>
+                            <li key={section.id}><a href={section.id}>{section.label}</a></li>
                         ))}
                     </ul>
                 </div>
