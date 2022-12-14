@@ -28,11 +28,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <UIkit>
-      <Head>
-        <title>OpenSource @ Maplelabs </title>
-        <meta name="description" content="Embracing OpenSource..." />
-        <link rel="icon" href="/images/favicon.png" />
-      </Head>
+        <Head>
+          <title>OpenSource @ Maplelabs </title>
+          <meta name="description" content="Embracing OpenSource..." />
+          <link rel="icon" href="/images/favicon.png" />
+        </Head>
         <div data-uk-sticky="start: 0" id="nav" className="nav-bg">
           <nav className="uk-navbar-container uk-navbar-sticky uk-navbar-transparent uk-light uk-width-1-1">
             <div className=" uk-container ">
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
                 <Link href="/" className="uk-navbar-item uk-logo">
                   <Image src={LOGO} width={120} height={50}></Image>
                   <hr className="uk-divider-vertical uk-margin-small-left"></hr>
-                  <div className="uk-text-bolder uk-margin-small-left">
+                  <div className="uk-text-bolder uk-text-default uk-margin-small-left">
                     OPEN SOURCE
                   </div>
                 </Link>

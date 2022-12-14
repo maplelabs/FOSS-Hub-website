@@ -18,9 +18,9 @@
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-github-headings": "^2.0.1",
-    "next": "13.0.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "uikit": "^3.15.17"
   }
 }

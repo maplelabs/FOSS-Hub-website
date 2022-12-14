@@ -21,12 +21,12 @@ export default function TopContributors({ data }) {
           </div>
 
           <div
-            className="uk-grid-column-small uk-grid-row-large uk-grid-match uk-child-width-1-3@m uk-child-width-1-2@s uk-text-left"
+            className="uk-grid-column-small uk-grid-row-medium uk-grid-match uk-child-width-1-3@m uk-child-width-1-2@s uk-text-left"
             data-uk-grid
           >
             {data.map((user) => (
               <div key={user.login}>
-                <div className="uk-card uk-card-small uk-card-default uk-card-body uk-dark">
+                <div className="uk-card uk-card-small uk-card-default uk-card-body uk-dark  uk-margin-small-right">
                   <Image
                     className="uk-border-circle"
                     width="40"

@@ -2,7 +2,7 @@
 export default function ProjectCard({ data }) {
     return (
     <div>
-      <div className="uk-card uk-card-default uk-card-body">
+      <div className="uk-card uk-card-default uk-card-body uk-card-hover">
         <div className="uk-margin-small-bottom uk-border-circle">
           <img  className="uk-border-circle" src={data.icon_url} width="80" height={80} alt=""></img>
         </div>
@@ -15,7 +15,7 @@ export default function ProjectCard({ data }) {
         <div>
           {data.languages.map((lang) => (
             <span
-              className="uk-badge  uk-padding-small uk-margin-small-bottom uk-margin-small-right"
+              className="mpl-badge uk-light  uk-padding-small uk-margin-small-bottom uk-margin-small-right"
               style={{ color: "black !important" }}
               key={lang}
             >

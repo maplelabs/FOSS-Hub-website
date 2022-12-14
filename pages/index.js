@@ -15,10 +15,7 @@ export default function Home({featuredProjects,featuredBlogs,topContributors,tim
   console.log(new Date(time));
   return (
     <div className={styles.container}>
-      
-
       <main className={styles.main}>
-      
         <IntroSection></IntroSection>
         <FeaturedProject data={featuredProjects}></FeaturedProject>
         <BlogsSection data={featuredBlogs}></BlogsSection>
