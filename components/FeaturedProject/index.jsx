@@ -13,9 +13,9 @@ export default function FeaturedProject({data}){
                     Featured Projects
                 </div> 
                 <div className={styles.view_all}>
-                  <button className="uk-button uk-button-link uk-padding-small uk-margin-small-left uk-margin-small-right uk-text-bolder">
+                  <a className="uk-button uk-button-link uk-padding-small uk-margin-small-left uk-margin-small-right uk-text-bolder" href='projects'>
                   VIEW ALL
-                  </button>
+                  </a>
                 </div>
               </div>    
               <div className="uk-child-width-1-3@m uk-text-left uk-grid-match" data-uk-grid>

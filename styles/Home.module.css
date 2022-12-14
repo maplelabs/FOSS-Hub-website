@@ -1,8 +1,8 @@
-.container {
+/* .container {
 position: absolute;
 top: 0;
 left: 0;
-}
+} */
 
 .main {
   min-height: 100vh;
@@ -16,11 +16,12 @@ left: 0;
 
 .footer {
   display: flex;
-  flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  height: 50.53px;
+  background-color: #F5F5F5;
+  color: black;
 }
 
 .footer a {
@@ -129,8 +130,16 @@ left: 0;
     filter: invert(1);
   }
 }
+
+.intro-section {
+  background-image: url('../public/images/background2.svg'), url('../public/images/background3.svg');
+  background-repeat: no-repeat; 
+  background-attachment: scroll;
+  background-position: right 110%, left bottom;
+  background-size: 75px;
+}
 .intro-background{
-  background-image: url('../public/images/background_intro.png');
+  background-image: url('../public/images/background_image.png');
   background-size: cover;
   min-height: 70vh;
   width: 100vw;
@@ -150,6 +159,12 @@ left: 0;
 
 }
 .top_contrib_overlay{
-  background-image: url('../public/images/background_tc.png');
-  background-size: cover;
+  background-color: #1F384F;
+  background-image: url('../public/images/Picture1.svg');
+  background-repeat: no-repeat; 
+  background-attachment: scroll;
+  background-position: right 80%;
+  background-size: 70px;
+   /* background-image: url('../public/images/background_tc.png'); */
+  /* background-size: cover; */
 }

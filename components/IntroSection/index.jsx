@@ -22,7 +22,7 @@ export default function IntroSection(){
             <div className="uk-container uk-container uk-flex">
               <div id="intro-section"
                 className="uk-flex uk-flex-column uk-flex-center uk-height-1-1 "
-                 style={{ height: "95vh" }}
+                 style={{ height: "80vh" }}
               >
                 <div className="uk-heading-small color-white">
                   Embracing Collabration.
