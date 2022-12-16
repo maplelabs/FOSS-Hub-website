@@ -11,8 +11,7 @@ import TopContributors from "../components/TopContributors";
 // import 'uikit/dist/js/uikit.js'
 // import projectImg from '../public/images/favicon.ico'
 
-export default function Home({featuredProjects,featuredBlogs,topContributors,time}) {
-  console.log(new Date(time));
+export default function Home({featuredProjects,featuredBlogs,topContributors}) {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -24,15 +23,14 @@ export default function Home({featuredProjects,featuredBlogs,topContributors,tim
     </div>
   );
 }
-export async function getServerSideProps({res}) {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=300, stale-while-revalidate=599'
-  )
+
+
+export async function getStaticProps({res}) {
+  
   const featuredBlogs =  blogService.getFeaturedBlogs()
-  const [featuredProjects,topContributors,time] = await githubService.readHomePageData();
+  const [featuredProjects,topContributors] = await githubService.getHomePageData();
   // const topContributors = await   githubService.getTopFiveContributors();
 
   // Pass data to the page via props
-  return { props: {  featuredProjects , featuredBlogs, topContributors,time} }
+  return { props: {  featuredProjects , featuredBlogs, topContributors} }
 }

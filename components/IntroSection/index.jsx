@@ -15,14 +15,14 @@ export default function IntroSection(){
 <div >
           <div
             className={
-              "uk-section uk-light uk-background-cover uk-height-1-1 " +
+              "uk-section uk-light uk-background-cover uk-height-1-1 uk-padding-small uk-padding-remove-horizontal " +
               styles["intro-background"]
             }
           >
             <div className="uk-container uk-container uk-flex">
               <div id="intro-section"
                 className="uk-flex uk-flex-column uk-flex-center uk-height-1-1 "
-                 style={{ height: "80vh" }}
+                 style={{ height: "50vh" }}
               >
                 <div className="uk-heading-small color-white">
                   Embracing Collabration.
@@ -34,7 +34,7 @@ export default function IntroSection(){
                   We at MapleLabs believe open source solves real-world
                   problems. We are a passionate, open-minded and focused group
                   of software enthusiasts pushing boundaries with an aim to
-                  create unpralleled software experience.
+                  create unparalleled software experience.
                 </div>
                 <div className="uk-padding uk-padding-remove-horizontal">
                   <a className="uk-button uk-button-primary uk-button uk-text-bold" href='https://github.com/maplelabs' target="_blank" rel="noopener noreferrer">

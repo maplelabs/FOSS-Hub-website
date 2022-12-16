@@ -3,7 +3,7 @@ export default function Footer(){
     return (
         <>
         <div className={styles.footer}>
-        <p className='uk-text-small'>Copyright © {new Date().getFullYear()} Maplelabs. All rights reserved.</p>
+        <div className='uk-text-small'>Copyright © {new Date().getFullYear()} Maplelabs. All rights reserved.</div>
         </div>
         </>
     )

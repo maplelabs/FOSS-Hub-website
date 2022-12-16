@@ -28,7 +28,7 @@ export default function ProjectCard({ data }) {
             {data.top_contributors.map((user) => (
               <a target="_blank" rel="noopener noreferrer" key={user.login}>
                 <img
-                  className="uk-comment-avatar uk-margin-right uk-border-circle	uk-box-shadow-medium"
+                  className="uk-comment-avatar uk-margin-right uk-border-circle	uk-box-shadow-medium grayscale"
                   uk-tooltip={`title: ${user.login}; pos: bottom`}
                   src={user.avatar_url}
                   width="40"

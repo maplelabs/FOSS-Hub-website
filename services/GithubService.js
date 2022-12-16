@@ -38,9 +38,14 @@ class GithibService {
     }
 
     async getHomePageData(){
-        const data= await this.fetchProjects();
-        let contributors=[]
-        const repositories = data.filter((repo) =>
+        const data= await this.fetchProjects(false);
+        const [repos,topFive] = await Promise.all([this.fetchFeaturedProjects(data),this.fetchTopFiveContributors(data)])
+        return [repos,topFive]
+
+    }
+
+    async fetchFeaturedProjects(projects){
+        const repositories = projects.filter((repo) =>
         repo.topics.includes('featured') || repo.topics.includes('contributions-welcome')
         )
         const repos = await Promise.all(repositories.map(async (repo,i) => {
@@ -49,42 +54,6 @@ class GithibService {
                 repo['top_contributors'] = data.slice(0, 3);
             })
             this.fetchLanguages(repo.languages_url).then(lang => {repo['languages'] = lang})
-            repo['icon_url'] = `https://ui-avatars.com/api/?background=${COLORS[i%3].bg}&color=${COLORS[i%3].fg}&name=${repo.name}&size=256&font-size=0.33`
-            return repo
-        }))
-        const contribs = await Promise.all(data.map(async (repo,i) => {
-            return await this.fetchContributors(repo.name)
-        }))
-        contribs.forEach(item =>contributors.push(...item))
-
-        const combinedContributors = contributors.reduce((obj, item) => {
-            obj[item.id] ? (obj[item.id].contributions = (obj[item.id].contributions + item.contributions), obj[item.id]._repo.push(...item._repo)) : (obj[item.id] = { ...item });
-            return obj;
-        }, {});
-    
-        contributors = [...Object.values(combinedContributors)].sort((a, b) => b.contributions - a.contributions).slice(0, 5);
-
-        let topFive=await Promise.all(contributors.map(async (data) => {
-            const name = await this.getUserName(data.url)
-            return {...data, name}
-        }))
-        const fileData={data:{repos,topFive},timestamp: Date.now()}
-        fs.writeFileSync(path.join(process.cwd(),`cache/gitHub.json`), JSON.stringify(fileData),('utf-8'));
-        return [repos,topFive,Date.now()]
-
-    }
-
-    async fetchFeaturedProjects(){
-        const data = await this.fetchProjects(false);
-        const repositories = data.filter((repo) =>
-        repo.topics.includes('featured') || repo.topics.includes('contributions-welcome')
-        )
-        let repos = await Promise.all(repositories.map(async (repo,i) => {
-            const data = await this.fetchContributors(repo.name)
-            repo['contributors'] = data
-            repo['top_contributors'] = [...data].sort((a, b) => b.contributions - a.contributions).slice(0, 3);
-            const lang = await this.fetchLanguages(repo.languages_url)
-            repo['languages'] = lang
             repo['icon_url'] = `https://ui-avatars.com/api/?background=${COLORS[i%3].bg}&color=${COLORS[i%3].fg}&name=${repo.name}&size=256&font-size=0.33`
             return repo
         }))
@@ -103,32 +72,30 @@ class GithibService {
         return Object.keys(data);
     }
 
-    async getUserName(url){
+    async fetchUserName(url){
         const {data} = await this.axios.get(url)
         return data.name
     }
 
-    async getTopFiveContributors() {
-        let repos
-        let contributor = [];
-    
-        repos = await this.fetchProjects();
-        repos.map((repo) => { contributor.push(...repo.contributors) })
-    
-        const combinedContributors = contributor.reduce((obj, item) => {
+    async fetchTopFiveContributors(projects) {
+        let contributors=[]
+        const contribs = await Promise.all(projects.map(async (repo,i) => {
+            return await this.fetchContributors(repo.name)
+        }))
+        contribs.forEach(item =>contributors.push(...item))
+
+        const combinedContributors = contributors.reduce((obj, item) => {
             obj[item.id] ? (obj[item.id].contributions = (obj[item.id].contributions + item.contributions), obj[item.id]._repo.push(...item._repo)) : (obj[item.id] = { ...item });
             return obj;
         }, {});
     
-        contributor = [...Object.values(combinedContributors)].sort((a, b) => b.contributions - a.contributions).slice(0, 5);
-    
-        if (contributor.length === 5) {
-            let topFive=await Promise.all(contributor.map(async (data) => {
-                const name = await this.getUserName(data.url)
-                return {...data, name}
-            }))
-            return topFive;
-        }
+        contributors = [...Object.values(combinedContributors)].sort((a, b) => b.contributions - a.contributions).slice(0, 5);
+
+        let topFive=await Promise.all(contributors.map(async (data) => {
+            const name = await this.fetchUserName(data.url)
+            return {...data, name}
+        }))
+        return topFive
        
     
     }

@@ -114,3 +114,7 @@ a {
 .uk-badge:hover {
   text-decoration: none;
 }
+/* .grayscale{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+} */

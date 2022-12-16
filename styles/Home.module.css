@@ -132,7 +132,7 @@ left: 0;
 }
 
 .intro-section {
-  background-image: url('../public/images/background2.svg'), url('../public/images/background3.svg');
+  /* background-image: url('../public/images/background2.svg'), url('../public/images/background3.svg'); */
   background-repeat: no-repeat; 
   background-attachment: scroll;
   background-position: right 110%, left bottom;
@@ -142,6 +142,7 @@ left: 0;
   background-image: url('../public/images/background_image.png');
   background-size: cover;
   min-height: 70vh;
+  background-position-y: bottom;
   width: 100vw;
 }
 
@@ -159,12 +160,12 @@ left: 0;
 
 }
 .top_contrib_overlay{
-  background-color: #1F384F;
-  background-image: url('../public/images/Picture1.svg');
+  /* background-color: #1F384F; */
+  background-image: url('../public/images/background_tc.png');
   background-repeat: no-repeat; 
-  background-attachment: scroll;
-  background-position: right 80%;
-  background-size: 70px;
+  /* background-attachment: scroll; */
+  /* background-position: right 80%; */
+  /* background-size: 70px; */
    /* background-image: url('../public/images/background_tc.png'); */
-  /* background-size: cover; */
+  background-size: cover;
 }
