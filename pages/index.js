@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import FeaturedProject from "../components/FeaturedProject";
 import IntroSection from "../components/IntroSection";
 import githubService from "../services/GithubService";

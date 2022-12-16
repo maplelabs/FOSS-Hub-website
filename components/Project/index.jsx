@@ -1,4 +1,3 @@
-
 export default function ProjectCard({ data }) {
     return (
     <div>
@@ -26,7 +25,7 @@ export default function ProjectCard({ data }) {
         <div className="uk-width-expand uk-padding-small uk-padding-remove-horizontal">
           <div className="uk-flex uk-flex-nowrap uk-margin-remove-bottom">
             {data.top_contributors.map((user) => (
-              <a target="_blank" rel="noopener noreferrer" key={user.login}>
+              <a target="_blank" rel="noopener noreferrer" key={user.login} href={user.html_url}>
                 <img
                   className="uk-comment-avatar uk-margin-right uk-border-circle	uk-box-shadow-medium grayscale"
                   uk-tooltip={`title: ${user.login}; pos: bottom`}

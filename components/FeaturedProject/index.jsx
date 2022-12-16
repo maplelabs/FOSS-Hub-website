@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useEffect } from 'react';
 import styles from "../../styles/Home.module.css";
 import ProjectCard from '../Project';
@@ -13,9 +14,9 @@ export default function FeaturedProject({data}){
                     Featured Projects
                 </div> 
                 <div className={styles.view_all}>
-                  <a className="uk-button uk-button-link uk-padding-small uk-margin-small-left uk-margin-small-right uk-text-bolder" href='projects'>
+                  <Link className="uk-button uk-button-link uk-padding-small uk-margin-small-left uk-margin-small-right uk-text-bolder" href='projects'>
                   VIEW ALL
-                  </a>
+                  </Link>
                 </div>
               </div>    
               <div className="uk-child-width-1-3@m uk-text-left uk-grid-match" data-uk-grid>

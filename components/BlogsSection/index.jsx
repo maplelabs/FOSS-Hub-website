@@ -16,9 +16,9 @@ export default function BlogsSection({ data }) {
               Blogs
             </div>
             <div className={styles.view_all}>
-              <button className="uk-button uk-button-link uk-padding-small uk-margin-small-left uk-margin-small-right uk-text-bolder">
+              <Link className="uk-button uk-button-link uk-padding-small uk-margin-small-left uk-margin-small-right uk-text-bolder" href='blogs'>
                 VIEW ALL
-              </button>
+              </Link>
             </div>
           </div>
           <div className="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" data-uk-grid>

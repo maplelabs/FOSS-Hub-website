@@ -1,6 +1,7 @@
 import Axios from 'axios'
 import fs from 'fs'
 import path from 'path'
+import { orgsName } from '../maplelabs.config'
 const COLORS=[
     {bg:'F8C02F',fg:'4E2E07'},
     {bg:'0362A7',fg:'FFF'},
@@ -9,7 +10,7 @@ const COLORS=[
 
 class GithibService {
     baseURL='https://api.github.com'
-    orgs='maplelabs'
+   // orgs='maplelabs'
     axios
     constructor(){
         this.axios=Axios.create({
@@ -18,10 +19,10 @@ class GithibService {
     }
 
     async fetchProjects(getExtras=true){
-        const {data} = await this.axios.get(`${this.baseURL}/orgs/${this.orgs}/repos`)
+        const {data} = await this.axios.get(`${this.baseURL}/orgs/${orgsName}/repos`)
         const repositories = data.filter((repo) =>
             repo.fork === false 
-        ).sort((a, b) => new Date(b.pushed_at) > new Date(a.pushed_at) ? 1 : -1);
+        ).filter((data)=> data.topics.length).sort((a, b) => new Date(b.pushed_at) > new Date(a.pushed_at) ? 1 : -1);
         if(getExtras){
             let repos = await Promise.all(repositories.map(async (repo,i) => {
                 const data = await this.fetchContributors(repo.name)
@@ -58,11 +59,10 @@ class GithibService {
             return repo
         }))
         return repos
-
     }
 
     async fetchContributors(repository) {
-        const {data} = await this.axios.get(`${this.baseURL}/repos/${this.orgs}/${repository}/contributors?q=contributions&order=desc`)
+        const {data} = await this.axios.get(`${this.baseURL}/repos/${orgsName}/${repository}/contributors?q=contributions&order=desc`)
         data.forEach(i => i._repo = [repository])
         return data;
     }
@@ -95,12 +95,9 @@ class GithibService {
             const name = await this.fetchUserName(data.url)
             return {...data, name}
         }))
-        return topFive
-       
-    
+        return topFive  
     }
-
-    
+ 
     async readHomePageData(){
         try{
             const readFile = fs.readFileSync(path.join(process.cwd(),`cache/gitHub.json`), 'utf-8');
@@ -118,12 +115,7 @@ class GithibService {
         }
         catch(e){
             return await this.getHomePageData()
-
         }
-
     }
-
-
 }
-
 export default new GithibService()

@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
-*{
+
+* {
   font-family: 'Manrope', sans-serif !important;
 }
+
 html,
 body {
   padding: 0;
@@ -24,21 +26,25 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
 }
-.uk-button{
+
+.uk-button {
   border-radius: .5rem !important;
   text-transform: none !important;
   color: black !important;
 }
-.color-white{
-  color:#fff
+
+.color-white {
+  color: #fff
 }
-.view-all{
-  background:url('/public/images/cornered_btn.svg') 1px 3px no-repeat !important;
+
+.view-all {
+  background: url('/public/images/cornered_btn.svg') 1px 3px no-repeat !important;
   width: 130px;
 }
 
@@ -47,49 +53,55 @@ a {
   background: #FAFBFC !important;
   color: #575757 !important;
 } */
-.uk-card{
+.uk-card {
   border-radius: .75rem !important;
 }
-.uk-navbar-left .uk-divider-vertical{
+
+.uk-navbar-left .uk-divider-vertical {
   height: 40px !important;
   border-left: 2px solid #B7BFC7;
 }
-.uk-navbar-container{
-}
 
-.nav-bg{
-  background:linear-gradient(#151720, #282c38) !important;
+/* .uk-navbar-container {} */
+
+.nav-bg {
+  background: linear-gradient(#151720, #282c38) !important;
   height: 80px;
 }
-#nav{
+
+#nav {
   -webkit-transition: all 5s linear;
   -moz-transition: all 5s linear;
   -o-transition: all 5s linear;
   transition: all 5s linear;
 }
-#nav > nav{
+
+#nav>nav {
   z-index: 100;
-  height:80px;
+  height: 80px;
   position: absolute;
 }
+
 @media only screen and (min-width: 640px) {
-  .uk-card-media-right{
+  .uk-card-media-right {
     border-top-right-radius: .75rem !important;
     border-bottom-right-radius: .75rem !important;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  .uk-card-media-right{
+  .uk-card-media-right {
     border-top-right-radius: .75rem !important;
     border-top-left-radius: .75rem !important;
   }
 }
 
-.uk-card-media-top,.uk-card-media-top > img{
+.uk-card-media-top,
+.uk-card-media-top>img {
   border-top-right-radius: .75rem !important;
   border-top-left-radius: .75rem !important;
 }
+
 .mpl-badge {
   box-sizing: border-box;
   min-width: 18px;
@@ -108,6 +120,7 @@ a {
   align-items: center;
   line-height: 0;
 }
+
 /*
  * Required for `a`
  */
@@ -118,3 +131,14 @@ a {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 } */
+.uk-subnav-pill > * > :first-child {
+  padding: 10px 15px !important;
+  background: transparent;
+  color: #999;
+  border: 1px solid #B7BFC7 !important;
+  border-radius: 30px !important;
+}
+
+.uk-subnav-pill>.uk-active>a {
+  background-color: #222 !important;
+}

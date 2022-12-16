@@ -167,5 +167,18 @@ left: 0;
   /* background-position: right 80%; */
   /* background-size: 70px; */
    /* background-image: url('../public/images/background_tc.png'); */
-  background-size: cover;
+  /* background-size: cover; */
 }
+
+/* .uk_navbar_nav2 {
+  display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+@media (max-width: 996px){
+  .uk_navbar_nav2 {
+    display: none;
+}
+} */

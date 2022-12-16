@@ -1,7 +1,7 @@
 import  React, { useEffect } from 'react';
 import UIkit from 'uikit';
 import styles from "../../styles/Home.module.css";
-
+import { textInintroSection1, textInintroSection2, introSectionDescription, githubUrl, organizationName } from '../../maplelabs.config';
 
 export default function IntroSection(){
     useEffect(()=>{
@@ -12,7 +12,7 @@ export default function IntroSection(){
         // }
       },[])
     return (
-<div >
+<div className={styles['intro-section']}>
           <div
             className={
               "uk-section uk-light uk-background-cover uk-height-1-1 uk-padding-small uk-padding-remove-horizontal " +
@@ -25,25 +25,22 @@ export default function IntroSection(){
                  style={{ height: "50vh" }}
               >
                 <div className="uk-heading-small color-white">
-                  Embracing Collabration.
+                  {textInintroSection1}
                 </div>
                 <div className="uk-heading-small uk-margin-remove-top uk-text-bolder color-white">
-                  Embracing Open&nbsp;Source.
+                  {textInintroSection2}
                 </div>
                 <div className="uk-text color-white">
-                  We at MapleLabs believe open source solves real-world
-                  problems. We are a passionate, open-minded and focused group
-                  of software enthusiasts pushing boundaries with an aim to
-                  create unparalleled software experience.
+                  {introSectionDescription}
                 </div>
                 <div className="uk-padding uk-padding-remove-horizontal">
-                  <a className="uk-button uk-button-primary uk-button uk-text-bold" href='https://github.com/maplelabs' target="_blank" rel="noopener noreferrer">
+                  <a className="uk-button uk-button-primary uk-button uk-text-bold" href={githubUrl} target="_blank" rel="noopener noreferrer">
                     {" "}
                     <span
                       uk-icon="github"
                       className="uk-margin-small-right uk-icon"
                     ></span>
-                    Maplelabs on GitHub
+                    {organizationName} on GitHub
                   </a>
                 </div>
               </div>
