@@ -6,4 +6,4 @@ our project and we hope you'll enjoy it :D
 **All contributors must comply with
 [the code of conduct](./code-of-conduct.md).**
 
-To get started developing, see our [DEVELOPMENT.md](./DEVELOPMENT.md).
+To get started developing, see our [DEVELOPMENT.md](./development.md).
