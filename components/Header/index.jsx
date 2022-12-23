@@ -25,7 +25,7 @@ export default function Header() {
               </Link>
             </div> 
           
-            <div className={"uk-navbar-right uk-visible uk-hidden@l uk-hidden@m " + styles.navbar_right}>
+            <div className={"uk-navbar-right uk-hidden@m " + styles.navbar_right}>
               <ul className="uk-navbar-nav">
                 <li>
                   <a uk-navbar-toggle-icon='true' href="#"></a>
@@ -48,7 +48,7 @@ export default function Header() {
                 </li>
               </ul>
             </div>
-            <div className="uk-navbar-center uk-visible@m uk-visible@l">
+            <div className="uk-navbar-center uk-visible@m ">
             {/* <div className="uk-navbar-center uk-visible uk-hidden@s"> */}
               <ul className='uk-navbar-nav'>
                 <li>
