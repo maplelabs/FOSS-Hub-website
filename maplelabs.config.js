@@ -23,7 +23,10 @@ module.exports = {
 
     // footerWebsiteUrl: 'https://www.maplelabs.com',
     // footerDiscordUrl: 'https://www.maplelabs.com',
-    // footerLinkedinUrl: 'https://in.linkedin.com/company/maplelabs-cloud-solutions',
-    // footerInstagramUrl: 'https://www.instagram.com/maplelabs',
+    footerLinkedinUrl: 'https://in.linkedin.com/company/maplelabs-cloud-solutions',
+    footerInstagramUrl: 'https://www.instagram.com/maplelabs',
+    officeAddress1 : '152, Siddhi Vinayak Towers, Sarjapur - Marathahalli Road, Jakkasandra, 1st Block, Koramangala, Bangalore – 560034',
+    officeAddress2: '1248 Reamwood Ave, Sunnyvale, CA 94089',
+    services: ['Performance Engineering', 'Dev Ops', 'Site Reliability Engineering', 'Implementation Services']
 
 }

@@ -62,7 +62,7 @@ export async function getStaticPaths() {
                         </div>
                     <div>{time} min read</div>
                 </div>
-                <img src={frontmatter.banner} className='uk-width-1-1 uk-margin-top'></img>
+                <img src={frontmatter.banner} className='uk-width-1-1 uk-margin-top' alt=''></img>
                 <div className={styles.blog_content+' uk-margin-large-top'} dangerouslySetInnerHTML={{ __html: html }} />
                 <div className={styles.sidebar_right+' uk-visible@l'}>
                 <div data-uk-sticky="offset: 150" className="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">

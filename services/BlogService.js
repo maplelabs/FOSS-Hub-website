@@ -1,6 +1,7 @@
 import fs from 'fs'
 import matter from 'gray-matter';
 import path from 'path';
+
 const COLORS=[
     {bg:'F8C02F',fg:'4E2E07'},
     {bg:'0362A7',fg:'FFF'},

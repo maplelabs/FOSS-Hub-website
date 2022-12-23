@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import styles from "../../styles/Home.module.css";
-import ProjectCard from "../Project";
 
 export default function TopContributors({ data }) {
   return (

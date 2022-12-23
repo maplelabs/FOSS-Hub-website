@@ -24,7 +24,6 @@ export default function Home({featuredProjects,featuredBlogs,topContributors}) {
 
 
 export async function getStaticProps({res}) {
-  
   const featuredBlogs =  blogService.getFeaturedBlogs()
   const [featuredProjects,topContributors] = await githubService.getHomePageData();
   // const topContributors = await   githubService.getTopFiveContributors();

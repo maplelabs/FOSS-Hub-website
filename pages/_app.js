@@ -26,52 +26,18 @@ function MyApp({ Component, pageProps }) {
     //   nav.classList.remove("nav-bg");
     // });
   }, []);
-  return (
-    <>
-      <UIkit>
-        {/* <Head>
-          <title>OpenSource @ Maplelabs </title>
-          <meta name="description" content="Embracing OpenSource..." />
-          <link rel="icon" href="/images/favicon.png" />
-        </Head>
-        <div data-uk-sticky="start: 0" id="nav" className="nav-bg">
-          <nav className="uk-navbar-container uk-navbar-sticky uk-navbar-transparent uk-light uk-width-1-1">
-            <div className=" uk-container ">
-              <div className="uk-navbar-left">
-                <Link href="/" className="uk-navbar-item uk-logo">
-                  <Image src={LOGO} width={120} height={50}></Image>
-                  <hr className="uk-divider-vertical uk-margin-small-left"></hr>
-                  <div className="uk-text-bolder uk-text-default uk-margin-small-left">
-                    OPEN SOURCE
-                  </div>
-                </Link>
-              </div>
-              <div className="uk-navbar-center">
-                <ul className="uk-navbar-nav">
-                  <li>
-                    <a href="#">Projects</a>
-                  </li>
-                  <li>
-                    <a href="#">Blogs</a>
-                  </li>
-                  <li>
-                    <a href="#">Learn</a>
-                  </li>
-                  <li>
-                    <a href="#">Getting Started</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div> */}
-        <Layout>
-        <Component {...pageProps} />
-        </Layout>
-      </UIkit>
-      {/* <Script src='https://cdn.jsdelivr.net/npm/uikit@3.15.16/dist/js/uikit.js' /> */}
-    </>
-  );
+  const getLayout = Component.getLayout || ((page) =><UIkit><Layout>{page}</Layout></UIkit>)
+  return getLayout(<Component {...pageProps} />)
+  // return (
+  //   <>
+  //     <UIkit>
+  //       <Layout>
+  //       <Component {...pageProps} />
+  //       </Layout>
+  //     </UIkit>
+  //     {/* <Script src='https://cdn.jsdelivr.net/npm/uikit@3.15.16/dist/js/uikit.js' /> */}
+  //   </>
+  // );
 }
 
 export default MyApp;

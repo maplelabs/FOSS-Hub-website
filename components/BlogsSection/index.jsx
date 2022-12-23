@@ -2,11 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 import styles from "../../styles/Home.module.css";
-import ProjectCard from '../Project';
+import BlogCard from '../BlogCard';
 
 
 export default function BlogsSection({ data }) {
-  const blog = data[0].frontMatter
+  const [remBlogs, setRemBlogs] = React.useState([]);
+  useEffect(()=>{
+    setRemBlogs(data);
+    setRemBlogs(remBlogs.splice(0,1))
+  },[])
+ 
+   const blog = data[0].frontMatter
   return (
     <div className={"uk-width-1-1 " + styles.blogs_section}>
       <div className="uk-section uk-dark">
@@ -37,6 +43,10 @@ export default function BlogsSection({ data }) {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="uk-child-width-1-4@l uk-child-width-1@s uk-text-left uk-grid-match" data-uk-grid>
+          {remBlogs.length  && remBlogs.map((blog)=>
+            <BlogCard blog={blog}></BlogCard>)} 
           </div>
         </div>
       </div>
