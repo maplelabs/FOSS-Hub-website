@@ -54,7 +54,7 @@ export default function Footer() {
                                 SERVICES
                             </p>
                             <ul className='uk-list uk-text-meta'>
-                               {services.map((service)=> <li>{service}</li>)}
+                               {services.map((service)=> <li key={service}>{service}</li>)}
                             </ul>
                         </div>
                         <div>
