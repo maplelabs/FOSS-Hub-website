@@ -44,8 +44,8 @@ export default function BlogsSection({ data }) {
               </div>
             </div>
           </div>
-          <div className="uk-child-width-1-4@l uk-child-width-1@s uk-text-left uk-grid-match" data-uk-grid>
-          {remBlogs.length  && remBlogs.map((blog)=>
+          <div className="uk-child-width-1-3@l uk-child-width-1@s uk-text-left uk-grid-match" data-uk-grid>
+          {remBlogs.length>0  && remBlogs.map((blog)=>
             <BlogCard blog={blog} key={blog.slug}></BlogCard>)} 
           </div>
         </div>

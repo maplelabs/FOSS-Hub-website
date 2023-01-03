@@ -127,11 +127,12 @@ a {
 .uk-badge:hover {
   text-decoration: none;
 }
+
 /* .grayscale{
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 } */
-.uk-subnav-pill > * > :first-child {
+.uk-subnav-pill>*> :first-child {
   padding: 10px 15px !important;
   background: transparent;
   color: #999;
@@ -139,11 +140,23 @@ a {
   border-radius: 30px !important;
 }
 
-.uk-subnav-pill>.uk-active>a {
+/* .uk-subnav-pill>li>div>.uk-nav>.uk-active>label{
+ color: #0362A7 !important;
+ 
+} */
+
+.uk-open {
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.16) !important;
+  border-radius: 30px !important;
+  top: 45px !important;
+}
+
+.uk-subnav-pill>li>button:focus {
+  color: #FFFFFF;
   background-color: #222 !important;
 }
 
-.uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
+.uk-breadcrumb> :nth-child(n+2):not(.uk-first-column)::before {
   content: ">" !important;
 }
 
@@ -156,11 +169,19 @@ a {
   border-radius: 6px !important;
 }
 
-.uk-icon-button{
+.uk-icon-button {
   background-color: black !important;
   color: white !important;
 }
 
 .uk-form-width-medium {
   width: 359.52px !important;
+}
+
+.uk-checkbox {
+  border-radius: 50% !important;
+}
+
+.uk-checkbox:checked {
+  background-size: 13px;
 }

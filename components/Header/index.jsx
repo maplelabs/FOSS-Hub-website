@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import LOGO from '../../public/images/maplelabs_dark.svg';
 import { title, tagline, favicon, description, navbarLogo } from '../../maplelabs.config';
 import styles from '../../styles/Home.module.css'
 export default function Header() {

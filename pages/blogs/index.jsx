@@ -18,7 +18,7 @@ export default function Blogs({ blog }) {
                     </form>
                 </div>
             </div>
-            <div className="uk-child-width-1-4@l uk-child-width-1@s uk-text-left uk-grid-match" data-uk-grid>
+            <div className="uk-child-width-1-3@l uk-child-width-1@s uk-text-left uk-grid-match" data-uk-grid>
                 {blog.map(blog =>
                    <BlogCard blog={blog} key={blog.slug}></BlogCard>
                 )}
