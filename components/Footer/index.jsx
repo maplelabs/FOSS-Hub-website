@@ -6,14 +6,14 @@ export default function Footer() {
         <>
             <div className={"uk-section uk-padding-remove-bottom " + styles.footer}>
                 <div className="uk-container  uk-margin-small-bottom" >
-                    <div className="uk-flex uk-flex-center uk-margin-medium-bottom">
+                    {/* <div className="uk-flex uk-flex-center uk-margin-medium-bottom">
                         <form>
                             <label className='uk-text-muted uk-text-default uk-padding-small'>Stay tuned to our latest newsletter</label>
                             <input className="uk-input uk-form-width-medium uk-margin-small-right" type="text" placeholder="Enter Email ID" />
                             <button className="uk-button uk-button-primary">SUBSCRIBE</button>
                         </form>
-                    </div>
-                    <hr />
+                    </div> */}
+                    {/* <hr /> */}
                     <div className="uk-grid uk-child-width-expand@s" uk-grid='true'>
                     <span className="uk-width-auto uk-margin-small-right" uk-icon="location"></span>  
                         <div className='uk-padding-remove-left'>
