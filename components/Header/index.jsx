@@ -31,10 +31,12 @@ export default function Header() {
                   <div className="uk-dropbar uk-dropbar-top" style={{background: "linear-gradient(rgb(40, 44, 56), rgb(61, 65, 74))"}}  uk-drop="stretch: x; mode: click;  target: !.uk-navbar-container; animation: slide-top; animate-out: true; duration: 700">
                     <ul className="uk-nav uk-navbar-dropdown-nav ">
                       <li>
-                        <Link href="projects">Projects</Link>
+                        {/* <Link href="projects">Projects</Link> */}
+                        <Link href="#">Projects</Link>
                       </li>
                       <li>
-                        <Link href="blogs">Blogs</Link>
+                        {/* <Link href="blogs">Blogs</Link> */}
+                        <Link href="#">Blogs</Link>
                       </li>
                       <li>
                         <a href="#">Learn</a>
@@ -51,10 +53,12 @@ export default function Header() {
             {/* <div className="uk-navbar-center uk-visible uk-hidden@s"> */}
               <ul className='uk-navbar-nav'>
                 <li>
-                  <Link href="projects">Projects</Link>
+                  {/* <Link href="projects">Projects</Link> */}
+                  <Link href="#">Projects</Link>
                 </li>
                 <li>
-                  <Link href="blogs">Blogs</Link>
+                  {/* <Link href="blogs">Blogs</Link> */}
+                  <Link href="#">Blogs</Link>
                 </li>
                 <li>
                   <a href="#">Learn</a>
