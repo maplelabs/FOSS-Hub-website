@@ -38,9 +38,9 @@ export default function Header() {
                         {/* <Link href="blogs">Blogs</Link> */}
                         <Link href="#">Blogs</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href="#">Learn</a>
-                      </li>
+                      </li> */}
                       <li>
                         <a href="#">Getting Started</a>
                       </li>
@@ -60,9 +60,9 @@ export default function Header() {
                   {/* <Link href="blogs">Blogs</Link> */}
                   <Link href="#">Blogs</Link>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#">Learn</a>
-                </li>
+                </li> */}
                 <li>
                   <a href="#">Getting Started</a>
                 </li>

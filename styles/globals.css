@@ -189,3 +189,10 @@ a {
 .gs-bg{
   aspect-ratio: 3/1;
 }
+
+.get-started-section {
+  background-image: url('../public/images/curve_bg.svg');
+  background-size: cover;
+  background-position-y: bottom;
+  width: 100vw;
+}

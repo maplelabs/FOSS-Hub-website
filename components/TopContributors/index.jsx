@@ -7,7 +7,7 @@ export default function TopContributors({ data }) {
   return (
     <div className={"uk-width-1-1 " + styles.top_contrib_overlay}>
       <div className="uk-section ">
-        <div className="uk-container uk-margin-xlarge-bottom	">
+        <div className="uk-container">
           <div className="uk-flex uk-flex-left uk-margin-large-bottom uk-light">
             <div>
               <div className="uk-h1 uk-text-bolder">Top Contributors</div>

@@ -16,9 +16,9 @@ export default function Home({featuredProjects,featuredBlogs,topContributors}) {
       <main className={styles.main}>
         <IntroSection></IntroSection>
         <FeaturedProject data={featuredProjects}></FeaturedProject>
+        <GettingStartedCard></GettingStartedCard>
         <BlogsSection data={featuredBlogs}></BlogsSection>
         <TopContributors data={topContributors}></TopContributors>
-        <GettingStartedCard></GettingStartedCard>
       </main>
     </div>
   );
