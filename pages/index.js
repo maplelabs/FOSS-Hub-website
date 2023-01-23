@@ -5,6 +5,7 @@ import blogService from "../services/BlogService";
 import styles from "../styles/Home.module.css";
 import BlogsSection from "../components/BlogsSection";
 import TopContributors from "../components/TopContributors";
+import GettingStartedCard from "../components/GettingStartedCard";
 
 // import 'uikit/dist/js/uikit.js'
 // import projectImg from '../public/images/favicon.ico'
@@ -17,6 +18,7 @@ export default function Home({featuredProjects,featuredBlogs,topContributors}) {
         <FeaturedProject data={featuredProjects}></FeaturedProject>
         <BlogsSection data={featuredBlogs}></BlogsSection>
         <TopContributors data={topContributors}></TopContributors>
+        <GettingStartedCard></GettingStartedCard>
       </main>
     </div>
   );

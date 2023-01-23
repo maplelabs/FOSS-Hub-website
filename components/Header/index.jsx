@@ -16,18 +16,18 @@ export default function Header() {
           <div className=" uk-container ">
           <div className="uk-navbar-left">
               <Link href="/" className="uk-navbar-item uk-logo">
-                <Image src={navbarLogo.src} width={120} height={50} alt={navbarLogo.alt}></Image>
-                <hr className="uk-divider-vertical uk-margin-small-left"></hr>
+                <Image src={navbarLogo.src} width={310} height={40} alt={navbarLogo.alt}></Image>
+                {/* <hr className="uk-divider-vertical uk-margin-small-left"></hr>
                 <div className="uk-text-bolder uk-text-default uk-margin-small-left">
                   OPEN SOURCE
-                </div>
+                </div> */}
               </Link>
             </div> 
           
             <div className={"uk-navbar-right uk-hidden@m " + styles.navbar_right}>
               <ul className="uk-navbar-nav">
                 <li>
-                  <a uk-navbar-toggle-icon='true' href="#"></a>
+                  {/* <a uk-navbar-toggle-icon='true' href="#"></a> */}
                   <div className="uk-dropbar uk-dropbar-top" style={{background: "linear-gradient(rgb(40, 44, 56), rgb(61, 65, 74))"}}  uk-drop="stretch: x; mode: click;  target: !.uk-navbar-container; animation: slide-top; animate-out: true; duration: 700">
                     <ul className="uk-nav uk-navbar-dropdown-nav ">
                       <li>

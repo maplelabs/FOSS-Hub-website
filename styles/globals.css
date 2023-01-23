@@ -185,3 +185,7 @@ a {
 .uk-checkbox:checked {
   background-size: 13px;
 }
+
+.gs-bg{
+  aspect-ratio: 3/1;
+}
