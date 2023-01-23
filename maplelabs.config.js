@@ -4,7 +4,8 @@ module.exports = {
     favicon: '/images/favicon.png',
     navbarLogo: {
         alt: 'Maple Labs Logo',
-        src: '/images/logo.svg',
+        dark: '/images/dark-logo.svg',
+        light: '/images/logo.svg',
     },
     //description goes to meta-tag
     description: 'OpenSource @ MapleLabs: Get involved in open source communities, discover projects and learn about MapleLabs opensource program.',

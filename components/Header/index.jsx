@@ -16,7 +16,8 @@ export default function Header() {
           <div className=" uk-container ">
           <div className="uk-navbar-left">
               <Link href="/" className="uk-navbar-item uk-logo">
-                <Image src={navbarLogo.src} width={310} height={40} alt={navbarLogo.alt}></Image>
+                <Image src={navbarLogo.dark} width={310} height={40} alt={navbarLogo.alt} className='dark-img'></Image>
+                <Image src={navbarLogo.light} width={310} height={40} alt={navbarLogo.alt} className='light-img'></Image>
                 {/* <hr className="uk-divider-vertical uk-margin-small-left"></hr>
                 <div className="uk-text-bolder uk-text-default uk-margin-small-left">
                   OPEN SOURCE

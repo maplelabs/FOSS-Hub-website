@@ -4,14 +4,9 @@ import styles from "../../styles/Home.module.css";
 import { textInintroSection1, textInintroSection2, introSectionDescription, githubUrl, organizationName } from '../../maplelabs.config';
 
 export default function IntroSection(){
-    useEffect(()=>{
-        // const el = UIkit.util.$('#intro-section')
-        // UIkit.scrollspy(el,{repeat: true, delay: 100});
-        // return ()=>{
-        //     UIkit.scrollspy.$destroy()
-        // }
-      },[])
+
     return (
+      <div className={styles.container}>
 <div className={styles['intro-section']}>
           <div
             className={
@@ -22,7 +17,7 @@ export default function IntroSection(){
             <div className="uk-container uk-container uk-flex">
               <div id="intro-section"
                 className="uk-flex uk-flex-column uk-flex-center uk-height-1-1 "
-                 style={{ height: "50vh" }}
+                 style={{ height: "65vh" }}
               >
                 <div className="uk-heading-small color-white">
                   {textInintroSection1}
@@ -47,6 +42,7 @@ export default function IntroSection(){
               <div className="uk-width-1-1"></div>
             </div>
           </div>
+        </div>
         </div>
     )
 }
