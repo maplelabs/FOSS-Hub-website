@@ -14,7 +14,7 @@ export default function BlogsSection({ data }) {
  
    const blog = data[0].frontMatter
   return (
-    <div className={"uk-width-1-1 " + styles.blogs_section}>
+    <div id='blogs' className={"uk-width-1-1 " + styles.blogs_section}>
       <div className="uk-section uk-dark">
         <div className="uk-container">
           <div className="uk-flex uk-flex-between uk-margin-large-bottom">

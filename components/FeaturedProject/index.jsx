@@ -6,7 +6,7 @@ import ProjectCard from '../Project';
 
 export default function FeaturedProject({data}){
     return (
-      <div className="uk-width-1-1">
+      <div id='projects' className="uk-width-1-1">
           <div className="uk-section uk-dark">
             <div className="uk-container">
               <div className="uk-flex uk-flex-between uk-margin-large-bottom">

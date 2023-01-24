@@ -13,7 +13,7 @@ export default function Header() {
       </Head>
       <div data-uk-sticky="start: 0" id="nav" className="nav-bg">
         <nav className="uk-navbar-container uk-navbar-sticky uk-navbar-transparent uk-light uk-width-1-1">
-          <div className=" uk-container ">
+          <div className=" uk-container " data-uk-navbar>
           <div className="uk-navbar-left">
               <Link href="/" className="uk-navbar-item uk-logo">
                 <Image src={navbarLogo.dark} width={310} height={40} alt={navbarLogo.alt} className='dark-img'></Image>
@@ -24,48 +24,22 @@ export default function Header() {
                 </div> */}
               </Link>
             </div> 
-          
-            <div className={"uk-navbar-right uk-hidden@m " + styles.navbar_right}>
-              <ul className="uk-navbar-nav">
-                <li>
-                  {/* <a uk-navbar-toggle-icon='true' href="#"></a> */}
-                  <div className="uk-dropbar uk-dropbar-top" style={{background: "linear-gradient(rgb(40, 44, 56), rgb(61, 65, 74))"}}  uk-drop="stretch: x; mode: click;  target: !.uk-navbar-container; animation: slide-top; animate-out: true; duration: 700">
-                    <ul className="uk-nav uk-navbar-dropdown-nav ">
-                      <li>
-                        {/* <Link href="projects">Projects</Link> */}
-                        <Link href="#">Projects</Link>
-                      </li>
-                      <li>
-                        {/* <Link href="blogs">Blogs</Link> */}
-                        <Link href="#">Blogs</Link>
-                      </li>
-                      {/* <li>
-                        <a href="#">Learn</a>
-                      </li> */}
-                      <li>
-                        <a href="#">Getting Started</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="uk-navbar-center uk-visible@m ">
+            <div className="uk-navbar-right uk-visible@m ">
             {/* <div className="uk-navbar-center uk-visible uk-hidden@s"> */}
               <ul className='uk-navbar-nav'>
                 <li>
                   {/* <Link href="projects">Projects</Link> */}
-                  <Link href="#">Projects</Link>
+                  <a href="#projects" data-uk-scroll='offset:80'>Projects</a>
                 </li>
                 <li>
                   {/* <Link href="blogs">Blogs</Link> */}
-                  <Link href="#">Blogs</Link>
+                  <a href="#blogs" data-uk-scroll='offset:80'>Blogs</a>
                 </li>
                 {/* <li>
                   <a href="#">Learn</a>
                 </li> */}
                 <li>
-                  <a href="#">Getting Started</a>
+                  <a href="#getstarted" data-uk-scroll='offset:80'>Getting Started</a>
                 </li>
               </ul>
             </div>           

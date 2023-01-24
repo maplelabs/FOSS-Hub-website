@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 export default function GettingStartedCard() {
     return (
-        <div className='uk-width-1-1'>
+        <div id='getstarted' className='uk-width-1-1'>
             <div className={"uk-section uk-background-cover uk-height-1-1 uk-padding-remove-horizontal get-started-section"}>
             <div className=' uk-container' style={{position:'relative'}}>
                 <div className="uk-card uk-card-default uk-card-body uk-width-1-1 gs-bg">
