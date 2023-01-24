@@ -96,7 +96,7 @@ export default function Project({ repos }) {
                   All Tags
                 </label>
               </div>
-              {tags.map(lang => <div className="uk-margin-small">
+              {tags.map(lang => <div key={lang} className="uk-margin-small">
                 <input
                   className="uk-checkbox uk-margin-small-right"
                   type="checkbox"
@@ -128,7 +128,7 @@ export default function Project({ repos }) {
                   All Languages
                 </label>
               </div>
-              {filterList.map(lang => <div className="uk-margin-small">
+              {filterList.map(lang => <div key={lang} className="uk-margin-small">
                 <input
                   className="uk-checkbox uk-margin-small-right"
                   type="checkbox"
