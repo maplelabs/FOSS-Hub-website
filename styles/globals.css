@@ -73,6 +73,9 @@ a {
 .nav-bg li>a{
   color: #222 !important;
 }
+.nav-bg-dark > nav{
+  background-image: linear-gradient(180deg, #010101, #15171f69) !important;
+}
 
 #nav {
   -webkit-transition: all 5s linear;

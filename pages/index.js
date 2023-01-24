@@ -22,10 +22,12 @@ export default function Home({featuredProjects,featuredBlogs,topContributors}) {
       console.log("out");
       // uikit.toggle(nav,{cls:'nav-bg',target:'#nav',mode:'true'})
       nav.classList.add("nav-bg");
+      nav.classList.remove("nav-bg-dark");
       // nav.classList.add('')
     });
     uikit.util.on(el, "inview", function () {
       console.log("in");
+      nav.classList.add("nav-bg-dark");
       nav.classList.remove("nav-bg");
     });
   }, []);
