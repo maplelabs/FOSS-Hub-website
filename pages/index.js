@@ -17,10 +17,9 @@ export default function Home({featuredProjects,featuredBlogs,topContributors}) {
     const el = uikit.util.$("#intro-section");
     const nav = uikit.util.$("#nav");
     var sticky = uikit.sticky(nav);
-    uikit.scrollspy(el, { repeat: true, delay: 50 });
+    uikit.scrollspy(el, { repeat: true, delay: 0 });
     uikit.util.on(el, "outview", function () {
       console.log("out");
-      // uikit.toggle(nav,{cls:'nav-bg',target:'#nav',mode:'true'})
       nav.classList.add("nav-bg");
       nav.classList.remove("nav-bg-dark");
       // nav.classList.add('')
