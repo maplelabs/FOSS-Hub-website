@@ -31,15 +31,15 @@ export default function Header() {
                   {/* <Link href="projects">Projects</Link> */}
                   <a href="#projects" data-uk-scroll='offset:80'>Projects</a>
                 </li>
-                <li>
-                  {/* <Link href="blogs">Blogs</Link> */}
-                  <a href="#blogs" data-uk-scroll='offset:80'>Blogs</a>
-                </li>
                 {/* <li>
                   <a href="#">Learn</a>
                 </li> */}
                 <li>
                   <a href="#getstarted" data-uk-scroll='offset:80'>Getting Started</a>
+                </li>
+                <li>
+                  {/* <Link href="blogs">Blogs</Link> */}
+                  <a href="#blogs" data-uk-scroll='offset:80'>Blogs</a>
                 </li>
               </ul>
             </div>           

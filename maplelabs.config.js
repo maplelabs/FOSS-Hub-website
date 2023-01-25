@@ -9,10 +9,23 @@ module.exports = {
     },
     //description goes to meta-tag
     description: 'OpenSource @ MapleLabs: Get involved in open source communities, discover projects and learn about MapleLabs opensource program.',
-    organizationName: 'MapleLabs', 
-    
-    //organization name as per github 
-    orgsName: 'maplelabs',
+    organizationName: 'MapleLabs',
+
+    projects: [
+        {
+            //organization name as per github 
+            orgsName: 'maplelabs',
+            //repositories to include
+            include: [], //includes all
+            //repositories to exclude
+            exclude: [],  //exclude none
+        },
+        {
+            orgsName: 'snappyflow',
+            include: ['snappyflow-jenkins-plugin'],
+            exclude: [],
+        }
+    ],
 
     textInintroSection1: 'Embracing Collabration.',
     textInintroSection2: 'Embracing Open Source.',
@@ -26,7 +39,7 @@ module.exports = {
     // footerDiscordUrl: 'https://www.maplelabs.com',
     footerLinkedinUrl: 'https://in.linkedin.com/company/maplelabs-cloud-solutions',
     footerInstagramUrl: 'https://www.instagram.com/maplelabs',
-    officeAddress1 : '152, Siddhi Vinayak Towers, Sarjapur - Marathahalli Road, Jakkasandra, 1st Block, Koramangala, Bangalore – 560034',
+    officeAddress1: '152, Siddhi Vinayak Towers, Sarjapur - Marathahalli Road, Jakkasandra, 1st Block, Koramangala, Bangalore – 560034',
     officeAddress2: '1248 Reamwood Ave, Sunnyvale, CA 94089',
     services: ['Performance Engineering', 'Dev Ops', 'Site Reliability Engineering', 'Implementation Services']
 

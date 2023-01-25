@@ -57,6 +57,9 @@ a {
   border-radius: .75rem !important;
 }
 
+.hover:hover {
+  text-decoration: none !important;
+}
 .uk-navbar-left .uk-divider-vertical {
   height: 40px !important;
   border-left: 2px solid #B7BFC7;
