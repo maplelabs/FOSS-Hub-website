@@ -40,7 +40,15 @@ a {
 }
 
 .color-white {
-  color: #fff
+  color: #fff;
+}
+
+.color-midnight-blue {
+  color:  #1F284F !important;
+}
+
+.color-black {
+  color: #000000 !important;
 }
 
 .view-all {
@@ -76,8 +84,11 @@ a {
 .nav-bg li>a{
   color: #222 !important;
 }
+.nav-bg-dark li>a{
+  color: #fff !important;
+}
 .nav-bg-dark > nav{
-  background-image: linear-gradient(180deg, #010101, #15171f69) !important;
+  background-image: linear-gradient(180deg, #010101, #15171f50) !important;
 }
 
 #nav {
@@ -128,7 +139,7 @@ a {
   box-sizing: border-box;
   min-width: 18px;
   height: 18px;
-  padding: 0 5px;
+  padding: 12px;
   border-radius: 500px;
   vertical-align: middle;
   /* 1 */
@@ -141,6 +152,11 @@ a {
   justify-content: center;
   align-items: center;
   line-height: 0;
+}
+
+.contributors:not(:nth-of-type(1)) {
+  border: 2px solid #FFFFFF;
+  margin-left: -10px;
 }
 
 /*
@@ -213,7 +229,7 @@ a {
 }
 
 .get-started-section {
-  background-image: url('../public/images/curve_bg.svg');
+  background-image: url('../public/images/curve_bg.png');
   background-size: cover;
   background-position-y: bottom;
   width: 100vw;

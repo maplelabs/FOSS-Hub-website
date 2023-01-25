@@ -17,8 +17,8 @@ export default function BlogsSection({ data }) {
     <div id='blogs' className={"uk-width-1-1 " + styles.blogs_section}>
       <div className="uk-section uk-dark">
         <div className="uk-container">
-          <div className="uk-flex uk-flex-between uk-margin-small-bottom">
-            <div className="uk-h1 uk-text-bolder">
+          <div className="uk-flex uk-flex-between uk-margin-medium-bottom">
+            <div className="uk-h1 uk-text-bolder uk-margin-small-bottom color-midnight-blue">
               Blogs
             </div>
             <div className={styles.view_all} hidden="true">

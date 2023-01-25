@@ -2,22 +2,22 @@ import Link from 'next/link'
 export default function ProjectCard({ data }) {
   return (
     <Link target="_blank" rel="noopener noreferrer" href={data.html_url} className="hover">
-      <div className="uk-card uk-card-default uk-card-body uk-card-hover">
+      <div className="uk-card uk-card-small uk-card-default uk-card-body uk-card-hover">
+        <div className='uk-margin-small-top uk-margin-small-left uk-margin-small-right uk-margin-small-bottom'>
         <div className="uk-margin-small-bottom uk-border-circle">
-          <img className="uk-border-circle" src={data.icon_url} width="80" height={80} alt=""></img>
+          <img className="uk-border-circle" src={data.icon_url} width="56" height={56} alt=""></img>
         </div>
 
         <div>
-          <h3 className="uk-h3 uk-text-bolder">{data.name}</h3>
+          <h3 className="uk-h4 uk-text-bolder uk-margin-small-bottom">{data.name}</h3>
         </div>
         <div>
-          <p>{data.description}</p>
+          <p className='uk-text-small uk-text-secondary'>{data.description}</p>
         </div>
         <div>
           {data.languages.map((lang) => (
             <span
-              className="mpl-badge uk-light  uk-padding-small uk-margin-small-bottom uk-margin-small-right"
-              style={{ color: "black !important" }}
+              className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
               key={lang}
             >
               {lang}
@@ -29,7 +29,7 @@ export default function ProjectCard({ data }) {
           <div className="uk-flex uk-flex-nowrap uk-margin-remove-bottom">
             {data.top_contributors.map((user) => (
               <img
-                className="uk-comment-avatar uk-margin-right uk-border-circle	uk-box-shadow-medium grayscale"
+                className="uk-comment-avatar contributors uk-border-circle"
                 uk-tooltip={`title: ${user.login}; pos: bottom`}
                 src={user.avatar_url}
                 width="40"
@@ -61,6 +61,7 @@ export default function ProjectCard({ data }) {
               />
             </a> */}
           </div>
+        </div>
         </div>
       </div>
     </Link>

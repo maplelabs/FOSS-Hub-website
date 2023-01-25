@@ -29,17 +29,17 @@ export default function Header() {
               <ul className='uk-navbar-nav'>
                 <li>
                   {/* <Link href="projects">Projects</Link> */}
-                  <a href="#projects" data-uk-scroll='offset:80'>Projects</a>
+                  <a href="#projects" data-uk-scroll='offset:80' className="uk-text-capitalize">Projects</a>
                 </li>
                 {/* <li>
                   <a href="#">Learn</a>
                 </li> */}
                 <li>
-                  <a href="#getstarted" data-uk-scroll='offset:80'>Getting Started</a>
+                  <a href="#getstarted" data-uk-scroll='offset:80' className="uk-text-capitalize">Getting Started</a>
                 </li>
                 <li>
                   {/* <Link href="blogs">Blogs</Link> */}
-                  <a href="#blogs" data-uk-scroll='offset:80'>Blogs</a>
+                  <a href="#blogs" data-uk-scroll='offset:80' className="uk-text-capitalize">Blogs</a>
                 </li>
               </ul>
             </div>           

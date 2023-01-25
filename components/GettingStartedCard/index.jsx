@@ -9,10 +9,11 @@ export default function GettingStartedCard() {
                 <div className="uk-card uk-card-default uk-card-body uk-width-1-1 gs-bg">
                     <Image src="/images/gettingstarted.png" fill={true}></Image>
                     <div style={{position:'relative',zIndex:10}} className='uk-width-1-2'>
-                        <div class="uk-h1 uk-text-bolder">Getting Started</div>
+                        <div className="uk-h1 uk-text-bolder color-midnight-blue">Getting Started</div>
                         <p>You can get started by choosing a <a href="#">project</a> you want to use/contribute-to and go to the respective github link.</p>
-                        <h3 class="uk-card-title">It is easy to get started if you join our open source discord community</h3>
-                        <button class="uk-button uk-button-primary uk-text-bold" style={{backgroundColor:'#0362A7'}}>Click to join</button>
+                        <hr className='uk-margin-remove-bottom'/>
+                        <h3 className="uk-card-title uk-text-bold">It is easy to get started if you join our open source discord community</h3>
+                        <button className="uk-button uk-button-primary  uk-text-bold" style={{backgroundColor:'#0362A7',fontSize:'16px'}}>Click to join</button>
                 </div>
                 </div>
                 </div>

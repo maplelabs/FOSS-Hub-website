@@ -143,7 +143,7 @@ left: 0;
   background-size: 75px;
 }
 .intro-background{
-  background-image: url('../public/images/background_image.png');
+  background-image: url('../public/images/background_intro2.png');
   background-size: cover;
   min-height: 85vh;
   background-position-y: bottom;
