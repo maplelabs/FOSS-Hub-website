@@ -179,3 +179,12 @@ left: 0;
   top: 0px;
   right: 15px;
 }
+
+.get-started-section {
+  background-image: url('../public/images/curve_bg.svg');
+  background-size: cover;
+  background-position-y: bottom;
+  width: 100vw;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+}
