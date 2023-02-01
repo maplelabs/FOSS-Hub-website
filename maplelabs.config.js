@@ -41,6 +41,7 @@ module.exports = {
     footerInstagramUrl: 'https://www.instagram.com/maplelabs',
     officeAddress1: '152, Siddhi Vinayak Towers, Sarjapur - Marathahalli Road, Jakkasandra, 1st Block, Koramangala, Bangalore – 560034',
     officeAddress2: '1248 Reamwood Ave, Sunnyvale, CA 94089',
-    services: ['Performance Engineering', 'Dev Ops', 'Site Reliability Engineering', 'Implementation Services']
+    services: ['Performance Engineering', 'Dev Ops', 'Site Reliability Engineering', 'Implementation Services'],
+    discordLink: 'https://discord.gg/XQudKrsmdk'
 
 }

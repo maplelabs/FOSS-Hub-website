@@ -1,6 +1,7 @@
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import discordLink from '../../maplelabs.config'
 export default function GettingStartedCard() {
     return (
         <div id='getstarted' className='uk-width-1-1'>
@@ -13,7 +14,7 @@ export default function GettingStartedCard() {
                         <p>You can get started by choosing a <a href="#">project</a> you want to use/contribute-to and go to the respective github link.</p>
                         <hr className='uk-margin-remove-bottom'/>
                         <h3 className="uk-card-title uk-text-bold">It is easy to get started if you join our open source discord community</h3>
-                        <button className="uk-button uk-button-primary  uk-text-bold" style={{backgroundColor:'#0362A7',fontSize:'16px'}}>Click to join</button>
+                        <button href={discordLink} className="uk-button uk-button-primary  uk-text-bold" style={{backgroundColor:'#0362A7',fontSize:'16px'}}>Click to join</button>
                 </div>
                 </div>
                 </div>
