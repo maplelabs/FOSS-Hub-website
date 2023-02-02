@@ -29,7 +29,7 @@ module.exports = {
 
     textInintroSection1: 'Embracing Collabration.',
     textInintroSection2: 'Embracing Open Source.',
-    introSectionDescription: 'We at MapleLabs believe open source solves real-world problems. We are a passionate, open-minded and focused group of software enthusiasts pushing boundaries with an aim to create unparalleled software experience.',
+    introSectionDescription: "We at MapleLabs believe open source solves real-world problems. We are a passionate, open-minded and focused group of software enthusiasts pushing boundaries with an aim to contribute back to open-source by developing value adding applications, tools, plugins, utilities, etc relevant to company's product/services' offerings.",
 
     githubUrl: 'https://github.com/maplelabs',
 
