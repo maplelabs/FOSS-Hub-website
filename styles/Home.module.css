@@ -143,7 +143,7 @@ left: 0;
   background-size: 75px;
 }
 .intro-background{
-  background-image: url('../public/images/background_intro2.png');
+  background-image: url('../public/images/background_intro.svg');
   background-size: cover;
   min-height: 85vh;
   background-position-y: bottom;
@@ -187,4 +187,20 @@ left: 0;
   width: 100vw;
   padding-top: 120px !important;
   padding-bottom: 120px !important;
+}
+
+.get-started-section-card {
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%),url('../public/images/checks.svg');
+  background-size: cover;
+
+}
+
+@media only screen and (min-width: 640px){
+  .intro-section .content-height{
+    height:72vh !important;
+  }
+}
+
+.intro-section .content-height{
+  height:80vh !important;
 }

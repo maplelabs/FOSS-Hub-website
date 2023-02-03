@@ -21,7 +21,7 @@ a {
 * {
   box-sizing: border-box;
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -31,7 +31,7 @@ a {
     color: white;
     background: black;
   }
-}
+} */
 
 .uk-button {
   border-radius: .5rem !important;
@@ -50,7 +50,12 @@ a {
 .color-black {
   color: #000000 !important;
 }
-
+.color-lead {
+  color: #17181A !important;
+}
+.color-nickel {
+  color: #575757 !important;
+}
 .view-all {
   background: url('/public/images/cornered_btn.svg') 1px 3px no-repeat !important;
   width: 130px;
@@ -83,7 +88,7 @@ a {
   transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 .nav-bg li>a{
-  color: #222 !important;
+  color: #000 !important;
 }
 .nav-bg-dark li>a{
   color: #fff !important;
@@ -236,4 +241,25 @@ a {
   width: 100vw;
   padding-top: 120px !important;
   padding-bottom: 120px !important;
+}
+
+.uk-link{
+  color: #0362A7E5 !important;
+}
+.height-auto{
+  height: auto;
+}
+.height-350{
+  height: 350px;
+}
+.pos-relative{
+  position: relative;
+}
+@media only screen and (max-width: 640px){
+  .uk-heading-small{
+    font-size: 2rem !important;
+  }
+  .uk-text{
+    font-size: 14px !important;
+  }
 }

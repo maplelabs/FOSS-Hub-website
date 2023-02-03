@@ -34,12 +34,12 @@ export default function TopContributors({ data }) {
                     alt={user.login}
                     style={{ border: "1px solid #D9D9D9" }}
                   />
-                  <h3 className="uk-card-title uk-text-bolder uk-margin-small-top">
+                  <h3 className="uk-card-title uk-text-bolder uk-margin-small-top uk-margin-small-bottom">
                     {user.name || user.login}
                   </h3>
                   <p className=" uk-margin-remove-top">{user._repo[0]}</p>
                   <Link href={user.html_url} target='_blank'>
-                  <button className="uk-button uk-button-link uk-button uk-link uk-text-primary">
+                  <button className="uk-button uk-button-link uk-button uk-link">
                     {" "}
                     <span
                       uk-icon="github"

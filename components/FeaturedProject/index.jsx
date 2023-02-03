@@ -7,7 +7,7 @@ import ProjectCard from '../Project';
 export default function FeaturedProject({data}){
     return (
       <div id='projects' className="uk-width-1-1">
-          <div className="uk-section uk-dark">
+          <div className="uk-section uk-dark" style={{marginBottom:'-20px'}}>
             <div className="uk-container">
               <div className="uk-flex uk-flex-between uk-margin-medium-bottom">
                 <div className="uk-h1 uk-text-bolder uk-margin-small-bottom color-midnight-blue">

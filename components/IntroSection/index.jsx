@@ -16,8 +16,7 @@ export default function IntroSection() {
         >
           <div className="uk-container uk-container uk-flex">
             <div id="intro-section"
-              className="uk-padding uk-flex uk-flex-column uk-flex-center uk-height-1-1 "
-              style={{ height: "65vh" }}
+              className={"uk-padding uk-padding-remove-horizontal uk-flex uk-flex-column uk-flex-center uk-height-1-1 " + styles['content-height']}
             >
               <div className="uk-heading-small color-white uk-margin-remove-bottom">
                 {textInintroSection1}

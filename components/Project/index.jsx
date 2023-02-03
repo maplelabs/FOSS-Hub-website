@@ -9,10 +9,10 @@ export default function ProjectCard({ data }) {
         </div>
 
         <div>
-          <h3 className="uk-h4 uk-text-bolder uk-margin-small-bottom">{data.name}</h3>
+          <h3 className="uk-h4 uk-text-bolder color-black uk-margin-small-bottom">{data.name}</h3>
         </div>
         <div>
-          <p className='uk-text-small uk-text-secondary'>{data.description}</p>
+          <p className='uk-text-small color-lead uk-text-secondary'>{data.description}</p>
         </div>
         <div>
           {data.languages.map((lang) => (

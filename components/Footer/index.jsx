@@ -16,7 +16,7 @@ export default function Footer() {
                     {/* <hr /> */}
                     <div className="uk-grid uk-child-width-expand@s" uk-grid='true'>
                     <span className="uk-width-auto uk-margin-small-right" uk-icon="location"></span>  
-                        <div className='uk-padding-remove-left'>
+                        <div className=''>
                             <div>
                            <p className="uk-text-small uk-text-bold">
                                     INDIAN OFFICE
