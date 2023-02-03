@@ -42,6 +42,9 @@ module.exports = {
     officeAddress1: '152, Siddhi Vinayak Towers, Sarjapur - Marathahalli Road, Jakkasandra, 1st Block, Koramangala, Bangalore – 560034',
     officeAddress2: '1248 Reamwood Ave, Sunnyvale, CA 94089',
     services: ['Performance Engineering', 'Dev Ops', 'Site Reliability Engineering', 'Implementation Services'],
-    discordLink: 'https://discord.gg/XQudKrsmdk'
+    discordLink: 'https://discord.gg/XQudKrsmdk',
+    privacyPolicy: 'https://www.maplelabs.com/privacy_policy.html',
+    termsofUse: 'https://www.maplelabs.com/terms.html',
+    cookiePolicy: 'https://www.maplelabs.com/cookies.html'
 
 }

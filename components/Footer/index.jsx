@@ -1,6 +1,6 @@
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
-import { organizationName, footerInstagramUrl, footerLinkedinUrl, officeAddress1, officeAddress2, services } from '../../maplelabs.config'
+import { organizationName, footerInstagramUrl, footerLinkedinUrl, officeAddress1, officeAddress2, services, privacyPolicy, termsofUse, cookiePolicy } from '../../maplelabs.config'
 export default function Footer() {
     return (
         <>
@@ -89,9 +89,9 @@ export default function Footer() {
                     <div className='uk-flex uk-flex-between'>
                         <div className='uk-text-meta'>Copyright © {new Date().getFullYear()} {organizationName}. All rights reserved.</div>
                         <div className="uk-grid-divider  uk-text-meta" uk-grid="true">
-                            <a href='#'>Privacy Policy</a>
-                            <a href='#'>Terms of Use</a>
-                            <a href='#'>Cookie Policy</a>
+                            <a href={privacyPolicy}>Privacy Policy</a>
+                            <a href={termsofUse}>Terms of Use</a>
+                            <a href={cookiePolicy}>Cookie Policy</a>
                         </div>
                     </div>
                 </div>

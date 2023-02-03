@@ -10,7 +10,7 @@ export default function GettingStartedCard() {
                 <div className={"uk-card uk-card-default uk-card-body uk-width-1-1 uk-child-width-1-2@m uk-child-width-1-1@s "+ styles['get-started-section-card']}>
                     <div style={{position:'relative',zIndex:10}} >
                         <div className="uk-h1 uk-text-bolder color-midnight-blue">Getting Started</div>
-                        <p className='color-nickel'>You can get started by choosing a <a href="#" className='uk-link'>project</a> you want to use/contribute-to and go to the respective github link.</p>
+                        <p className='color-nickel'>You can get started by choosing a <a href="#projects" className='uk-link'>project</a> you want to use/contribute-to and go to the respective github link.</p>
                         <hr className='uk-margin-remove-bottom'/>
                         <h3 className="uk-card-title uk-text-bold">It is easy to get started if you join our open source discord community</h3>
                         <button onClick={() => window.open(discordLink, '_blank')} className="uk-button uk-button-primary  uk-text-bold" style={{backgroundColor:'#0362A7',fontSize:'16px'}}>Click to join</button>
