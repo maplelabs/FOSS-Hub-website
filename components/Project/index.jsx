@@ -15,7 +15,7 @@ export default function ProjectCard({ data }) {
           <p className='uk-text-small color-lead uk-text-secondary'>{data.description}</p>
         </div>
         <div>
-          {data.languages.map((lang) => (
+          {data.languages?.map((lang) => (
             <span
               className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
               key={lang}
@@ -27,7 +27,7 @@ export default function ProjectCard({ data }) {
 
         <div className="uk-width-expand uk-padding-small uk-padding-remove-horizontal">
           <div className="uk-flex uk-flex-nowrap uk-margin-remove-bottom">
-            {data.top_contributors.map((user) => (
+            {data.top_contributors?.map((user) => (
               <img
                 className="uk-comment-avatar contributors uk-border-circle"
                 uk-tooltip={`title: ${user.login}; pos: bottom`}

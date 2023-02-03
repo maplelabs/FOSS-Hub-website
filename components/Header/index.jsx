@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { title, tagline, favicon, description, navbarLogo } from '../../maplelabs.config';
 import styles from '../../styles/Home.module.css'
-export default function Header() {
+export default function Header({showNavItems}) {
   return (
     <>
       <Head>
@@ -24,7 +24,7 @@ export default function Header() {
                 </div> */}
               </Link>
             </div> 
-            <div className="uk-navbar-right uk-visible@m ">
+            {showNavItems && <div className="uk-navbar-right uk-visible@m ">
             {/* <div className="uk-navbar-center uk-visible uk-hidden@s"> */}
               <ul className='uk-navbar-nav'>
                 <li>
@@ -42,7 +42,7 @@ export default function Header() {
                   <a href="#blogs" data-uk-scroll='offset:80' className="uk-text-capitalize">Blogs</a>
                 </li>
               </ul>
-            </div>           
+            </div> }          
           </div>
         </nav>
       </div>

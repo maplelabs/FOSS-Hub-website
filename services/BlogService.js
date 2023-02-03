@@ -39,6 +39,11 @@ class BlogService {
         return `https://ui-avatars.com/api/?background=${COLORS[i%3].bg}&color=${COLORS[i%3].fg}&name=${name}&size=128&font-size=0.4`
     }
 
+    getRecentBlogs(currentBlog){
+        let blogs = this.getBlogs().filter(blog=>blog.frontMatter.title !== currentBlog.title).sort((a, b) => new Date(b.frontMatter.data) > new Date(a.frontMatter.data) ? 1 : -1).slice(0,3);
+        return blogs
+    }
+
 }
 
 export default new BlogService()

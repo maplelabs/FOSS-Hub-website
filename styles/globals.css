@@ -42,11 +42,9 @@ a {
 .color-white {
   color: #fff;
 }
-
 .color-midnight-blue {
   color:  #1F284F !important;
 }
-
 .color-black {
   color: #000000 !important;
 }
@@ -56,6 +54,10 @@ a {
 .color-nickel {
   color: #575757 !important;
 }
+.color-blue {
+  color: #0362A7 !important;
+}
+
 .view-all {
   background: url('/public/images/cornered_btn.svg') 1px 3px no-repeat !important;
   width: 130px;

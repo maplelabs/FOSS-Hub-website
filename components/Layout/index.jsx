@@ -4,7 +4,7 @@ import Header from "../Header";
 export default function Layout({children}){
     return(
         <>
-        <Header/>
+        <Header showNavItems={true}/>
         <main>{children}</main>
         <Footer/>
         </>
