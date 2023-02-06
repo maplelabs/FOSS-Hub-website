@@ -21,12 +21,12 @@ export default function BlogsSection({ data }) {
           </div>
           {data.length > 3 ?
             <>
-              <HorizontalBlogCard blog={data[0]}></HorizontalBlogCard>
+              <HorizontalBlogCard key={data.slug} blog={data[0]}></HorizontalBlogCard>
               <div className="uk-child-width-1-3@l uk-child-width-1@s uk-text-left uk-grid-match" data-uk-grid>
                 {data.slice(1).map((blog) =>
                   <BlogCard blog={blog} key={blog.slug}></BlogCard>)}
               </div>
-            </> : <> {data.map((blog) => <HorizontalBlogCard blog={blog}></HorizontalBlogCard>)}
+            </> : <> {data.map((blog) => <HorizontalBlogCard key={blog.slug} blog={blog}></HorizontalBlogCard>)}
             </>
           }
         </div>
