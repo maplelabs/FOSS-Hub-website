@@ -60,7 +60,7 @@ export default function Blog({ frontmatter, content, blog }) {
   return (
     <div>
       <div>
-        <img src={frontmatter.banner} style={{ objectFit: 'cover', height: '450px', width: '100%' }} alt=''></img>
+        <img className={styles.banner + ' ' + styles['img-style']} src={frontmatter.banner} alt=''></img>
       </div>
       <div className={`uk-container-small uk-container uk-position-relative uk-margin-large-left uk-padding-remove-horizontal`}>
         <nav aria-label="Breadcrumb">

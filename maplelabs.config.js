@@ -33,10 +33,14 @@ module.exports = {
 
     githubUrl: 'https://github.com/maplelabs',
 
-    //blogs
+    featuredVideos : [
+        {
+            videoLink : 'https://www.youtube.com/watch?v=JLmei2IUDm0',
+            thumbnail: '/images/videos/Thumbnail1.png',
+            title : 'WHAT, WHY AND HOW OF OPEN SOURCE',
+        },
+    ],
 
-    // footerWebsiteUrl: 'https://www.maplelabs.com',
-    // footerDiscordUrl: 'https://www.maplelabs.com',
     footerLinkedinUrl: 'https://in.linkedin.com/company/maplelabs-cloud-solutions',
     footerInstagramUrl: 'https://www.instagram.com/maplelabs',
     officeAddress1: '152, Siddhi Vinayak Towers, Sarjapur - Marathahalli Road, Jakkasandra, 1st Block, Koramangala, Bangalore – 560034',
