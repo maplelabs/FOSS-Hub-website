@@ -8,11 +8,14 @@ import TopContributors from "../components/TopContributors";
 import GettingStartedCard from "../components/GettingStartedCard";
 import { useEffect } from "react";
 import uikit from "uikit";
+import FeaturedVideos from "../components/FeaturedVideos";
 
 // import 'uikit/dist/js/uikit.js'
 // import projectImg from '../public/images/favicon.ico'
 
 export default function Home({featuredProjects,featuredBlogs,topContributors}) {
+  let errMsg;
+  featuredProjects.includes('AxiosError: Request failed with status code 404') ? errMsg = 'Error: Request failed with status code 404' : featuredProjects.includes('AxiosError: Request failed with status code 403') ? errMsg = 'Github API exceeds the limit' : errMsg='';
   useEffect(() => {
     const el = uikit.util.$("#intro-section");
     const nav = uikit.util.$("#nav");
@@ -38,6 +41,7 @@ export default function Home({featuredProjects,featuredBlogs,topContributors}) {
         <GettingStartedCard></GettingStartedCard>
         <BlogsSection data={featuredBlogs}></BlogsSection>
         <TopContributors data={topContributors}></TopContributors>
+        <FeaturedVideos />
       </main>
     </div>
   );

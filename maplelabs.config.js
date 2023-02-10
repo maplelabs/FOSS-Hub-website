@@ -37,7 +37,7 @@ module.exports = {
         {
             videoLink : 'https://www.youtube.com/watch?v=JLmei2IUDm0',
             thumbnail: '/images/videos/Thumbnail1.png',
-            title : 'WHAT, WHY AND HOW OF OPEN SOURCE',
+            title : 'What, Why And How Of Open Source',
         },
     ],
 
