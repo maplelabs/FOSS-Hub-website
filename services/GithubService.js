@@ -1,7 +1,7 @@
 import Axios from 'axios'
 import fs from 'fs'
 import path from 'path'
-import { projects as Project } from '../maplelabs.config'
+import { projects as Project, excludeTopContributors } from '../maplelabs.config'
 const COLORS = [
     { bg: 'F8C02F', fg: '4E2E07' },
     { bg: '0362A7', fg: 'FFF' },
@@ -106,7 +106,11 @@ class GithibService {
             return obj;
         }, {});
 
-        contributors = [...Object.values(combinedContributors)].sort((a, b) => b.contributions - a.contributions).slice(0, 5);
+        contributors = [...Object.values(combinedContributors)].sort((a, b) => b.contributions - a.contributions)
+        if (excludeTopContributors.length > 0) {
+            contributors = contributors.filter((user) => !excludeTopContributors.includes(user.login))
+        }
+        contributors = contributors.slice(0, 5);
 
         let topFive = await Promise.all(contributors.map(async (data) => {
             const name = await this.fetchUserName(data.url)
