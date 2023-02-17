@@ -19,7 +19,7 @@ export default function BlogsSection({ data }) {
               </Link>
             </div>
           </div>
-          {data.length > 3 ?
+          {true ?
             <>
               <HorizontalBlogCard key={data.slug} blog={data[0]}></HorizontalBlogCard>
               <div className="uk-child-width-1-3@l uk-child-width-1@s uk-text-left uk-grid-match" data-uk-grid>

@@ -9,6 +9,7 @@ import GettingStartedCard from "../components/GettingStartedCard";
 import { useEffect } from "react";
 import uikit from "uikit";
 import FeaturedVideos from "../components/FeaturedVideos";
+import BlockIcon from "../components/BlockIcon";
 
 // import 'uikit/dist/js/uikit.js'
 // import projectImg from '../public/images/favicon.ico'
@@ -33,10 +34,15 @@ export default function Home({featuredProjects,featuredBlogs,topContributors}) {
       nav.classList.remove("nav-bg");
     });
   }, []);
+  const a=[]
+  for(let i=0;i<20;i++){
+    a.push(<BlockIcon icon={i} color={{bg:'#000',fg:'#fff'}}></BlockIcon>)
+  }
   return (
     <div >
       <main className={styles.main}>
         <IntroSection></IntroSection>
+        {/* {a} */}
         <FeaturedProject data={featuredProjects}></FeaturedProject>
         <GettingStartedCard></GettingStartedCard>
         <BlogsSection data={featuredBlogs}></BlogsSection>

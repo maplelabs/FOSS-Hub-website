@@ -62,17 +62,22 @@ export default function Blog({ frontmatter, content, blog }) {
       <div>
         <img className={styles.banner + ' ' + styles['img-style']} src={frontmatter.banner} alt=''></img>
       </div>
-      <div className={`uk-container-small uk-container uk-position-relative uk-margin-large-left uk-padding-remove-horizontal`}>
-        <nav aria-label="Breadcrumb">
+      <div className={`uk-container`}>
+        
+      <nav aria-label="Breadcrumb">
           <ul className="uk-breadcrumb uk-margin-small-top">
             <li><Link href="/">Home</Link></li>
             <li><Link href="#">{frontmatter.title}</Link></li>
           </ul>
         </nav>
-        <h1 className={' uk-text-bolder uk-margin-small-bottom uk-padding uk-padding-remove-left uk-padding-remove-top uk-margin-xlarge-right'}>{frontmatter.title}</h1>
-        <div className={styles.blog_content + ' uk-padding uk-padding-remove-left uk-padding-remove-top uk-margin-xlarge-right'} dangerouslySetInnerHTML={{ __html: html }} />
-        <div className={styles.sidebar_right + ' uk-visible@l uk-margin-large-top uk-margin-medium-right'}>
-          <div uk-sticky="end: !.uk-height-large; start: 100%">
+        <div className='uk-flex uk-position-relative'>
+        <div className='uk-width-4-5@l uk-margin-medium-right'>
+        <h1 className={' uk-text-bolder uk-margin-small-bottom uk-padding uk-padding-remove-left uk-padding-remove-top '}>{frontmatter.title}</h1>
+        <div className={styles.blog_content + ' uk-padding uk-padding-remove-left uk-padding-remove-top '} dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+       
+        <div className={styles.sidebar_right + ' uk-visible@l uk-width-2-5@l'}>
+          <div>
             {blog.length > 0 &&
               <><h2 className='uk-text-bolder'>Recent Posts</h2>
                 <ul className="uk-nav uk-nav-default">
@@ -82,6 +87,7 @@ export default function Blog({ frontmatter, content, blog }) {
             }
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

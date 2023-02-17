@@ -47,10 +47,10 @@
 
 
 .sidebar_right {
-    position: absolute;
-    top: 0;
-    left: calc(100% - 70px);
-    width: 371px;
+    /* position: absolute;
+    top: 0; */
+    /* left: calc(100% - 70px);
+    width: 371px; */
 }
 
 .banner {

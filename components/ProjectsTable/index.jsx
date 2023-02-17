@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BlockIcon from "../BlockIcon";
 
 export default function ProjectsTable({ data }) {
   
@@ -16,18 +17,12 @@ export default function ProjectsTable({ data }) {
           </thead>
           <tbody>
             {data.map((row) => (
-              <tr>
+              <tr key={row.html_url}>
                 <td>
                  <Link target="_blank" rel="noopener noreferrer" href={row.html_url} className="hover">
                   <div className=" uk-flex uk-flex-row">
                     <div className=" uk-margin-small-right">
-                      <img
-                        className="uk-border-circle "
-                        src={row.icon_url}
-                        width="40"
-                        height="40"
-                        alt=""
-                      ></img>
+                      <BlockIcon {...row.icon} ></BlockIcon>
                     </div>
                     <div>
                       <h3 className="uk-h4 uk-text-bolder uk-margin-small-bottom">
@@ -42,11 +37,11 @@ export default function ProjectsTable({ data }) {
                 </td>
                 <td>
                   <div className=" uk-flex uk-flex-row ">
-                    {row.languages.map((Lang) => (
-                      <span
+                    {row.languages.map((lang) => (
+                      <span key={lang}
                       className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
                       >
-                        {Lang}
+                        {lang}
                       </span>
                     ))}
                   </div>
@@ -58,7 +53,7 @@ export default function ProjectsTable({ data }) {
                 </td>
                 <td className="uk-flex uk-flex-row">
                   {row.topics.map((topic) => (
-                    <span
+                    <span key={topic}
                     className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
                     >
                       {topic}

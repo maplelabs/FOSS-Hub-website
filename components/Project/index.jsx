@@ -1,11 +1,13 @@
 import Link from 'next/link'
+import BlockIcon from '../BlockIcon';
 export default function ProjectCard({ data }) {
   return (
     <Link target="_blank" rel="noopener noreferrer" href={data.html_url} className="hover">
       <div className="uk-card uk-card-small uk-card-default uk-card-body uk-card-hover">
         <div className='uk-margin-small-top uk-margin-small-left uk-margin-small-right uk-margin-small-bottom'>
         <div className="uk-margin-small-bottom uk-border-circle">
-          <img className="uk-border-circle" src={data.icon_url} width="56" height={56} alt=""></img>
+          <BlockIcon {...data.icon} ></BlockIcon>
+          {/* <img className="uk-border-circle" src={data.icon_url} width="56" height={56} alt=""></img> */}
         </div>
 
         <div>

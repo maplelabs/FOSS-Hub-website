@@ -275,3 +275,9 @@ a {
     font-size: 14px !important;
   }
 }
+
+.recent_thumbnail{
+  width: 180px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}

@@ -9,10 +9,10 @@ export default function BlogCard({ blog }) {
                     <div class="uk-card-media-top">
                         <img src={blog.frontMatter.thumbnail} width="1800" height="1200" alt="" />
                     </div>
-                    <div class="uk-card-body">
+                    <div class="uk-card-body uk-margin-medium-bottom">
                         <h4 className="uk-text-bolder">{blog.frontMatter.title}</h4>
                         <p>{blog.frontMatter.description}</p>
-                        <div class="uk-position-bottom uk-padding-small uk-flex uk-flex-between">
+                        <div class="uk-position-bottom uk-padding uk-padding-remove-bottom uk-margin-medium-bottom uk-flex uk-flex-between">
                         <Link href={`blogs/${blog.slug}`}><button className='uk-text-bold uk-button uk-button-link'>Read More <span uk-icon="arrow-right"></span></button></Link>
                         <div >
                             <Image src={blog.frontMatter.author_avatar} width={40} height={40} className='uk-border-circle' style={{ border: '1px solid #D9D9D9' }} />
