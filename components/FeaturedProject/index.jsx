@@ -26,7 +26,7 @@ export default function FeaturedProject({ data }) {
           </div>
           {tabularView ? (
             <div className="uk-child-width-1-4@m uk-text-left uk-grid uk-grid-small uk-grid-match" data-uk-grid>
-              {data.map(project => <ProjectCard data={project}></ProjectCard>)}
+              {data.map(project => <ProjectCard data={project} key={project.id}></ProjectCard>)}
             </div>) : (
             <ProjectsTable data={data} key={data.id}></ProjectsTable>
           )}
