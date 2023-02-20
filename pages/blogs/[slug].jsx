@@ -48,13 +48,13 @@ export default function Blog({ frontmatter, content, blog }) {
   const [sections, setSections] = useState([]);
   useEffect(() => {
     setTime(Math.ceil(content.match(/\w+/g).length / 200));
-    const renderedHtml = md().use(require('markdown-it-github-headings'), { prefix: 'section-' }).render(content)
-    const labelList = content.match(/\n#{1,6}.+/g).map(val => val.replace(/\n#{1,6} /g, ''))
-    const sectionList = renderedHtml.match(/id="section-(.*?)"/g).map((val, i) => {
-      const id = val.replace(/id="/g, '#').replace('"', '');
-      return { id, label: labelList[i] }
-    })
-    setSections(sectionList)
+    const renderedHtml = md().render(content)
+    // const labelList = content.match(/\n#{1,6}.+/g).map(val => val.replace(/\n#{1,6} /g, ''))
+    // const sectionList = renderedHtml.match(/id="section-(.*?)"/g).map((val, i) => {
+    //   const id = val.replace(/id="/g, '#').replace('"', '');
+    //   return { id, label: labelList[i] }
+    // })
+    // setSections(sectionList)
     setHtml(renderedHtml)
   }, [content])
   return (
