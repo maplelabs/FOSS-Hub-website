@@ -27,7 +27,7 @@ export default function ProjectCard({ data }) {
           ))}
         </div>
 
-        <div className="uk-width-expand uk-padding-small uk-padding-remove-horizontal">
+        <div className="uk-width-expand uk-padding-small uk-padding-remove-horizontal uk-padding-remove-bottom">
           <div className="uk-flex uk-flex-nowrap uk-margin-remove-bottom">
             {data.top_contributors?.map((user) => (
               <img

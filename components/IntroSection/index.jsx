@@ -4,7 +4,6 @@ import styles from "../../styles/Home.module.css";
 import { textInintroSection1, textInintroSection2, introSectionDescription, githubUrl, organizationName } from '../../maplelabs.config';
 
 export default function IntroSection() {
-
   return (
     <div className={styles.container}>
       <div className={styles['intro-section']}>
@@ -24,7 +23,7 @@ export default function IntroSection() {
               <div className="uk-heading-small uk-margin-remove-top uk-text-bolder color-white">
                 {textInintroSection2}
               </div>
-              <div className="uk-text">
+              <div className="uk-text uk-width-4-5">
                 {introSectionDescription}
               </div>
               <div className="uk-padding uk-padding-remove-horizontal">

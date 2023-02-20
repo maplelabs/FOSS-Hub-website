@@ -65,6 +65,7 @@ export default function ProjectsTable({ data }) {
                   <div className="uk-flex ">
                     {row.top_contributors.map((user) => (
                         <img
+                          key={user.html_url}
                           className="uk-comment-avatar contributors uk-border-circle"
                           uk-tooltip={`title: ${user.login}; pos: bottom`}
                           src={user.avatar_url}
