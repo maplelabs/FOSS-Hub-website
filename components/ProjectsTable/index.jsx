@@ -8,10 +8,10 @@ export default function ProjectsTable({ data }) {
         <table className="uk-table uk-table-divider ">
           <thead>
             <tr>
-              <th>Project Name</th>
-              <th>Tech Stack</th>
-              <th>Category</th>
-              <th>Tags</th>
+              <th className="uk-width-large">Project Name</th>
+              <th className="uk-width-small">Tech Stack</th>
+              <th className="uk-width-small">Category</th>
+              <th className="uk-width-small">Tags</th>
               <th>Contributors</th>
             </tr>
           </thead>
@@ -22,13 +22,13 @@ export default function ProjectsTable({ data }) {
                  <Link target="_blank" rel="noopener noreferrer" href={row.html_url} className="hover">
                   <div className=" uk-flex uk-flex-row">
                     <div className=" uk-margin-small-right">
-                      <BlockIcon {...row.icon} ></BlockIcon>
+                      <BlockIcon {...row.icon} scale={'0.7'} ></BlockIcon>
                     </div>
                     <div>
                       <h3 className="uk-h4 uk-text-bolder uk-margin-small-bottom">
                         {row.name}
                       </h3>
-                      <div className='uk-text-small color-lead uk-text-secondary uk-width-large'>
+                      <div className='uk-text-small color-dark-cyan-blue uk-width-large'>
                         {row.description}
                       </div>
                     </div>
@@ -53,6 +53,7 @@ export default function ProjectsTable({ data }) {
                 </td>
                 <td className="uk-flex uk-flex-row">
                   {row.topics.map((topic) => (
+                    topic !== 'Featured' || topic !== 'Contributions-Welcome' &&
                     <span key={topic}
                     className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
                     >
@@ -63,12 +64,6 @@ export default function ProjectsTable({ data }) {
                 <td>
                   <div className="uk-flex ">
                     {row.top_contributors.map((user) => (
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        key={user.login}
-                        href={user.html_url}
-                      >
                         <img
                           className="uk-comment-avatar contributors uk-border-circle"
                           uk-tooltip={`title: ${user.login}; pos: bottom`}
@@ -76,8 +71,8 @@ export default function ProjectsTable({ data }) {
                           width="25"
                           height="25"
                           alt=""
+                          onClick={() => window.open(user.html_url, '_blank', 'noreferrer')}
                         />
-                      </a>
                     ))}
                     {/* <div>
                       {row.contributors.length > 3 && (

@@ -57,6 +57,9 @@ a {
 .color-blue {
   color: #0362A7 !important;
 }
+.color-dark-cyan-blue {
+  color: #5a5d62 !important;
+}
 
 .view-all {
   background: url('/public/images/cornered_btn.svg') 1px 3px no-repeat !important;
