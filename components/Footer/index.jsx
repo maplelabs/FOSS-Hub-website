@@ -55,7 +55,8 @@ export default function Footer() {
                                 SERVICES
                             </p>
                             <ul className='uk-list uk-text-meta'>
-                               {services.map((service)=> <li key={service}>{service}</li>)}
+                               {services.map((service)=> <li key={service}>
+                                <Link href={service.url} target="_blank" rel="noreferrer noopener">{service.name}</Link></li>)}
                             </ul>
                         </div>
                         <div>
