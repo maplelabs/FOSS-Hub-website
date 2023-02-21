@@ -51,6 +51,10 @@ module.exports = {
     discordLink: 'https://discord.gg/XQudKrsmdk',
     privacyPolicy: 'https://www.maplelabs.com/privacy_policy.html',
     termsofUse: 'https://www.maplelabs.com/terms.html',
-    cookiePolicy: 'https://www.maplelabs.com/cookies.html'
+    cookiePolicy: 'https://www.maplelabs.com/cookies.html',
+    productsURL: 'https://www.snappyflow.io/',
+    whatwedoURL: 'https://www.maplelabs.com/index.html',
+    careersURL: 'https://jobs.maplelabs.com/jobs/Careers',
+    contactusURL: 'https://www.maplelabs.com/getstarted.html'
 
 }

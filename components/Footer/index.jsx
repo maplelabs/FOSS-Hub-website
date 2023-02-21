@@ -1,6 +1,7 @@
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
-import { organizationName, footerInstagramUrl, footerLinkedinUrl, officeAddress1, officeAddress2, services, privacyPolicy, termsofUse, cookiePolicy } from '../../maplelabs.config'
+import { organizationName, footerInstagramUrl, footerLinkedinUrl, officeAddress1, 
+    officeAddress2, services, privacyPolicy, termsofUse, cookiePolicy, productsURL, whatwedoURL, careersURL, contactusURL } from '../../maplelabs.config'
 export default function Footer() {
     return (
         <>
@@ -19,7 +20,7 @@ export default function Footer() {
                         <div className=''>
                             <div>
                            <p className="uk-text-small uk-text-bold">
-                                    INDIAN OFFICE
+                                    INDIA OFFICE
                                 </p>
                                 <p className='uk-text-meta'>{officeAddress1}</p>
                             </div>
@@ -30,7 +31,7 @@ export default function Footer() {
                                 <p className='uk-text-meta'>{officeAddress2}</p>
                             </div>
                         </div>
-                        <div>
+                        {/* <div>
                             <p className="uk-text-small uk-text-bold">
                                 QUICK CONNECT
                             </p>
@@ -48,7 +49,7 @@ export default function Footer() {
                                     <a href="#">Getting Started</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div>
                             <p className="uk-text-small uk-text-bold">
                                 SERVICES
@@ -62,20 +63,20 @@ export default function Footer() {
                                 COMPANY
                             </p>
                             <ul className='uk-list uk-text-meta'>
+                                {/* <li>
+                                    <Link href={}>About</Link>
+                                </li> */}
                                 <li>
-                                    Our Products
+                                    <Link href={productsURL} target="_blank" rel="noreferrer noopener">Our Products</Link>
                                 </li>
                                 <li>
-                                    Documentation
+                                    <Link href={whatwedoURL} target="_blank" rel="noreferrer noopener">What we do?</Link>
                                 </li>
                                 <li>
-                                    Our Services
+                                    <Link href={careersURL} target="_blank" rel="noreferrer noopener">Careers</Link>
                                 </li>
                                 <li>
-                                    Company
-                                </li>
-                                <li>
-                                    What we do ?
+                                    <Link href={contactusURL} target="_blank" rel="noreferrer noopener">Contact Us</Link>
                                 </li>
                             </ul>
                         </div>
