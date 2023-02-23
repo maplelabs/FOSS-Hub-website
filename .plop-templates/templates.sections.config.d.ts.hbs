@@ -1,0 +1,12 @@
+/**
+ * Files generated using template generator
+ */
+export interface {{pascalCase name}}Props {
+    [k: string]: unknown;
+}
+
+export interface {{pascalCase name}}Schema {
+  template: typeof {{pascalCase name}};
+  data: Partial<{{pascalCase name}}Props>;
+  dynamicData: () => Partial<{{pascalCase name}}Props>;
+}
