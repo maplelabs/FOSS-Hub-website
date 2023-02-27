@@ -44,15 +44,11 @@ export default function Home({
       nav.classList.remove('nav-bg');
     });
   }, []);
-  const a = [];
-  for (let i = 0; i < 20; i++) {
-    a.push(<BlockIcon icon={i} color={{ bg: '#000', fg: '#fff' }}></BlockIcon>);
-  }
+
   return (
     <div>
       <main className={styles.main}>
         <IntroSection></IntroSection>
-        {/* {a} */}
         <FeaturedProject data={featuredProjects}></FeaturedProject>
         <GettingStartedCard></GettingStartedCard>
         <BlogsSection data={featuredBlogs}></BlogsSection>

@@ -6,7 +6,7 @@ export interface {{pascalCase name}}Props {
 }
 
 export interface {{pascalCase name}}Schema {
-  template: typeof {{pascalCase name}};
+  template: '{{pascalCase name}}';
   data: Partial<{{pascalCase name}}Props>;
   dynamicData: () => Partial<{{pascalCase name}}Props>;
 }

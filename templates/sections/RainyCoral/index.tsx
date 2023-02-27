@@ -5,10 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import { FlatTilesProps } from './config';
+import { RainyCoralProps } from './config';
 import styles from './styles.module.css';
 
-export default function FlatTiles({ title,description,tiles }:FlatTilesProps) {
+export default function RainyCoral({ title,description,tiles }:RainyCoralProps) {
     return (
       <div className={`uk-width-1-1 ${styles.background}`}>
         <div className="uk-section ">

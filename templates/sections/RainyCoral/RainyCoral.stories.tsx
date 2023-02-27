@@ -5,17 +5,17 @@ import React from 'react';
 
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FlatTiles from './index';
+import RainyCoral from './index';
 
 export default {
-    title: 'Templates/Section/FlatTiles',
-    component: FlatTiles,
+    title: 'Templates/Section/RainyCoral | Grids',
+    component: RainyCoral,
     parameters: {
       layout: 'fullscreen',
     },
-  } as ComponentMeta<typeof FlatTiles>;
+  } as ComponentMeta<typeof RainyCoral>;
 
-export const Template: ComponentStory<typeof FlatTiles> = (args) => <FlatTiles {...args} />;
+export const Template: ComponentStory<typeof RainyCoral> = (args) => <RainyCoral {...args} />;
 
 Template.bind({})
 Template.args={

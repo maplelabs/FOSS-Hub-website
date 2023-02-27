@@ -1,17 +1,12 @@
 /**
  * Files generated using template generator
  */
-
-import FlatTiles from './';
-
-export interface FlatTilesProps {
+export interface RainyCoralProps {
   title: string;
   description?: string;
   tiles?: Tiles[];
 }
-/**
- * Card/Tile title
- */
+
 interface Tiles {
   id: string | number;
   title?: string;
@@ -26,8 +21,8 @@ interface Tiles {
   [k: string]: unknown;
 }
 
-export interface FlatTilesSchema {
-  template: typeof FlatTiles;
-  data: Partial<FlatTilesProps>;
-  dynamicData: () => Partial<FlatTilesProps>;
+export interface RainyCoralSchema {
+  template: 'RainyCoral';
+  data?: Partial<RainyCoralProps>;
+  dynamicData?: () => Partial<RainyCoralProps>;
 }
