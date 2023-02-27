@@ -1,4 +1,5 @@
 // SCHEMAS IMPORTS
+import { GoodFoxSchema } from './templates/sections/GoodFox/config';
 import { RainyCoralSchema } from './templates/sections/RainyCoral/config';
 
 interface Config {
@@ -13,6 +14,7 @@ type HeadersTemplates =
   null;
 type SectionsTemplates =
   // SECTIONS SCHEMAS
+	GoodFoxSchema |
 	RainyCoralSchema |
   null;
 type FootersTemplates =

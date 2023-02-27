@@ -1,4 +1,5 @@
 // COMPONENT IMPORTS
+import GoodFox from './sections/GoodFox';
 import RainyCoral from './sections/RainyCoral';
 import FlatTiles from './sections/FlatTiles';
 
@@ -11,6 +12,7 @@ export default {
   },
   sections: {
     // SECTIONS EXPORTS
+		GoodFox,
 		RainyCoral,
     FlatTiles,
   },
