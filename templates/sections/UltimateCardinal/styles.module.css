@@ -1,0 +1,8 @@
+.view_all {
+  background: url("../../../public/images/cornered_btn.svg") 1px 3px no-repeat !important;
+  width: 130px;
+}
+
+.blogs_section {
+  background: linear-gradient(135deg, #f5f0ff, #eff6fe, #edfaf5);
+}

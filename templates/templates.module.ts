@@ -1,7 +1,9 @@
 // COMPONENT IMPORTS
+import UltimateCardinal from './sections/UltimateCardinal';
+import SpotlessAntelope from './sections/SpotlessAntelope';
+import AggressiveClownfish from './sections/AggressiveClownfish';
 import GoodFox from './sections/GoodFox';
 import RainyCoral from './sections/RainyCoral';
-import FlatTiles from './sections/FlatTiles';
 
 export default {
   headers: {
@@ -12,8 +14,10 @@ export default {
   },
   sections: {
     // SECTIONS EXPORTS
+		UltimateCardinal,
+		SpotlessAntelope,
+		AggressiveClownfish,
 		GoodFox,
 		RainyCoral,
-    FlatTiles,
   },
 };

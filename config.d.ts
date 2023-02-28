@@ -1,4 +1,7 @@
 // SCHEMAS IMPORTS
+import { UltimateCardinalSchema } from './templates/sections/UltimateCardinal/config';
+import { SpotlessAntelopeSchema } from './templates/sections/SpotlessAntelope/config';
+import { AggressiveClownfishSchema } from './templates/sections/AggressiveClownfish/config';
 import { GoodFoxSchema } from './templates/sections/GoodFox/config';
 import { RainyCoralSchema } from './templates/sections/RainyCoral/config';
 
@@ -14,6 +17,9 @@ type HeadersTemplates =
   null;
 type SectionsTemplates =
   // SECTIONS SCHEMAS
+	UltimateCardinalSchema |
+	SpotlessAntelopeSchema |
+	AggressiveClownfishSchema |
 	GoodFoxSchema |
 	RainyCoralSchema |
   null;

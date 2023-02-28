@@ -1,0 +1,14 @@
+.intro-section {
+  /* background-image: url('../public/images/background2.svg'), url('../public/images/background3.svg'); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: right 110%, left bottom;
+  background-size: 75px;
+}
+.intro-background {
+  /* background-image: url("../../../public/images/background_intro.png"); */
+  background-size: cover;
+  min-height: 90vh;
+  background-position-y: bottom;
+  width: 100vw;
+}
