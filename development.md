@@ -42,7 +42,7 @@ To contribute to this repo, please follow these steps:
 6. Create a pull request by clicking the "New Pull Request" button on the original repository page.
 7. Wait for the project maintainers to review your pull request and merge it if it meets the project guidelines.
 
-This is a template driven codebase where we encourage developers to create new reusable templates which can be used to render the website. Please feel free to create generic templates which serves the purpose of rendering the content.
+This is a template driven codebase where we encourage developers to create new reusable templates which can be used to render the website. Please feel free to create generic templates which serves the purpose of rendering the content. Once you develop your template, please test it using the stroybook. You can aslo refer to the storybook for all existing templates.
 
 Please follow these setps to generate the boiler plate code for the template: 
 
@@ -51,6 +51,15 @@ cd FOSS-projects-website/
 yarn
 yarn gen
 ```
+
+Please follow these setps to host the storybook : 
+
+```shell
+cd FOSS-projects-website/
+yarn
+yarn storybook
+```
+The storybook will be running at [`http://localhost:6006`](http://localhost:6006)! 
 
 ### Getting Help
 
