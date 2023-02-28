@@ -44,7 +44,7 @@ export default function Home({
       nav.classList.remove('nav-bg');
     });
   }, []);
-
+  console.log(topContributors);
   return (
     <div>
       <main className={styles.main}>

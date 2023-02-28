@@ -6,16 +6,16 @@ export interface SpotlessAntelopeProps {
   subtitle: string;
   description: string;
   button: {
-    text: string,
-    url: string
+    text: string;
+    url: string;
   };
   image: {
-    url: string
+    url: string;
   };
 }
 
 export interface SpotlessAntelopeSchema {
   template: 'SpotlessAntelope';
-  data: Partial<SpotlessAntelopeProps>;
-  dynamicData: () => Partial<SpotlessAntelopeProps>;
+  data?: Partial<SpotlessAntelopeProps>;
+  dynamicData?: () => Partial<SpotlessAntelopeProps>;
 }

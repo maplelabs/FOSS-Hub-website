@@ -4,32 +4,24 @@ import UIKit from '../components/uikit';
 import config from '../template.config';
 import Components from '../templates/templates.module';
 
-export default function Template({ sections }) {
-  useEffect(() => {
-    const el = uikit.util.$('#intro-section');
-    const nav = uikit.util.$('#nav');
-    var sticky = uikit.sticky(nav);
-    uikit.scrollspy(el, { repeat: true, delay: 0 });
-    uikit.util.on(el, 'outview', function () {
-      console.log('out');
-      nav.classList.add('nav-bg');
-      nav.classList.remove('nav-bg-dark');
-      // nav.classList.add('')
-    });
-    uikit.util.on(el, 'inview', function () {
-      console.log('in');
-      nav.classList.add('nav-bg-dark');
-      nav.classList.remove('nav-bg');
-    });
-  }, []);
-
+export default function Template({ header, sections, footer }) {
+  const Header = ({ template, props }) => {
+    const Component = Components.headers[template];
+    return <Component {...props}></Component>;
+  };
+  const Footer = ({ template, props }) => {
+    const Component = Components.footers[template];
+    return <Component {...props}></Component>;
+  };
   return (
     <div>
       <main>
-        {sections.map(([template, props], index) => {
+        {header ? <Header {...header}></Header> : null}
+        {sections.map(({ template, props }, index) => {
           const Component = Components.sections[template];
           return <Component key={index} {...props}></Component>;
         })}
+        {footer ? <Footer {...footer}></Footer> : null}
       </main>
     </div>
   );
@@ -37,9 +29,15 @@ export default function Template({ sections }) {
 Template.getLayout = (page) => <UIKit>{page}</UIKit>;
 
 export async function getStaticProps() {
-  const sections = config.body.sections.map((item) => [
-    item.template,
-    item.data,
-  ]);
-  return { props: { sections } };
+  const extractTemplate = async (item) => {
+    const dynamicData = item.dynamicData ? await item.dynamicData() : {};
+    return {
+      template: item.template,
+      props: { ...item.data, ...dynamicData },
+    };
+  };
+  const sections = await Promise.all(config.body.sections.map(extractTemplate));
+  const header = config.header ? await extractTemplate(config.header) : null;
+  const footer = config.footer ? await extractTemplate(config.footer) : null;
+  return { props: { header, sections, footer } };
 }

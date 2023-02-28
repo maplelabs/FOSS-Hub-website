@@ -24,5 +24,5 @@ interface Tiles {
 export interface RainyCoralSchema {
   template: 'RainyCoral';
   data?: Partial<RainyCoralProps>;
-  dynamicData?: () => Partial<RainyCoralProps>;
+  dynamicData?: () => Promise<Partial<RainyCoralProps>>;
 }

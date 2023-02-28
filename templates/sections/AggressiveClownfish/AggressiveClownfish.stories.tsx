@@ -8,7 +8,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import AggressiveClownfish from './index';
 
 export default {
-    title: 'Templates/Section/AggressiveClownfish | Banner',
+    title: 'Templates/Section/AggressiveClownfish | Covers',
     component: AggressiveClownfish,
     parameters: {
       layout: 'fullscreen',

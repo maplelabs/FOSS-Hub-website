@@ -15,7 +15,7 @@ interface BlogItem {
 }
 
 export interface UltimateCardinalSchema {
-  template: "UltimateCardinal";
-  data: Partial<UltimateCardinalProps>;
-  dynamicData: () => Partial<UltimateCardinalProps>;
+  template: 'UltimateCardinal';
+  data?: Partial<UltimateCardinalProps>;
+  dynamicData?: () => Partial<UltimateCardinalProps>;
 }

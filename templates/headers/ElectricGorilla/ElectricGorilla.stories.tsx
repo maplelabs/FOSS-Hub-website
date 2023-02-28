@@ -8,7 +8,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import ElectricGorilla from './index';
 
 export default {
-    title: 'Templates/Section/ElectricGorilla',
+    title: 'Templates/Headers/ElectricGorilla',
     component: ElectricGorilla,
     parameters: {
       layout: 'fullscreen',

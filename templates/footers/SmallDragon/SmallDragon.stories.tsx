@@ -8,7 +8,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import SmallDragon from './index';
 
 export default {
-    title: 'Templates/Section/SmallDragon',
+    title: 'Templates/Footers/SmallDragon',
     component: SmallDragon,
     parameters: {
       layout: 'fullscreen',

@@ -6,15 +6,15 @@ export interface AggressiveClownfishProps {
   title2: string;
   description: string;
   button?: {
-    text: string,
-    icon: string,
-    url: string
-  }
+    text: string;
+    icon: string;
+    url: string;
+  };
   backgroundImage: string;
 }
 
 export interface AggressiveClownfishSchema {
-  template: "AggressiveClownfish";
-  data: Partial<AggressiveClownfishProps>;
-  dynamicData: () => Partial<AggressiveClownfishProps>;
+  template: 'AggressiveClownfish';
+  data?: Partial<AggressiveClownfishProps>;
+  dynamicData?: () => Partial<AggressiveClownfishProps>;
 }

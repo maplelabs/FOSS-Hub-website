@@ -2,12 +2,12 @@
  * Files generated using template generator
  */
 export interface SmallDragonProps {
-    [k: string]: unknown;
-    address?: Address[]; 
-    subSections?: SubSection[];
-    copyRight: string;
-    terms: SubSectionItems[];
-    social: SubSection;
+  [k: string]: unknown;
+  address?: Address[];
+  subSections?: SubSection[];
+  copyRight: string;
+  terms: SubSectionItems[];
+  social: SubSection;
 }
 
 interface SubSection {
@@ -27,6 +27,6 @@ interface Address {
 
 export interface SmallDragonSchema {
   template: 'SmallDragon';
-  data: Partial<SmallDragonProps>;
-  dynamicData: () => Partial<SmallDragonProps>;
+  data?: Partial<SmallDragonProps>;
+  dynamicData?: () => Partial<SmallDragonProps>;
 }
