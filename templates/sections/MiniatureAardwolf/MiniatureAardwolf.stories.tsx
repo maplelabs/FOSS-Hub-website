@@ -2,17 +2,20 @@
  * Files generated using template generator
  */
 import React from 'react';
+
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import FlatTiles_2 from './index';
+
+import MiniatureAardwolf from './index';
+
 export default {
-    title: 'Templates/Section/FlatTiles_2',
-    component: FlatTiles_2,
+    title: 'Templates/Section/MiniatureAardwolf | Grids',
+    component: MiniatureAardwolf,
     parameters: {
       layout: 'fullscreen',
     },
-  } as ComponentMeta<typeof FlatTiles_2>;
+  } as ComponentMeta<typeof MiniatureAardwolf>;
 
-export const Template: ComponentStory<typeof FlatTiles_2> = (args) => <FlatTiles_2 {...args} />;
+export const Template: ComponentStory<typeof MiniatureAardwolf> = (args) => <MiniatureAardwolf {...args} />;
 
 Template.bind({})
 Template.args={

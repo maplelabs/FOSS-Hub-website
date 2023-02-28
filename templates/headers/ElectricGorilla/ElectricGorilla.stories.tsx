@@ -19,15 +19,11 @@ export const Template: ComponentStory<typeof ElectricGorilla> = (args) => <Elect
 
 Template.bind({})
 Template.args={
-  title: 'OpenSource @ Maplelabs',
-  text: 'At MapleLabs we contribute back.',
   logo: {
     alternateText: 'Maple Labs Logo',
     darkMode: '/images/dark-logo.svg',
     lightMode: '/images/logo.svg',
   },
-  favicon: '/images/favicon.png',
-  show: true,
   menu: [
     {
       title: 'Projects',

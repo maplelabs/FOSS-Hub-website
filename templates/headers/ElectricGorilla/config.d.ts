@@ -3,11 +3,7 @@
  */
 export interface ElectricGorillaProps {
   [k: string]: unknown;
-  title: string;
-  text: string;
   logo: LogoProps;
-  favicon: string;
-  show: Boolean;
   menu?: Menu[];
 }
 

@@ -1,5 +1,9 @@
-// import { GoodFoxSchema } from './templates/sections/GoodFox/config';
-// import { MiniatureAardwolfSchema } from './templates/sections/MiniatureAardwolf/config';
+// SCHEMAS IMPORTS
+import { UltimateCardinalSchema } from './templates/sections/UltimateCardinal/config';
+import { SpotlessAntelopeSchema } from './templates/sections/SpotlessAntelope/config';
+import { AggressiveClownfishSchema } from './templates/sections/AggressiveClownfish/config';
+import { GoodFoxSchema } from './templates/sections/GoodFox/config';
+import { MiniatureAardwolfSchema } from './templates/sections/MiniatureAardwolf/config';
 import { SmallDragonSchema } from './templates/footers/SmallDragon/config';
 import { ElectricGorillaSchema } from './templates/headers/ElectricGorilla/config';
 import { AggressiveClownfishSchema } from './templates/sections/AggressiveClownfish/config';
@@ -26,6 +30,7 @@ type SectionsTemplates =
 	SpotlessAntelopeSchema |
 	AggressiveClownfishSchema |
 	GoodFoxSchema |
+	MiniatureAardwolfSchema |
 	RainyCoralSchema |
   null;
 type FootersTemplates =
