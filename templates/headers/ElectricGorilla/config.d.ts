@@ -13,7 +13,6 @@ interface Menu {
 }
 
 interface LogoProps {
-  alternateText: string;
   lightMode: string;
   darkMode: string;
 }

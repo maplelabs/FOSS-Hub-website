@@ -3,7 +3,7 @@
  */
 export interface UltimateCardinalProps {
   title: string;
-  Cards?: CardItem[];
+  cards?: CardItem[];
 }
 
 interface CardItem {

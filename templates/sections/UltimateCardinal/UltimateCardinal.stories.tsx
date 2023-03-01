@@ -22,7 +22,7 @@ export const Template: ComponentStory<typeof UltimateCardinal> = (args) => (
 Template.bind({});
 Template.args = {
   title: "Blogs",
-  Cards: [
+  cards: [
     {
       slug: "contributing-to-opensource",
       title: "A Journey towards contributing to the open-source Project",

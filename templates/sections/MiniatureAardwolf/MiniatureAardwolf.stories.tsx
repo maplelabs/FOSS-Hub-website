@@ -8,7 +8,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import MiniatureAardwolf from './index';
 
 export default {
-    title: 'Templates/Section/MiniatureAardwolf | Grids',
+    title: 'Templates/Section/MiniatureAardwolf | Grids, Media',
     component: MiniatureAardwolf,
     parameters: {
       layout: 'fullscreen',
@@ -20,7 +20,7 @@ export const Template: ComponentStory<typeof MiniatureAardwolf> = (args) => <Min
 Template.bind({})
 Template.args={
   title: 'Featured Videos',
-  videos: [
+  medias: [
     {
         url : 'https://www.youtube.com/watch?v=JLmei2IUDm0',      
         text : 'What, Why And How Of Open Source',

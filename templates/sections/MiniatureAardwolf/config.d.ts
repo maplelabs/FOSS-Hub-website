@@ -4,10 +4,10 @@
 export interface MiniatureAardwolfProps {
     [k: string]: unknown;
     title: string
-    videos?: Videos[]
+    medias?: Media[]
 }
 
-interface Videos {
+interface Media {
   url?: string
   text?: string
   thumbnail?: string | any
@@ -15,6 +15,6 @@ interface Videos {
 
 export interface MiniatureAardwolfSchema {
   template: 'MiniatureAardwolf';
-  data: Partial<MiniatureAardwolfProps>;
-  dynamicData: () => Partial<MiniatureAardwolfProps>;
+  data?: Partial<MiniatureAardwolfProps>;
+  dynamicData?: () => Partial<MiniatureAardwolfProps>;
 }

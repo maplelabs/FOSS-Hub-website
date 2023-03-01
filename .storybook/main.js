@@ -14,19 +14,7 @@ module.exports = {
     builder: '@storybook/builder-webpack5',
   },
   staticDirs: ['../public'],
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.(ttf|eot|svg)$/,
-  //       use: 'file-loader?name=[name].[ext]',
-  //       exclude: /\.inline.svg$/,
-  //     },
-  //     {
-  //       test: /\.inline.svg$/,
-  //       use: 'svgr/webpack',
-  //     },
-  //   ],
-  // },
+
   webpackFinal: async (config, { configType }) => {
     config.module.rules = config.module.rules.map((rule) =>
       rule.test.test('.svg') ? { ...rule, exclude: /\.svg$/ } : rule

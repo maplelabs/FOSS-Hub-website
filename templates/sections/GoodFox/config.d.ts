@@ -2,50 +2,37 @@
  * Files generated using template generator
  */
 export interface GoodFoxProps {
-  gridListView?: IGridListView;
   [k: string]: unknown;
+  title: string;
+  listItems: ListItems[];
+  columnHeaders: ColumnHeader[];
 }
 
-interface IGridListView {
-title?: string,
-cardDetails?: ICard[],
-tableDetails?:
-  {
-    id: string | number,
-    tableData: ITable[]
-  }
+interface ColumnHeader {
+  name: string;
+  className?: string;
 }
 
-interface ICard {
-id: string | number;
-title?: string;
-description?: string;
-link?: string;
-icon?: any;
-tags?: any;
-avatars?: IAvatar[];
-[k: string]: unknown;
+interface ListItems {
+  title: string;
+  description?: string;
+  link?: string;
+  icon?: any;
+  tags?: string[];
+  languages?: string[];
+  categories?: string[];
+  contributors?: Avatar[];
+
 }
 
-interface ITable {
-name?: string;
-description?: string;
-link?: string;
-icon?: any;
-tags?: any;
-topics?: any;
-avatars?: IAvatar[];
-[k: string]: unknown;
-}
-
-interface IAvatar {
+interface Avatar {
   name?: string;
-  src?: any;
-  link?: any;
+  src?: string;
+  link?: string;
 }
 
 export interface GoodFoxSchema {
   template: 'GoodFox';
-  data: Partial<GoodFoxProps>;
-  dynamicData: () => Partial<GoodFoxProps>;
+  data?: Partial<GoodFoxProps>;
+  dynamicData?: () => Partial<GoodFoxProps>;
 }

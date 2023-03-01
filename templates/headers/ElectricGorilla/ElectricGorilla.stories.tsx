@@ -20,9 +20,8 @@ export const Template: ComponentStory<typeof ElectricGorilla> = (args) => <Elect
 Template.bind({})
 Template.args={
   logo: {
-    alternateText: 'Maple Labs Logo',
     darkMode: '/images/dark-logo.svg',
-    lightMode: '/images/logo.svg',
+    lightMode: '/images/light-logo.svg',
   },
   menu: [
     {

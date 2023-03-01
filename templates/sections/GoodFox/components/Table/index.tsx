@@ -1,23 +1,21 @@
 import Link from "next/link";
-import BlockIcon from "../../../components/BlockIcon";
+import BlockIcon from '../../../../../components/BlockIcon';
 
-export default function Table({ data }) {
+export default function Table({ columns, data }) {
   
     return (
       <div>
         <table className="uk-table uk-table-divider ">
           <thead>
             <tr>
-              <th className="uk-width-large">Project Name</th>
-              <th className="uk-width-small">Tech Stack</th>
-              <th className="uk-width-small">Category</th>
-              <th className="uk-width-small">Tags</th>
-              <th>Contributors</th>
+              {columns.map((column, index) =>
+                <th className={column.className} key={index}>{column.name}</th> 
+              )}
             </tr>
           </thead>
           <tbody>
-            {data.map((row) => (
-              <tr key={row.link}>
+            {data.map((row, index) => (
+              <tr key={index}>
                 <td>
                  <Link target="_blank" rel="noopener noreferrer" href={row.link} className="hover">
                   <div className=" uk-flex uk-flex-row">
@@ -26,7 +24,7 @@ export default function Table({ data }) {
                     </div>
                     <div>
                       <h3 className="uk-h4 uk-text-bolder uk-margin-small-bottom">
-                        {row.name}
+                        {row.title}
                       </h3>
                       <div className='uk-text-small color-dark-cyan-blue uk-width-large'>
                         {row.description}
@@ -37,11 +35,11 @@ export default function Table({ data }) {
                 </td>
                 <td>
                   <div className=" uk-flex uk-flex-row ">
-                    {row.tags.map((tag) => (
-                      <span key={tag}
+                    {row.languages.map((lan) => (
+                      <span key={lan}
                       className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
                       >
-                        {tag}
+                        {lan}
                       </span>
                     ))}
                   </div>
@@ -52,7 +50,7 @@ export default function Table({ data }) {
                   </span>
                 </td>
                 <td className="uk-flex uk-flex-row">
-                  {row.topics.map((topic) => (
+                  {row.tags.map((topic) => (
                     topic !== 'Featured' || topic !== 'Contributions-Welcome' &&
                     <span key={topic}
                     className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
@@ -63,7 +61,7 @@ export default function Table({ data }) {
                 </td>
                 <td>
                   <div className="uk-flex ">
-                    {row.avatars.map((avatar) => (
+                    {row.contributors.map((avatar) => (
                         <img
                           key={avatar.link}
                           className="uk-comment-avatar contributors uk-border-circle"

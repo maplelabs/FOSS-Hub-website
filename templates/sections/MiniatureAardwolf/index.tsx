@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { MiniatureAardwolfProps } from './config';
 import styles from './styles.module.css';
 
-export default function MiniatureAardwolf({title, videos}:MiniatureAardwolfProps) {
+export default function MiniatureAardwolf({title, medias}:MiniatureAardwolfProps) {
     return <div id='projects' className="uk-width-1-1">
     <div className="uk-section uk-dark" style={{ marginBottom: '-20px' }}>
       <div className="uk-container">
@@ -24,7 +24,7 @@ export default function MiniatureAardwolf({title, videos}:MiniatureAardwolfProps
         </div>
 
         <div className="uk-child-width-1-2@m uk-text-left uk-grid uk-grid-small uk-grid-match" data-uk-grid>
-          {videos.map((item, index) =>
+          {medias.map((item, index) =>
             <div uk-lightbox="animation: scale;" key={index} >
               <a className='uk-h4 uk-text-bolder color-midnight-blue ' href={item.url} style={{ textDecoration: 'none' }}>
                 <Image src={item.thumbnail} className='uk-margin-small-bottom uk-width-1-1' width={0} height={0} alt={item.text} style={{ borderRadius: '12px' }}/>

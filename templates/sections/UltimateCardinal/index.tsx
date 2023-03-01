@@ -5,13 +5,13 @@ import Link from "next/link";
 import React from "react";
 
 import { UltimateCardinalProps } from "./config";
-import VerticalCard from "./VerticalCard";
-import HorizontalCard from "./HorizontalCard";
+import VerticalCard from "./components/VerticalCard";
+import HorizontalCard from "./components/HorizontalCard";
 import styles from "./styles.module.css";
 
 export default function UltimateCardinal({
   title,
-  Cards,
+  cards,
 }: UltimateCardinalProps) {
   return (
     <div id="Cards" className={"uk-width-1-1 " + styles.blogs_section}>
@@ -32,7 +32,7 @@ export default function UltimateCardinal({
           </div>
           <div className="uk-grid">
             {
-             Cards?.map((blog, index) =>
+             cards?.map((blog, index) =>
                   index == 0 ? (
                     <div className="uk-width-1-1" key={blog.slug}>
                       <HorizontalCard
@@ -41,7 +41,7 @@ export default function UltimateCardinal({
                     </div>
                   ) : (
                     <div
-                      className="uk-width-1-3@l uk-width-1@s uk-text-left uk-grid-match uk-margin-medium-top"
+                      className="uk-width-1-3@l uk-width-1-2@m uk-width-1@s uk-text-left uk-grid-match uk-margin-medium-top"
                       key={blog.slug}>
                       <VerticalCard blog={blog} key={blog.slug}></VerticalCard>
                     </div>

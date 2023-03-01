@@ -1,8 +1,7 @@
 /**
  * Files generated using template generator
  */
-import React, { useEffect } from 'react';
-import uikit from 'uikit';
+import React from 'react';
 
 import { AggressiveClownfishProps } from './config';
 import styles from './styles.module.css';
@@ -14,23 +13,6 @@ export default function AggressiveClownfish({
   button,
   backgroundImage
 }: AggressiveClownfishProps) {
-  useEffect(() => {
-    const el = uikit.util.$('#intro-section');
-    const nav = uikit.util.$('#nav');
-    var sticky = uikit.sticky(nav);
-    uikit.scrollspy(el, { repeat: true, delay: 0 });
-    uikit.util.on(el, 'outview', function () {
-      console.log('out');
-      nav.classList.add('nav-bg');
-      nav.classList.remove('nav-bg-dark');
-      // nav.classList.add('')
-    });
-    uikit.util.on(el, 'inview', function () {
-      console.log('in');
-      nav.classList.add('nav-bg-dark');
-      nav.classList.remove('nav-bg');
-    });
-  }, []);
   return (
   <div className={styles.container}>
     <div className={`${styles["intro-section"]}`}>
