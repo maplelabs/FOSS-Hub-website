@@ -1,24 +1,23 @@
 ---
 title: A Journey towards contributing to the open-source Project
-thumbnail: https://opensource.com/sites/default/files/lead-images/career_journey_road_gps_path_map_520.png
+banner: /images/blogs/journey-toward-opensource-project.svg
+thumbnail: /images/blogs/journey-toward-opensource-project.svg
 featured: true
 starred: false
 author: Akhil Nair
 date: 01/01/2023 #mm/dd/yyyy
 ---
+
 **[Openapi Generator](https://github.com/OpenAPITools/openapi-generator)**
 
 ### Introduction
 
-From the start of my career, I have been a consumer of the open-source community. It all started with using open-source tools and products. I am fascinated with the support I get from the community and the support an open-source community provides is much more than proprietary software. 
-I have always wanted to be part of a group where I could provide a solution to a problem that can help consumers of software. And I feel a straightforward way to do that is to get involved in an open-source project and contribute by solving an issue or enhancing the project. 
-
+From the start of my career, I have been a consumer of the open-source community. It all started with using open-source tools and products. I am fascinated with the support I get from the community and the support an open-source community provides is much more than proprietary software.
+I have always wanted to be part of a group where I could provide a solution to a problem that can help consumers of software. And I feel a straightforward way to do that is to get involved in an open-source project and contribute by solving an issue or enhancing the project.
 
 It all started with contributing to an open-source project - (OpenAPI-Generator). The customer is using OpenAPI-Generator to generate their application SDK’s. Since there were a lot of projects commits that happen every day, the probability of breakage was higher. We could find out the breakages in advance using our Continuous Integrated Jenkins jobs. Then we analyze the breakages, find out the generic solution, discuss the solution with the reviewers and then merge the code into the main project. At last, I got my contributor badge.
 
 Now I would like to share my journey with all of you talking about the process of how we can contribute to an open-source project.
-
-
 
 ### OpenAPI Generator
 
@@ -30,18 +29,17 @@ The SDK generated out of the OpenAPI generator will have the generated code whic
 
 ### Using OpenAPI Generator
 
-In one of the projects, we were using OpenAPI generator to generate SDKs, and those were used by the customers to connect to the server. We were supporting Python, Go, and Csharp SDKs. 
+In one of the projects, we were using OpenAPI generator to generate SDKs, and those were used by the customers to connect to the server. We were supporting Python, Go, and Csharp SDKs.
 
 Since it is an open-source project, everyday people were contributing to different feature development and bug fixes, and the dynamics of the code changes very frequently. Since we were responsible for making releases every week, it was our job to ensure that there were no breakages in the code and if there is any fix them as soon as possible.
 
-During the scope of the project, we as a team also contributed to the feature development and bug fixes. 
+During the scope of the project, we as a team also contributed to the feature development and bug fixes.
 
 The bug fixes were like some of the changes were not tested properly for all the versions of SDK and we will be fixing it. Or some were like the recent changes which were introduced in the previous commits were failing in our use case because our use case was vast, and contributors would not test that many test cases.
 
 The feature development was like optimizing the build time for SDK generation and adding certain features for certain frameworks which were not present previously.
 
 ![Using OpenAPI Generator](/images/blogs/openapi-flow.png)
-
 
 ### Process of raising an issue
 
@@ -64,9 +62,9 @@ After the bug is raised in the forum, we need to tag the responsible contributor
 
 ### Process of raising PR
 
-The PR – Pull request is a mechanism through which we will be able to contribute to bug fixes or feature development. It is step #1 toward the code submission by us. When we want to raise a code to give a bug fix or feature development, we raise PR. 
+The PR – Pull request is a mechanism through which we will be able to contribute to bug fixes or feature development. It is step #1 toward the code submission by us. When we want to raise a code to give a bug fix or feature development, we raise PR.
 
-To raise PR, we should fork the main repository of the project. Now this will be our local repository for making all the changes in the future as well. After that, we should pull all the latest changes and create a separate branch on top of the master branch. 
+To raise PR, we should fork the main repository of the project. Now this will be our local repository for making all the changes in the future as well. After that, we should pull all the latest changes and create a separate branch on top of the master branch.
 
 Then we should make the intended changes in the local branch and then build the code.
 
@@ -80,12 +78,12 @@ And as usual, we need to tag the core contributors and tell them to get it revie
 
 Once all the test cases are passed and we address the review comments the core members will merge the code and we will be ready to use the solution to which we contributed the project.
 
-
-
 ### Issues and PR Raised
+
 I want to briefly discuss some of the interesting issues and PR raised:
 
 #### Issues:
+
 https://github.com/OpenAPITools/openapi-generator/issues/13115 - Due to changes made in the generator code there was a mismatch between the type of argument variable in go SDK. Raised the issues with proper examples and the core team gave a quick fix. (GoLang SDK)
 
 https://github.com/OpenAPITools/openapi-generator/issues/12835 - With OAS 3.x we can define our content type and gain because of the generator code change there was a breakage on this feature. Given an initial solution for the above issue. (C-Sharp SDK)
@@ -93,6 +91,7 @@ https://github.com/OpenAPITools/openapi-generator/issues/12835 - With OAS 3.x we
 https://github.com/OpenAPITools/openapi-generator/issues/10083 - Due to a design change, there was a breakage in the Python SDK while setting an attribute. We provided the solution, and it was accepted by the core team members. (Python SDK)
 
 #### PRs:
+
 https://github.com/OpenAPITools/openapi-generator/pull/12909 - Optimized the build time for JAVA SDK. (JAVA SDK)
 
 https://github.com/OpenAPITools/openapi-generator/pull/12239 - Due to generator code changes the get item for a python dictionary was failing. We provided the solution, and it was accepted by the core team members. This issue was reported by many end users, and they appreciated our efforts for the quick fix. (Python SDK)

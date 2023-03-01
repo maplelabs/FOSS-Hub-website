@@ -1,11 +1,11 @@
 /**
  * Files generated using template generator
  */
-import React from "react";
+import React from 'react';
 
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import UltimateCardinal from "./index";
+import UltimateCardinal from './index';
 
 export default {
   title: "Templates/Section/UltimateCardinal | Blogs,Cards",
@@ -29,7 +29,7 @@ Template.args = {
       thumbnail:
         "https://opensource.com/sites/default/files/lead-images/career_journey_road_gps_path_map_520.png",
       author: "Akhil Nair",
-      author_avatar:
+      authorAvatar:
         "https://ui-avatars.com/api/?background=F8C02F&color=4E2E07&name=Akhil Nair&size=128&font-size=0.4",
     },
     {
@@ -38,7 +38,7 @@ Template.args = {
       thumbnail:
         "https://opensource.com/sites/default/files/lead-images/career_journey_road_gps_path_map_520.png",
       author: "Akhil Nair",
-      author_avatar:
+      authorAvatar:
         "https://ui-avatars.com/api/?background=F8C02F&color=4E2E07&name=Akhil Nair&size=128&font-size=0.4",
     },
     {
@@ -47,7 +47,7 @@ Template.args = {
       thumbnail:
         "https://opensource.com/sites/default/files/lead-images/career_journey_road_gps_path_map_520.png",
       author: "Akhil Nair",
-      author_avatar:
+      authorAvatar:
         "https://ui-avatars.com/api/?background=F8C02F&color=4E2E07&name=Akhil Nair&size=128&font-size=0.4",
     }
   ],

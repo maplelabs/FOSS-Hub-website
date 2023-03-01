@@ -164,14 +164,8 @@ left: 0;
 
 }
 .top_contrib_overlay{
-  /* background-color: #1F384F; */
   background-image: url('../public/images/background_tc.png');
   background-repeat: no-repeat; 
-  /* background-attachment: scroll; */
-  /* background-position: right 80%; */
-  /* background-size: 70px; */
-   /* background-image: url('../public/images/background_tc.png'); */
-  /* background-size: cover; */
 }
 
 .navbar_right {

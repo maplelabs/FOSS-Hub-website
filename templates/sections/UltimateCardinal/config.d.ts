@@ -8,7 +8,7 @@ export interface UltimateCardinalProps {
 
 interface CardItem {
   author: string;
-  author_avatar: string;
+  authorAvatar: string;
   thumbnail: string;
   title: string;
   slug: string;
@@ -17,5 +17,5 @@ interface CardItem {
 export interface UltimateCardinalSchema {
   template: 'UltimateCardinal';
   data?: Partial<UltimateCardinalProps>;
-  dynamicData?: () => Partial<UltimateCardinalProps>;
+  dynamicData?: (context = {}) => Promise<Partial<UltimateCardinalProps>>;
 }

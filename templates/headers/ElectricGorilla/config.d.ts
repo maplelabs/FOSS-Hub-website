@@ -20,5 +20,5 @@ interface LogoProps {
 interface ElectricGorillaSchema {
   template: 'ElectricGorilla';
   data?: Partial<ElectricGorillaProps>;
-  dynamicData?: () => Partial<ElectricGorillaProps>;
+  dynamicData?: (context = {}) => Promise<Partial<ElectricGorillaProps>>;
 }

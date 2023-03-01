@@ -22,8 +22,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "components/BlogCard/index.jsx", "components/BlogCard/index.jsx"  ],
+    "**/*.tsx"],
   "exclude": [
     "node_modules"
   ]

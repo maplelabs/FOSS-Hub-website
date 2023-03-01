@@ -28,5 +28,5 @@ interface Address {
 export interface SmallDragonSchema {
   template: 'SmallDragon';
   data?: Partial<SmallDragonProps>;
-  dynamicData?: () => Partial<SmallDragonProps>;
+  dynamicData?: (context = {}) => Promise<Partial<SmallDragonProps>>;
 }

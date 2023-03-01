@@ -22,7 +22,6 @@ interface ListItems {
   languages?: string[];
   categories?: string[];
   contributors?: Avatar[];
-
 }
 
 interface Avatar {
@@ -34,5 +33,5 @@ interface Avatar {
 export interface GoodFoxSchema {
   template: 'GoodFox';
   data?: Partial<GoodFoxProps>;
-  dynamicData?: () => Partial<GoodFoxProps>;
+  dynamicData?: (context = {}) => Promise<Partial<GoodFoxProps>>;
 }

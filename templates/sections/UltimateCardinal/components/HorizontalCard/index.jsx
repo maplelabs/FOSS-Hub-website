@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HorizontalCard({ blog }) {
   return (
@@ -14,9 +14,7 @@ export default function HorizontalCard({ blog }) {
         </div>
         <div>
           <div className="uk-card-body">
-            <h3 className="uk-card-title uk-text-bolder">
-              {blog.title}
-            </h3>
+            <h3 className="uk-card-title uk-text-bolder">{blog.title}</h3>
             <p>{blog.description}</p>
             <Link href={`blogs/${blog.slug}`}>
               <button className="uk-text-bold uk-button uk-button-link">
@@ -25,11 +23,11 @@ export default function HorizontalCard({ blog }) {
             </Link>
             <div className="uk-flex uk-flex-middle uk-margin-top">
               <Image
-                src={blog.author_avatar}
+                src={blog.authorAvatar}
                 width={40}
                 height={40}
                 className="uk-border-circle"
-                style={{ border: "1px solid #D9D9D9" }}
+                style={{ border: '1px solid #D9D9D9' }}
               />
               <div className="uk-text-bold uk-margin-small-left">
                 {blog.author}

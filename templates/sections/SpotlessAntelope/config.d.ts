@@ -17,5 +17,5 @@ export interface SpotlessAntelopeProps {
 export interface SpotlessAntelopeSchema {
   template: 'SpotlessAntelope';
   data?: Partial<SpotlessAntelopeProps>;
-  dynamicData?: () => Partial<SpotlessAntelopeProps>;
+  dynamicData?: (context = {}) => Promise<Partial<SpotlessAntelopeProps>>;
 }
