@@ -3,10 +3,10 @@
  */
 export interface UltimateCardinalProps {
   title: string;
-  Blogs?: BlogItem[];
+  Cards?: CardItem[];
 }
 
-interface BlogItem {
+interface CardItem {
   author: string;
   author_avatar: string;
   thumbnail: string;
