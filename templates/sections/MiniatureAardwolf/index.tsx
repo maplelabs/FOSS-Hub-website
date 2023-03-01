@@ -25,7 +25,7 @@ export default function MiniatureAardwolf({title, medias}:MiniatureAardwolfProps
 
         <div className="uk-child-width-1-2@m uk-text-left uk-grid uk-grid-small uk-grid-match" data-uk-grid>
           {medias.map((item, index) =>
-            <div uk-lightbox="animation: scale;video-autoplay	:true" key={index} >
+            <div uk-lightbox="animation: scale;video-autoplay	:true" key={item.url} >
               <a className='uk-h4 uk-text-bolder color-midnight-blue ' href={item.url} style={{ textDecoration: 'none' }}>
                 <Image src={item.thumbnail} className='uk-margin-small-bottom uk-width-1-1' width={450} height={250} alt={item.text} style={{ borderRadius: '12px' }}/>
                 {item.text}

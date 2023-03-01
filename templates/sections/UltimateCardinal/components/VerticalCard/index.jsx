@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -25,6 +25,7 @@ export default function VerticalCard({ blog }) {
                   width={40}
                   height={40}
                   className="uk-border-circle"
+                  alt={blog.author}
                   style={{ border: '1px solid #D9D9D9' }}
                 />
                 {/* <div className='uk-text-bold uk-margin-small-left'>{blog.frontMatter.author}</div> */}

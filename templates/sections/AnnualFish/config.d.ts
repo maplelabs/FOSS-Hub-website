@@ -2,10 +2,10 @@
  * Files generated using template generator
  */
 export interface AnnualFishProps {
-    [k: string]: unknown;
-    content: any;
-    frontMatter: FrontMatter;
-    recentBlogs: BlogItem[];
+  [k: string]: unknown;
+  content: string;
+  frontMatter: FrontMatter;
+  recentBlogs: BlogItem[];
 }
 
 interface BlogItem {
@@ -24,7 +24,6 @@ interface FrontMatter {
   author: string;
   authorAvatar: string;
 }
-
 
 export interface AnnualFishSchema {
   template: 'AnnualFish';

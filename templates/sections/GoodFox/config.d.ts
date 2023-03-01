@@ -17,7 +17,7 @@ interface ListItems {
   title: string;
   description?: string;
   link?: string;
-  icon?: any;
+  icon?: Icon;
   tags?: string[];
   languages?: string[];
   categories?: string[];
@@ -30,6 +30,10 @@ interface Avatar {
   link?: string;
 }
 
+interface Icon {
+  icon: number;
+  color: { fg: string; bg: string };
+}
 export interface GoodFoxSchema {
   template: 'GoodFox';
   data?: Partial<GoodFoxProps>;

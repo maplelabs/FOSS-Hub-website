@@ -73,7 +73,6 @@ module.exports = function (plop) {
       };
     },
     actions: (data) => {
-      console.log(data);
       const pattern_module = new RegExp(
         `// ${data.type.toUpperCase()} EXPORTS`,
         'g'

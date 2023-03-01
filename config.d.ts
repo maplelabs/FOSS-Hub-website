@@ -20,10 +20,10 @@ interface Config {
     | (() => Promise<{ [k: string]: Partial<Config> }>);
 }
 interface Meta {
-  title?: String;
-  description?: String;
-  robots?: String;
-  favicon?: String;
+  title?: string;
+  description?: string;
+  robots?: string;
+  favicon?: string;
 }
 type HeadersTemplates =
   // HEADERS SCHEMAS

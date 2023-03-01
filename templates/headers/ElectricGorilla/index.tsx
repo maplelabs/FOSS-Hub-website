@@ -1,27 +1,26 @@
+import Image from 'next/image';
 /**
  * Files generated using template generator
  */
 import Link from 'next/link';
 import React, { useEffect } from 'react';
-import Image from 'next/image';
+import uikit from 'uikit';
+
 import { ElectricGorillaProps } from './config';
 import styles from './styles.module.css';
-import uikit from 'uikit';
 
 export default function ElectricGorilla({ logo,  menu}:ElectricGorillaProps) {
     useEffect(() => {
         const el = uikit.util.$('#intro-section');
         const nav = uikit.util.$('#nav');
-        var sticky = uikit.sticky(nav);
+        uikit.sticky(nav);
         uikit.scrollspy(el, { repeat: true, delay: 0 });
         uikit.util.on(el, 'outview', function () {
-          console.log('out');
           nav.classList.add('nav-bg');
           nav.classList.remove('nav-bg-dark');
           // nav.classList.add('')
         });
         uikit.util.on(el, 'inview', function () {
-          console.log('in');
           nav.classList.add('nav-bg-dark');
           nav.classList.remove('nav-bg');
         });
@@ -40,7 +39,7 @@ export default function ElectricGorilla({ logo,  menu}:ElectricGorillaProps) {
                 <div className="uk-navbar-right uk-visible@m ">
                     <ul className='uk-navbar-nav'>
                        { menu.map((item, index) =>
-                            <li key={index}>
+                            <li key={item.title}>
                                 <a href={item.path} data-uk-scroll='offset:80' className="uk-text-capitalize">{item.title}</a>
                             </li>
                         )}

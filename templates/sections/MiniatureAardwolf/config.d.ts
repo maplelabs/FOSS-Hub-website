@@ -10,7 +10,7 @@ export interface MiniatureAardwolfProps {
 interface Media {
   url?: string;
   text?: string;
-  thumbnail?: string | any;
+  thumbnail?: string;
 }
 
 export interface MiniatureAardwolfSchema {

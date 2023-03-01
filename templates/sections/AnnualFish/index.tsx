@@ -1,18 +1,17 @@
 /**
  * Files generated using template generator
  */
+import md from 'markdown-it';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import md from 'markdown-it';
+
+import RecentBlogCard from './components/RecentBlogCard';
 import { AnnualFishProps } from './config';
 import styles from './styles.module.css';
-import RecentBlogCard from './components/RecentBlogCard'
 
 export default function AnnualFish({ content, frontMatter, recentBlogs }: AnnualFishProps) {
     const [html, setHtml] = useState();
-    //const [time, setTime] = useState(3);
     useEffect(() => {
-        //setTime(Math.ceil(content.match(/\w+/g).length / 200));
         const renderedHtml = md().render(content)
         setHtml(renderedHtml)
     }, [content])

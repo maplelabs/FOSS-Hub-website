@@ -1,17 +1,8 @@
 import Head from 'next/head';
-import UIKit from '../components/uikit';
 import config from '../main.config';
 import Components from '../templates/templates.module';
 
 export default function Template({ meta, header, sections, footer }) {
-  const Header = ({ template, props }) => {
-    const Component = Components.headers[template];
-    return <Component {...props}></Component>;
-  };
-  const Footer = ({ template, props }) => {
-    const Component = Components.footers[template];
-    return <Component {...props}></Component>;
-  };
   return (
     <div>
       <Head>
@@ -24,14 +15,22 @@ export default function Template({ meta, header, sections, footer }) {
         {header ? <Header {...header}></Header> : null}
         {sections.map(({ template, props }, index) => {
           const Component = Components.sections[template];
-          return <Component key={index} {...props}></Component>;
+          return <Component key={props.template} {...props}></Component>;
         })}
         {footer ? <Footer {...footer}></Footer> : null}
       </main>
     </div>
   );
 }
-Template.getLayout = (page) => <UIKit>{page}</UIKit>;
+
+const Header = ({ template, props }) => {
+  const Component = Components.headers[template];
+  return <Component {...props}></Component>;
+};
+const Footer = ({ template, props }) => {
+  const Component = Components.footers[template];
+  return <Component {...props}></Component>;
+};
 
 export async function getStaticPaths() {
   const paths = await getAllPaths(config);

@@ -14,7 +14,7 @@ interface Tiles {
   avatar?: string;
   link?: {
     icon?: string;
-    text?: string | (() => any);
+    text?: string;
     url?: string;
     [k: string]: unknown;
   };
