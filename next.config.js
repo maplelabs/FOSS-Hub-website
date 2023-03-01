@@ -8,12 +8,12 @@ const nextConfig = {
         hostname: 'avatars.githubusercontent.com',
       },
       {
-        protocol:'https',
-        hostname:'ui-avatars.com'
-      }
+        protocol: 'https',
+        hostname: 'ui-avatars.com',
+      },
     ],
   },
-}
+};
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
@@ -25,7 +25,7 @@ const withMDX = require('@next/mdx')({
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
-})
+});
 module.exports = withMDX({
   // Append the default value with md extensions
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
@@ -35,10 +35,10 @@ module.exports = withMDX({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
-    })
+    });
 
-    return config
+    return config;
   },
-})
+});
 
 // module.exports = nextConfig

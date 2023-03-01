@@ -1,0 +1,18 @@
+.get-started-section {
+  background-image: url("../../../public/images/curve_bg.svg");
+  background-size: cover;
+  background-position-y: bottom;
+  width: 100vw;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+}
+
+.get-started-section-card {
+  background-image: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 100%
+    ),
+    url("../../../public/images/checks.svg");
+  background-size: cover;
+}

@@ -1,0 +1,21 @@
+/**
+ * Files generated using template generator
+ */
+import React from 'react';
+
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
+import {{pascalCase name}} from './index';
+
+export default {
+    title: 'Templates/Section/{{pascalCase name}}{{#if tags}} | {{tags}}{{/if}}',
+    component: {{pascalCase name}},
+    parameters: {
+      layout: 'fullscreen',
+    },
+  } as ComponentMeta<typeof {{pascalCase name}}>;
+
+export const Template: ComponentStory<typeof {{pascalCase name}}> = (args) => <{{pascalCase name}} {...args} />;
+
+Template.bind({})
+Template.args={}
