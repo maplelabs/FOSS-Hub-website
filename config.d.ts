@@ -1,4 +1,5 @@
 // SCHEMAS IMPORTS
+import { AnnualFishSchema } from './templates/sections/AnnualFish/config';
 import { UltimateCardinalSchema } from './templates/sections/UltimateCardinal/config';
 import { SpotlessAntelopeSchema } from './templates/sections/SpotlessAntelope/config';
 import { AggressiveClownfishSchema } from './templates/sections/AggressiveClownfish/config';
@@ -10,8 +11,6 @@ import { AggressiveClownfishSchema } from './templates/sections/AggressiveClownf
 import { GoodFoxSchema } from './templates/sections/GoodFox/config';
 import { RainyCoralSchema } from './templates/sections/RainyCoral/config';
 import { SpotlessAntelopeSchema } from './templates/sections/SpotlessAntelope/config';
-// SCHEMAS IMPORTS
-import { UltimateCardinalSchema } from './templates/sections/UltimateCardinal/config';
 
 interface Config {
   render: 'static' | 'server' | 'client';
@@ -26,6 +25,7 @@ type HeadersTemplates =
   null;
 type SectionsTemplates =
   // SECTIONS SCHEMAS
+	AnnualFishSchema |
 	UltimateCardinalSchema |
 	SpotlessAntelopeSchema |
 	AggressiveClownfishSchema |

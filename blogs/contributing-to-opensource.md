@@ -1,6 +1,5 @@
 ---
 title: A Journey towards contributing to the open-source Project
-banner: https://opensource.com/sites/default/files/lead-images/career_journey_road_gps_path_map_520.png
 thumbnail: https://opensource.com/sites/default/files/lead-images/career_journey_road_gps_path_map_520.png
 featured: true
 starred: false

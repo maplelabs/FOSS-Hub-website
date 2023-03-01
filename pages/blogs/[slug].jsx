@@ -60,7 +60,7 @@ export default function Blog({ frontmatter, content, blog }) {
   return (
     <div>
       <div>
-        <img className={styles.banner + ' ' + styles['img-style']} src={frontmatter.banner} alt=''></img>
+        <img className={styles.banner + ' ' + styles['img-style']} src={frontmatter.thumbnail} alt=''></img>
       </div>
       <div className={`uk-container`}>
         

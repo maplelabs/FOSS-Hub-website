@@ -1,4 +1,5 @@
 // COMPONENT IMPORTS
+import AnnualFish from './sections/AnnualFish';
 import UltimateCardinal from './sections/UltimateCardinal';
 import SpotlessAntelope from './sections/SpotlessAntelope';
 import AggressiveClownfish from './sections/AggressiveClownfish';
@@ -19,6 +20,7 @@ export default {
   },
   sections: {
     // SECTIONS EXPORTS
+		AnnualFish,
 		UltimateCardinal,
 		SpotlessAntelope,
 		AggressiveClownfish,
