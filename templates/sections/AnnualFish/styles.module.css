@@ -21,7 +21,6 @@
 }
 
 .blog_bg {
-    background-image: url('../../../public/images/blog_bg.png');
     background-size: contain;
     background-attachment: scroll;
 }
