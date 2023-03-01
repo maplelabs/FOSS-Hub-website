@@ -240,14 +240,7 @@ a {
   aspect-ratio: 3/1;
 }
 
-.get-started-section {
-  background-image: url('../public/images/curve_bg.png');
-  background-size: cover;
-  background-position-y: bottom;
-  width: 100vw;
-  padding-top: 120px !important;
-  padding-bottom: 120px !important;
-}
+
 
 .tabView {
   margin-left: auto !important;
