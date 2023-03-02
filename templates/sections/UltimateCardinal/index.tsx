@@ -10,11 +10,12 @@ import HorizontalCard from "./components/HorizontalCard";
 import styles from "./styles.module.css";
 
 export default function UltimateCardinal({
+  id,
   title,
   cards,
 }: UltimateCardinalProps) {
   return (
-    <div id="Cards" className={"uk-width-1-1 " + styles.blogs_section}>
+    <div id={id} className={"uk-width-1-1 " + styles.blogs_section}>
       <div className="uk-section uk-dark">
         <div className="uk-container">
           <div className="uk-flex uk-flex-between uk-margin-medium-bottom">

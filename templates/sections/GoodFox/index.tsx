@@ -11,9 +11,9 @@ import Link from 'next/link';
 import { GoodFoxProps } from './config';
 import styles from './styles.module.css';
 
-export default function GoodFox({title, columnHeaders, listItems}:GoodFoxProps) {
+export default function GoodFox({id,title, columnHeaders, listItems}:GoodFoxProps) {
     const [tabularView, setTabularView] = React.useState(true);
-    return   <div id='projects' className="uk-width-1-1">
+    return   <div id={id} className="uk-width-1-1">
     <div className="uk-section uk-dark" style={{ marginBottom: '-20px' }}>
       <div className="uk-container">
         <div className="uk-flex uk-flex-between uk-margin-medium-bottom">

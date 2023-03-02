@@ -3,6 +3,7 @@
  */
 export interface GoodFoxProps {
   [k: string]: unknown;
+  id: string;
   title: string;
   listItems: ListItems[];
   columnHeaders: ColumnHeader[];

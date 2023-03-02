@@ -2,6 +2,7 @@
  * Files generated using template generator
  */
 export interface AggressiveClownfishProps {
+  id: string;
   title1: string;
   title2: string;
   description: string;

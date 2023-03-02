@@ -8,9 +8,9 @@ import React from 'react';
 import { RainyCoralProps } from './config';
 import styles from './styles.module.css';
 
-export default function RainyCoral({ title,description,tiles }:RainyCoralProps) {
+export default function RainyCoral({ id, title,description,tiles }:RainyCoralProps) {
     return (
-      <div className={`uk-width-1-1 ${styles.background}`}>
+      <div id={id} className={`uk-width-1-1 ${styles.background}`}>
         <div className="uk-section ">
           <div className="uk-container">
             <div className="uk-flex uk-flex-left uk-margin-large-bottom uk-light">

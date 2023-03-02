@@ -9,9 +9,9 @@ import uikit from 'uikit';
 import { ElectricGorillaProps } from './config';
 import styles from './styles.module.css';
 
-export default function ElectricGorilla({ logo,  menu}:ElectricGorillaProps) {
+export default function ElectricGorilla({ id, scrollSpySelector, logo,  menu}:ElectricGorillaProps) {
     useEffect(() => {
-        const el = uikit.util.$('#intro-section');
+        const el = uikit.util.$(`#${scrollSpySelector}`);
         const nav = uikit.util.$('#nav');
         uikit.sticky(nav);
         uikit.scrollspy(el, { repeat: true, delay: 0 });
@@ -26,7 +26,7 @@ export default function ElectricGorilla({ logo,  menu}:ElectricGorillaProps) {
       }, []);
     return <>
 
-    <div data-uk-sticky="start: 0" id="nav" className="nav-bg">
+    <div data-uk-sticky="start: 0" id={id} className="nav-bg">
         <nav className="uk-navbar-container uk-navbar-sticky uk-navbar-transparent uk-light uk-width-1-1">
             <div className=" uk-container " data-uk-navbar>
                 <div className="uk-navbar-left">

@@ -2,6 +2,7 @@
  * Files generated using template generator
  */
 export interface UltimateCardinalProps {
+  id?: string;
   title: string;
   cards?: CardItem[];
 }

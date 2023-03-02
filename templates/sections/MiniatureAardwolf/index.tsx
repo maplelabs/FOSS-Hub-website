@@ -8,8 +8,8 @@ import React from 'react';
 import { MiniatureAardwolfProps } from './config';
 import styles from './styles.module.css';
 
-export default function MiniatureAardwolf({title, medias}:MiniatureAardwolfProps) {
-    return <div id='projects' className="uk-width-1-1">
+export default function MiniatureAardwolf({id,title, medias}:MiniatureAardwolfProps) {
+    return <div id={id} className="uk-width-1-1">
     <div className="uk-section uk-dark">
       <div className="uk-container">
         <div className="uk-flex uk-flex-between uk-margin-medium-bottom">

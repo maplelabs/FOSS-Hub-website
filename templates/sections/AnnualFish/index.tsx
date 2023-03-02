@@ -4,18 +4,20 @@
 import md from 'markdown-it';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-
-import RecentBlogCard from './components/RecentBlogCard';
 import { AnnualFishProps } from './config';
 import styles from './styles.module.css';
+import RecentBlogCard from './components/RecentBlogCard'
+import Image from 'next/image';
 
-export default function AnnualFish({ content, frontMatter, recentBlogs }: AnnualFishProps) {
+export default function AnnualFish({ id, content, frontMatter, recentBlogs }: AnnualFishProps) {
     const [html, setHtml] = useState();
+    const [time, setTime] = useState(3);
     useEffect(() => {
+        setTime(Math.ceil(content.match(/\w+/g).length / 200));
         const renderedHtml = md().render(content)
         setHtml(renderedHtml)
     }, [content])
-    return <div>
+    return <div id={id}>
         <div>
             <img className={styles.banner + ' ' + styles['img-style']} src={frontMatter.thumbnail} alt=''></img>
         </div>
@@ -30,6 +32,24 @@ export default function AnnualFish({ content, frontMatter, recentBlogs }: Annual
             <div className='uk-flex uk-position-relative'>
                 <div className='uk-width-4-5@l uk-margin-medium-right'>
                     <h1 className={' uk-text-bolder uk-margin-small-bottom uk-padding uk-padding-remove-left uk-padding-remove-top '}>{frontMatter.title}</h1>
+                    <div className="uk-flex uk-flex-middle uk-margin-small-bottom">
+                        <Image
+                            src={frontMatter.authorAvatar}
+                            width={40}
+                            height={40}
+                            alt={frontMatter.author}
+                            className="uk-border-circle"
+                            style={{ border: "1px solid #D9D9D9" }}
+                        />
+                        <div className='uk-flex-column'>
+                        <div className="uk-text-bold uk-margin-small-left">
+                            {frontMatter.author}
+                        </div>
+                        <div className='uk-margin-small-left'>{new Date(frontMatter.date).toLocaleDateString('en-US', {day: 'numeric',month: 'short',year: 'numeric'})}</div>
+                        </div>
+                        <div className='uk-margin-auto-left uk-padding'>{time} min</div>
+                    </div>
+
                     <div className={styles.blog_content + ' uk-padding uk-padding-remove-left uk-padding-remove-top '} dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
 

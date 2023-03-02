@@ -3,6 +3,8 @@
  */
 export interface ElectricGorillaProps {
   [k: string]: unknown;
+  id: string;
+  scrollSpySelector: string;
   logo: LogoProps;
   menu?: Menu[];
 }

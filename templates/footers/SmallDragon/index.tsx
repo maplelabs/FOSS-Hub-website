@@ -7,9 +7,9 @@ import React from 'react';
 import { SmallDragonProps } from './config';
 import styles from './styles.module.css';
 
-export default function SmallDragon({address, subSections, copyRight, terms, social}:SmallDragonProps) {
+export default function SmallDragon({id, address, subSections, copyRight, terms, social}:SmallDragonProps) {
     return <>
-    <div className={"uk-section uk-padding-remove-bottom " + styles.footer}>
+    <div id={id} className={"uk-section uk-padding-remove-bottom " + styles.footer}>
         <div className="uk-container  uk-margin-small-bottom" >
             <div className="uk-grid uk-child-width-expand@s" uk-grid='true'>
                 <span className="uk-width-auto uk-margin-small-right" uk-icon="location"></span>

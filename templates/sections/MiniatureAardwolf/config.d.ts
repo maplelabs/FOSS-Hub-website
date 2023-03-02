@@ -3,6 +3,7 @@
  */
 export interface MiniatureAardwolfProps {
   [k: string]: unknown;
+  id: string;
   title: string;
   medias?: Media[];
 }

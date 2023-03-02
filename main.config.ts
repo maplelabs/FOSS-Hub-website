@@ -15,6 +15,8 @@ const config: Config = {
     id: 'index-header',
     template: 'ElectricGorilla',
     data: {
+      id: 'nav',   
+      scrollSpySelector: 'intro-section',
       logo: {
         darkMode: '/images/dark-logo.svg',
         lightMode: '/images/light-logo.svg',
@@ -41,6 +43,7 @@ const config: Config = {
         id: 'intro-section',
         template: 'AggressiveClownfish',
         data: {
+          id: 'intro-section',
           title1: 'Embracing Collaboration.',
           title2: 'Embracing Open Source.',
           description:
@@ -58,6 +61,7 @@ const config: Config = {
         id: 'featured-projects',
         template: 'GoodFox',
         data: {
+          id: 'projects',
           title: 'Featured Projects',
           columnHeaders: [
             {
@@ -102,6 +106,7 @@ const config: Config = {
         id: 'discord',
         template: 'SpotlessAntelope',
         data: {
+          id: 'getstarted',
           title: 'Getting Started',
           subtitle:
             'You can get started by choosing a project you want to use/contribute-to and go to the respective github link.',
@@ -120,6 +125,7 @@ const config: Config = {
         id: 'featured-blogs',
         template: 'UltimateCardinal',
         data: {
+          id: 'blogs',
           title: 'Blogs',
         },
         dynamicData: async () => {
@@ -137,6 +143,7 @@ const config: Config = {
         id: 'top-contributors',
         template: 'RainyCoral',
         data: {
+          id: 'top-contributors',
           title: 'Top Contributors',
           description:
             'Meet our contributors who believe in the notion that open source brings the best out in people. Join us in building the future with open source.',
@@ -161,6 +168,7 @@ const config: Config = {
         id: 'featured-videos',
         template: 'MiniatureAardwolf',
         data: {
+          id: 'featured-videos',
           title: 'Featured Videos',
           medias: [
             {
@@ -177,6 +185,7 @@ const config: Config = {
     id: 'footer',
     template: 'SmallDragon',
     data: {
+      id: 'footer',
       copyRight: `Copyright © 2023 MapleLabs. All rights reserved.`,
       address: [
         {
@@ -271,6 +280,7 @@ const config: Config = {
                 id: `header-${blog.slug}`,
                 template: 'ElectricGorilla',
                 data: {
+                  id: 'nav',
                   logo: {
                     darkMode: '/images/dark-logo.svg',
                     lightMode: '/images/light-logo.svg',

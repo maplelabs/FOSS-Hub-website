@@ -2,6 +2,7 @@
  * Files generated using template generator
  */
 export interface SpotlessAntelopeProps {
+  id: string;
   title: string;
   subtitle: string;
   description: string;

@@ -3,6 +3,7 @@
  */
 export interface SmallDragonProps {
   [k: string]: unknown;
+  id?: string;
   address?: Address[];
   subSections?: SubSection[];
   copyRight: string;

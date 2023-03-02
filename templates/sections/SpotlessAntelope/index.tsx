@@ -8,6 +8,7 @@ import Image from "next/image";
 import styles from "./styles.module.css";
 
 export default function SpotlessAntelope({
+  id,
   title,
   subtitle,
   description,
@@ -15,7 +16,7 @@ export default function SpotlessAntelope({
   image
 }: SpotlessAntelopeProps) {
   return (
-    <div id="getstarted" className="uk-width-1-1">
+    <div id={id} className="uk-width-1-1">
       <div
         className={`uk-section uk-background-cover uk-height-1-1 uk-padding-remove-horizontal ${styles["get-started-section"]}`}
       >

@@ -3,6 +3,7 @@
  */
 export interface AnnualFishProps {
   [k: string]: unknown;
+  id: string
   content: string;
   frontMatter: FrontMatter;
   recentBlogs: BlogItem[];

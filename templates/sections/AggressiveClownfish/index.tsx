@@ -7,6 +7,7 @@ import { AggressiveClownfishProps } from './config';
 import styles from './styles.module.css';
 
 export default function AggressiveClownfish({
+  id,
   title1,
   title2,
   description,
@@ -14,7 +15,7 @@ export default function AggressiveClownfish({
   backgroundImage
 }: AggressiveClownfishProps) {
   return (
-  <div className={styles.container}>
+  <div id={id} className={styles.container}>
     <div className={`${styles["intro-section"]}`}>
       <div
         className={`uk-section uk-light uk-background-cover uk-height-1-1 uk-padding-small uk-padding-remove-horizontal

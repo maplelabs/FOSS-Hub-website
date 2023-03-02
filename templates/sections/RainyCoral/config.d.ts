@@ -2,6 +2,7 @@
  * Files generated using template generator
  */
 export interface RainyCoralProps {
+  id: string;
   title: string;
   description?: string;
   tiles?: Tiles[];

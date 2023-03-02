@@ -56,6 +56,7 @@ class BlogService {
         new Date(b.frontMatter.data) > new Date(a.frontMatter.data) ? 1 : -1
       )
       .slice(0, 3);
+    blogs = blogs.map((blog)=>({slug: blog.slug, title: blog.frontMatter.title, thumbnail: blog.frontMatter.thumbnail, date: blog.frontMatter.date}))
     return blogs;
   }
 
