@@ -1,4 +1,5 @@
-import Link from "next/link";
+import Link from 'next/link';
+
 import BlockIcon from '../../../../../components/BlockIcon';
 
 export default function Table({ columns, data }) {
@@ -35,7 +36,7 @@ export default function Table({ columns, data }) {
                 </td>
                 <td>
                   <div className=" uk-flex uk-flex-row ">
-                    {row.languages.map((lan) => (
+                    {row.languages?.map((lan) => (
                       <span key={lan}
                       className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
                       >
@@ -50,7 +51,7 @@ export default function Table({ columns, data }) {
                   </span>
                 </td>
                 <td className="uk-flex uk-flex-row">
-                  {row.tags.map((topic) => (
+                  {row.tags?.map((topic) => (
                     topic !== 'Featured' || topic !== 'Contributions-Welcome' &&
                     <span key={topic}
                     className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
@@ -61,7 +62,7 @@ export default function Table({ columns, data }) {
                 </td>
                 <td>
                   <div className="uk-flex ">
-                    {row.contributors.map((avatar) => (
+                    {row.contributors?.map((avatar) => (
                         <img
                           key={avatar.link}
                           className="uk-comment-avatar contributors uk-border-circle"
