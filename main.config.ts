@@ -281,8 +281,8 @@ const config: Config = {
               body: {
                 sections: [
                   {
+                    id: `blog-content-${blog.slug}`,
                     template: 'AnnualFish',
-                    data: {},
                     dynamicData: async ({ params: { slug } }) => {
                       const { frontMatter, content } =
                         blogService.getBlogContents([...slug].pop());
