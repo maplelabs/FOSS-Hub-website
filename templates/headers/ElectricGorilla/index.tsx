@@ -11,6 +11,7 @@ import styles from './styles.module.css';
 
 export default function ElectricGorilla({ logo,  menu}:ElectricGorillaProps) {
     useEffect(() => {
+        console.warn('Effect');
         const el = uikit.util.$('#intro-section');
         const nav = uikit.util.$('#nav');
         uikit.sticky(nav);
@@ -18,11 +19,13 @@ export default function ElectricGorilla({ logo,  menu}:ElectricGorillaProps) {
         uikit.util.on(el, 'outview', function () {
           nav.classList.add('nav-bg');
           nav.classList.remove('nav-bg-dark');
-          // nav.classList.add('')
+          console.warn('out');
+          
         });
         uikit.util.on(el, 'inview', function () {
           nav.classList.add('nav-bg-dark');
           nav.classList.remove('nav-bg');
+          console.warn('in');
         });
       }, []);
     return <>
