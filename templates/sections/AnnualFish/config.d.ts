@@ -26,6 +26,7 @@ interface FrontMatter {
 }
 
 export interface AnnualFishSchema {
+  id: string;
   template: 'AnnualFish';
   data?: Partial<AnnualFishProps>;
   dynamicData?: () => Partial<AnnualFishProps>;

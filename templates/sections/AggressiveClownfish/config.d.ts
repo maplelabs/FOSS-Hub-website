@@ -14,6 +14,7 @@ export interface AggressiveClownfishProps {
 }
 
 export interface AggressiveClownfishSchema {
+  id: string;
   template: 'AggressiveClownfish';
   data?: Partial<AggressiveClownfishProps>;
   dynamicData?: (context = {}) => Promise<Partial<AggressiveClownfishProps>>;

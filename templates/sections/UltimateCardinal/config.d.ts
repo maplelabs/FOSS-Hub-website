@@ -15,6 +15,7 @@ interface CardItem {
 }
 
 export interface UltimateCardinalSchema {
+  id: string;
   template: 'UltimateCardinal';
   data?: Partial<UltimateCardinalProps>;
   dynamicData?: (context = {}) => Promise<Partial<UltimateCardinalProps>>;

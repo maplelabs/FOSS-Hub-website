@@ -35,6 +35,7 @@ interface Icon {
   color: { fg: string; bg: string };
 }
 export interface GoodFoxSchema {
+  id: string;
   template: 'GoodFox';
   data?: Partial<GoodFoxProps>;
   dynamicData?: (context = {}) => Promise<Partial<GoodFoxProps>>;

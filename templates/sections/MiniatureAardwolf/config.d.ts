@@ -14,6 +14,7 @@ interface Media {
 }
 
 export interface MiniatureAardwolfSchema {
+  id: string;
   template: 'MiniatureAardwolf';
   data?: Partial<MiniatureAardwolfProps>;
   dynamicData?: (context = {}) => Promise<Partial<MiniatureAardwolfProps>>;

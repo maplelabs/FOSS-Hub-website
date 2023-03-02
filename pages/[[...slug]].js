@@ -13,9 +13,9 @@ export default function Template({ meta, header, sections, footer }) {
       </Head>
       <main>
         {header ? <Header {...header}></Header> : null}
-        {sections.map(({ template, props }, index) => {
+        {sections.map(({ id, template, props }) => {
           const Component = Components.sections[template];
-          return <Component key={props.template} {...props}></Component>;
+          return <Component key={id} {...props}></Component>;
         })}
         {footer ? <Footer {...footer}></Footer> : null}
       </main>
@@ -23,13 +23,13 @@ export default function Template({ meta, header, sections, footer }) {
   );
 }
 
-const Header = ({ template, props }) => {
+const Header = ({ id, template, props }) => {
   const Component = Components.headers[template];
-  return <Component {...props}></Component>;
+  return <Component key={id} {...props}></Component>;
 };
-const Footer = ({ template, props }) => {
+const Footer = ({ id, template, props }) => {
   const Component = Components.footers[template];
-  return <Component {...props}></Component>;
+  return <Component key={id} {...props}></Component>;
 };
 
 export async function getStaticPaths() {
@@ -46,6 +46,7 @@ export async function getStaticProps(context) {
   const extractTemplate = async (item) => {
     const dynamicData = item.dynamicData ? await item.dynamicData(context) : {};
     return {
+      id: item.id,
       template: item.template,
       props: { ...item.data, ...dynamicData },
     };

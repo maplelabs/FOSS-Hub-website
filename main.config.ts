@@ -12,6 +12,7 @@ const config: Config = {
     favicon: '/favicon.png',
   },
   header: {
+    id: 'index-header',
     template: 'ElectricGorilla',
     data: {
       logo: {
@@ -37,6 +38,7 @@ const config: Config = {
   body: {
     sections: [
       {
+        id: 'intro-section',
         template: 'AggressiveClownfish',
         data: {
           title1: 'Embracing Collaboration.',
@@ -53,6 +55,7 @@ const config: Config = {
         },
       },
       {
+        id: 'featured-projects',
         template: 'GoodFox',
         data: {
           title: 'Featured Projects',
@@ -96,6 +99,7 @@ const config: Config = {
         },
       },
       {
+        id: 'discord',
         template: 'SpotlessAntelope',
         data: {
           title: 'Getting Started',
@@ -113,6 +117,7 @@ const config: Config = {
         },
       },
       {
+        id: 'featured-blogs',
         template: 'UltimateCardinal',
         data: {
           title: 'Blogs',
@@ -129,6 +134,7 @@ const config: Config = {
         },
       },
       {
+        id: 'top-contributors',
         template: 'RainyCoral',
         data: {
           title: 'Top Contributors',
@@ -152,6 +158,7 @@ const config: Config = {
         },
       },
       {
+        id: 'featured-videos',
         template: 'MiniatureAardwolf',
         data: {
           title: 'Featured Videos',
@@ -167,6 +174,7 @@ const config: Config = {
     ],
   },
   footer: {
+    id: 'footer',
     template: 'SmallDragon',
     data: {
       copyRight: `Copyright © 2023 MapleLabs. All rights reserved.`,
@@ -260,6 +268,7 @@ const config: Config = {
           (blog) =>
             (pages[blog.slug] = {
               header: {
+                id: `header-${blog.slug}`,
                 template: 'ElectricGorilla',
                 data: {
                   logo: {

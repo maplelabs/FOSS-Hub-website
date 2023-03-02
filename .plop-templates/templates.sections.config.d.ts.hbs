@@ -6,6 +6,7 @@ export interface {{pascalCase name}}Props {
 }
 
 export interface {{pascalCase name}}Schema {
+  id: string;
   template: '{{pascalCase name}}';
   data?: Partial<{{pascalCase name}}Props>;
   dynamicData?: (context = {}) => Promise<Partial<{{pascalCase name}}Props>>;
