@@ -11,21 +11,17 @@ import styles from './styles.module.css';
 
 export default function ElectricGorilla({ logo,  menu}:ElectricGorillaProps) {
     useEffect(() => {
-        console.warn('Effect');
         const el = uikit.util.$('#intro-section');
         const nav = uikit.util.$('#nav');
         uikit.sticky(nav);
         uikit.scrollspy(el, { repeat: true, delay: 0 });
         uikit.util.on(el, 'outview', function () {
           nav.classList.add('nav-bg');
-          nav.classList.remove('nav-bg-dark');
-          console.warn('out');
-          
+          nav.classList.remove('nav-bg-dark');          
         });
         uikit.util.on(el, 'inview', function () {
           nav.classList.add('nav-bg-dark');
           nav.classList.remove('nav-bg');
-          console.warn('in');
         });
       }, []);
     return <>
