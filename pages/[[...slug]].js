@@ -48,7 +48,7 @@ export async function getStaticProps(context) {
     return {
       id: item.id,
       template: item.template,
-      props: { ...item.data, ...dynamicData },
+      props: { id: item.id, ...item.data, ...dynamicData },
     };
   };
   let pageConfig = config;
