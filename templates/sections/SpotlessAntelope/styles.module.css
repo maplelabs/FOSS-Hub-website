@@ -16,3 +16,15 @@
     url("../../../public/images/checks.svg");
   background-size: cover;
 }
+
+.color_midnight-blue {
+  color:  #1F284F !important;
+}
+
+.color_nickel {
+  color: #575757 !important;
+}
+
+.height_350{
+  height: 350px;
+}

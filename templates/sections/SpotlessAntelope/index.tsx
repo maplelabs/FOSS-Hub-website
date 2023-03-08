@@ -25,10 +25,10 @@ export default function SpotlessAntelope({
             className={`uk-card uk-card-default uk-card-body uk-width-1-1 uk-child-width-1-2@m uk-child-width-1-1@s ${styles["get-started-section-card"]}`}
           >
             <div style={{ position: "relative", zIndex: 10 }}>
-              <div className="uk-h1 uk-text-bolder color-midnight-blue">
+            <div className={`uk-h1 uk-text-bolder ${styles['color_midnight-blue']}`}>
                 {title}
               </div>
-              <p className="color-nickel">{subtitle}</p>
+              <p className={styles['color_nickel']}>{subtitle}</p>
               <hr className="uk-margin-remove-bottom" />
               <h3 className="uk-card-title uk-text-bold">{description}</h3>
               <button
@@ -39,15 +39,15 @@ export default function SpotlessAntelope({
                 {button.text}
               </button>
             </div>
-            <div className="uk-position-bottom-right height-350 uk-visible@m">
+            <div className={`uk-position-bottom-right uk-visible@m ${styles['height_350']} `}>
               <Image
                 src={`${image.url}`}
                 fill={true}
                 alt={"image"}
               ></Image>
             </div>
-            <div className="height-350 uk-hidden@m"></div>
-            <div className="uk-position-bottom height-350 uk-hidden@m">
+            <div className={`${styles['height_350']} uk-hidden@m`}></div>
+            <div className={`uk-position-bottom uk-hidden@m ${styles['height_350']}`}>
               <Image
                 src={`${image.url}`}
                 fill={true}
