@@ -2,3 +2,7 @@
     background:url('../../../public/images/cornered_btn.svg') 1px 3px no-repeat !important;
     width: 130px;
   }
+
+  .color_midnight-blue {
+    color: #1F284F !important;
+  }

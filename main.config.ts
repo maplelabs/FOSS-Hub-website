@@ -91,9 +91,9 @@ const config: Config = {
             title: project.name || project.login,
             description: project.description,
             link: project.html_url,
-            languages: project.languages,
+            languages: project.languages || [],
             icon: project.icon,
-            contributors: project.top_contributors.map((user) => ({
+            contributors: project.top_contributors?.map((user) => ({
               name: user.login,
               src: user.avatar_url,
               link: user.html_url,

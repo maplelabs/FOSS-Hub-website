@@ -27,10 +27,10 @@ export default function AggressiveClownfish({
               "uk-padding uk-padding-remove-horizontal uk-flex uk-flex-column uk-flex-center uk-height-1-1 " +
               styles["content-height"]
             }>
-            <div className="uk-heading-small color-white uk-margin-remove-bottom">
+            <div className={`uk-heading-small uk-margin-remove-bottom ${styles['color_white']}`}>
               {title1}
             </div>
-            <div className="uk-heading-small uk-margin-remove-top uk-text-bolder color-white">
+            <div className={`uk-heading-small uk-margin-remove-top uk-text-bolder ${styles['color_white']}`}>
               {title2}
             </div>
             <div className="uk-text uk-width-4-5">
@@ -38,7 +38,7 @@ export default function AggressiveClownfish({
             </div>
             <div className="uk-padding uk-padding-remove-horizontal">
               <a
-                className="uk-button uk-button-primary uk-button uk-text-bold color-black"
+                className={`uk-button uk-button-primary uk-button uk-text-bold ${styles['color_black']}`}
                 href={button.url}
                 target="_blank"
                 rel="noopener noreferrer">

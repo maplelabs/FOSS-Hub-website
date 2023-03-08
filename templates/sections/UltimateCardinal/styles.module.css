@@ -6,3 +6,7 @@
 .blogs_section {
   background: linear-gradient(135deg, #f5f0ff, #eff6fe, #edfaf5);
 }
+
+.color_midnight-blue {
+  color:  #1F284F !important;
+}

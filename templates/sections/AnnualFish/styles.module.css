@@ -44,14 +44,6 @@
     }
 }
 
-
-/* .sidebar_right {
-    position: absolute;
-    top: 0; 
-    left: calc(100% - 70px);
-    width: 371px;
-} */
-
 .banner {
     object-fit: cover;
     height: 72vh;
@@ -68,4 +60,8 @@
     width: 180px;
     aspect-ratio: 1;
     object-fit: cover;
+}
+
+.color_blue {
+    color: #0362A7 !important;
   }
