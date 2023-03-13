@@ -24,7 +24,7 @@ Template.args={
     {
         url : 'https://www.youtube.com/watch?v=JLmei2IUDm0',      
         text : 'What, Why And How Of Open Source',
-        thumbnail: '/images/videos/Thumbnail1.png',
+        thumbnail: '/images/videos/what-why-how-opensource.svg',
     },
 ]
 }

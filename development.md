@@ -11,7 +11,7 @@ If you'd like to make code contributions or content contributions locally, follo
 You can serve this site locally to quickly see your changes and additions before you PR them. To get started, navigate into your new site’s directory and start it up, as follows:
 
 ```shell
-cd FOSS-projects-website/
+cd FOSS-HUB-website/
 yarn
 yarn start
 ```
@@ -30,7 +30,7 @@ To be able to [clone](https://help.github.com/en/github/creating-cloning-and-arc
 
 To contribute without write access, you can [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) the repository and contribute as needed. If you're planning to leave a fork open for a long time (for example, you're working on a complex set of changes), [sync your fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) occasionally to avoid merge conflicts.
 
-### Want to Contribute to FOSS-projects-website repo?
+### Want to Contribute to FOSS-HUB-website repo?
 
 To contribute to this repo, please follow these steps:
 
@@ -44,18 +44,18 @@ To contribute to this repo, please follow these steps:
 
 This is a template-driven codebase where we encourage developers to create new reusable templates which can be used to render the website. Please feel free to create generic templates which serve the purpose of rendering the content. Once you develop your template, please test it using the storybook. You can also refer to the storybook for all existing templates.
 
-Please follow these setps to generate the boiler plate code for the template: 
+Please follow these steps to generate the boiler plate code for the template: 
 
 ```shell
-cd FOSS-projects-website/
+cd FOSS-HUB-website/
 yarn
 yarn gen
 ```
 
-Please follow these setps to host the storybook : 
+Please follow these steps to host the storybook : 
 
 ```shell
-cd FOSS-projects-website/
+cd FOSS-HUB-website/
 yarn
 yarn storybook
 ```
@@ -75,8 +75,8 @@ Run your source code to and your website should be up and running!!!
 
 ### Getting Help
 
-If you have any questions or need help with contributing to FOSS-projects-website, please reach out to us through opensource@maplelabs.com. 
-We have also have a discord channel where you can post your questions and our team will get back to you shortly.
+If you have any questions or need help with contributing to FOSS-HUB-website, please reach out to us through opensource@maplelabs.com. 
+We have also have a discord channel which you can use for any of your discussions.
 Link for the discord channel - https://discord.com/channels/1020294105802219530/1020294105802219533
 
 We appreciate your interest in contributing to FOSS-HUB-website and look forward to collaborating with you!

@@ -8,7 +8,7 @@ author: Aishik Mukherjee
 date: 06/03/2023 #mm/dd/yyyy
 ---
 
-**[Openapi Generator](https://github.com/OpenAPITools/openapi-generator)**
+**[Codebase](https://github.com/maplelabs/FOSS-HUB-website.git)**
 
 ### Introduction
 
@@ -58,21 +58,13 @@ By following these guidelines, you can help us ensure that your contributions ar
 
 Meet the talented team members who made our open-source website a reality and enabled us to share Projects, Blogs, Talks, Videos, and more with the community.
 
-•	Skanda – Senior Developer
-•	Tejaswini – Developer
-•	Varshini - Developer
-•	Pravin – UX Designer
-•	Ram – Mentor
-•	Aswin – Mentor and Architect
-•	Aishik – Project Lead
-
-#### Issues:
-
-https://github.com/OpenAPITools/openapi-generator/issues/13115 - Due to changes made in the generator code there was a mismatch between the type of argument variable in go SDK. Raised the issues with proper examples and the core team gave a quick fix. (GoLang SDK)
-
-https://github.com/OpenAPITools/openapi-generator/issues/12835 - With OAS 3.x we can define our content type and gain because of the generator code change there was a breakage on this feature. Given an initial solution for the above issue. (C-Sharp SDK)
-
-https://github.com/OpenAPITools/openapi-generator/issues/10083 - Due to a design change, there was a breakage in the Python SDK while setting an attribute. We provided the solution, and it was accepted by the core team members. (Python SDK)
+•	**Skanda** – Senior Developer
+•	**Tejaswini** – Developer
+•	**Varshini** - Developer
+•	**Aishik** – Project Lead
+•	**Pravin** – UX Designer
+•	**Aswin** – Mentor and Architect
+•	**Ram** – Mentor
 
 ### Conclusion
 
