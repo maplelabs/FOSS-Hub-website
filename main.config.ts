@@ -93,6 +93,8 @@ const config: Config = {
             link: project.html_url,
             languages: project.languages || [],
             icon: project.icon,
+            tags: project.topics,
+            categories: [],
             contributors: project.top_contributors?.map((user) => ({
               name: user.login,
               src: user.avatar_url,
