@@ -1,7 +1,8 @@
 import Link from "next/link"
+import { BlogItem, RecentBlogCardProps } from "../../config"
 import styles from '../../styles.module.css'
 
-export default function RecentBlogCard({ blog }) {
+export default function RecentBlogCard({ blog }:RecentBlogCardProps) {
     return (
         <>
             <div className="uk-card uk-margin-small-bottom" uk-grid>

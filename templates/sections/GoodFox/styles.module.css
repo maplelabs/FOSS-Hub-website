@@ -21,7 +21,8 @@
 
 .mpl-badge {
   box-sizing: border-box;
-  min-width: 18px;
+  /* min-width: 18px; */
+  min-width: max-content;
   height: 18px;
   padding: 12px;
   border-radius: 500px;

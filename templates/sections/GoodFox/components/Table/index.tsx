@@ -1,9 +1,23 @@
 import Link from 'next/link';
 import styles from '../../styles.module.css';
 import BlockIcon from '../../../../../components/BlockIcon';
+import { TableProps } from '../../config';
 
-export default function Table({ columns, data }) {
-  
+export default function Table({ columns, data }:TableProps) {
+  data.map((row)=> {
+   row.tags = row.tags?.map((tag)=>
+    { 
+      if(tag !== 'featured' && tag !== 'contributions-welcome' ) {
+        if(tag?.includes('category')) {
+          const category = tag.split('-')
+          category.splice(0,1)
+          row.categories.push(category.join('-'))
+          return;
+        }
+        return tag
+    }
+  })
+  })
     return (
       <div>
         <table className="uk-table uk-table-divider ">
@@ -35,7 +49,7 @@ export default function Table({ columns, data }) {
                   </Link>
                 </td>
                 <td>
-                  <div className=" uk-flex uk-flex-row ">
+                  <div className=" uk-flex uk-flex-wrap ">
                     {row.languages?.map((lan) => (
                       <span key={lan}
                       className={`uk-light uk-margin-small-bottom uk-margin-small-right ${styles['mpl-badge']}`}
@@ -46,19 +60,25 @@ export default function Table({ columns, data }) {
                   </div>
                 </td>
                 <td>
-                  <span className={`uk-light uk-margin-small-bottom uk-margin-small-right ${styles['mpl-badge']}`}>
-                    utilities
+                 <div className=" uk-flex uk-flex-wrap ">
+                  {row.categories?.map((category) => 
+                  <span key={category} className={`uk-light uk-margin-small-bottom uk-margin-small-right ${styles['mpl-badge']}`}>
+                    {category ? category : 'utilities' }
                   </span>
+                  )}
+                  </div>
                 </td>
-                <td className="uk-flex uk-flex-row">
+                <td>
+                <div className=" uk-flex uk-flex-wrap ">
                   {row.tags?.map((topic) => (
-                    topic !== 'Featured' || topic !== 'Contributions-Welcome' &&
+                    topic &&
                     <span key={topic}
                     className={`uk-light uk-margin-small-bottom uk-margin-small-right ${styles['mpl-badge']}`}
                     >
                       {topic}
                     </span>
                   ))}
+                  </div>
                 </td>
                 <td>
                   <div className="uk-flex ">

@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import BlockIcon from '../../../../../components/BlockIcon';
+import { CardProps } from '../../config';
 import styles from '../../styles.module.css';
-export default function Card({ data }) {
+
+export default function Card({ data }:CardProps) {
   return (
     <Link target="_blank" rel="noopener noreferrer" href={data.link} className={styles["hover"]}>
       <div className="uk-card uk-card-small uk-card-default uk-card-body uk-card-hover">
         <div className='uk-margin-small-top uk-margin-small-left uk-margin-small-right uk-margin-small-bottom'>
         <div className="uk-margin-small-bottom uk-border-circle">
-          <BlockIcon {...data.icon} ></BlockIcon>
+          <BlockIcon scale={1} {...data.icon} ></BlockIcon>
         </div>
 
         <div>

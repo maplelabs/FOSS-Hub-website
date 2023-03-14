@@ -13,8 +13,12 @@ interface CardItem {
   thumbnail: string;
   title: string;
   slug: string;
+  description?: string;
 }
 
+interface CardProps {
+  blog: CardItem
+}
 export interface UltimateCardinalSchema {
   id: string;
   template: 'UltimateCardinal';
