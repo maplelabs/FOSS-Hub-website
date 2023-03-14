@@ -1,14 +1,13 @@
 ---
 title: Building an Open-Source Hub - A platform for sharing and collaboration
-banner: /images/blogs/journey-toward-opensource-project.svg
-thumbnail: /images/blogs/journey-toward-opensource-project.svg
+banner: /images/blogs/collaboration.png
+thumbnail: /images/blogs/collaboration.png
 featured: true
 starred: false
 author: Aishik Mukherjee
-date: 06/03/2023 #mm/dd/yyyy
+authorAvatar: /images/blogs/pic-AM.jpg
+date: 03/06/2023 #mm/dd/yyyy
 ---
-
-**[Codebase](https://github.com/maplelabs/FOSS-HUB-website.git)**
 
 ### Introduction
 
@@ -45,11 +44,11 @@ We welcome contributions to this project! If you're interested in contributing, 
 
 Our contributing guidelines provide information on:
 
-How to fork and submit feature requests
-Our coding standards
-How to set up your development environment
-The process for submitting code changes.
-How to contact us with questions or feedback
+- How to fork and submit feature requests
+- Our coding standards
+- How to set up your development environment
+- The process for submitting code changes
+- How to contact us with questions or feedback
 
 
 By following these guidelines, you can help us ensure that your contributions are valuable and effective.
@@ -58,13 +57,13 @@ By following these guidelines, you can help us ensure that your contributions ar
 
 Meet the talented team members who made our open-source website a reality and enabled us to share Projects, Blogs, Talks, Videos, and more with the community.
 
-•	**Skanda** – Senior Developer
-•	**Tejaswini** – Developer
-•	**Varshini** - Developer
-•	**Aishik** – Project Lead
-•	**Pravin** – UX Designer
-•	**Aswin** – Mentor and Architect
-•	**Ram** – Mentor
+- **Skanda** – Senior Developer
+- **Tejaswini** – Developer
+- **Varshini** - Developer
+- **Aishik** – Project Lead
+- **Pravin** – UX Designer
+- **Aswin** – Mentor and Architect
+- **Ram** – Mentor
 
 ### Conclusion
 
