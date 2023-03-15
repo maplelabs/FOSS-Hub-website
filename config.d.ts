@@ -1,4 +1,5 @@
 // SCHEMAS IMPORTS
+import { BlogServiceSchema } from './services/Blogs/config';
 import { GitHubServiceSchema } from './services/GitHub/config';
 import { SmallDragonSchema } from './templates/footers/SmallDragon/config';
 import { ElectricGorillaSchema } from './templates/headers/ElectricGorilla/config';
@@ -27,7 +28,8 @@ type Meta ={
   favicon?: string;
 }
 export interface ServiceConfig // eslint-disable-line
-  extends GitHubServiceSchema{}
+  extends BlogServiceSchema,
+    GitHubServiceSchema {}
 
 type HeadersTemplates =
   // HEADERS SCHEMAS

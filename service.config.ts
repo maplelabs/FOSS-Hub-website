@@ -18,5 +18,8 @@ const config: ServiceConfig = {
       },
     ],
   },
+  blogs: {
+    dirPaths: ['blogs'],
+  },
 };
 export default config;
