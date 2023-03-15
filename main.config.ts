@@ -1,5 +1,5 @@
 import Config from './config';
-import blogService from './services/BlogService';
+import blogService from './services/Blogs';
 import githubService from './services/GitHub';
 
 const config: Config = {
@@ -134,13 +134,16 @@ const config: Config = {
           title: 'Blogs',
         },
         dynamicData: async () => {
-          const cards = blogService.getBlogs().map(({ slug, frontMatter }) => ({
-            title: frontMatter.title,
-            thumbnail: frontMatter.thumbnail || frontMatter.banner,
-            author: frontMatter.author,
-            authorAvatar: frontMatter.authorAvatar,
-            slug: slug,
-          }));
+          const cards = blogService
+            .getBlogs()
+            .map(({ path, slug, frontMatter }) => ({
+              title: frontMatter.title,
+              thumbnail: frontMatter.thumbnail || frontMatter.banner,
+              author: frontMatter.author,
+              authorAvatar: frontMatter.authorAvatar,
+              slug,
+              path,
+            }));
           return { cards };
         },
       },
@@ -306,7 +309,7 @@ const config: Config = {
                     template: 'AnnualFish',
                     dynamicData: async ({ params: { slug } }) => {
                       const { frontMatter, content } =
-                        blogService.getBlogContents([...slug].pop());
+                        blogService.getBlogContents(slug.join('/'));
                       const recentBlogs =
                         blogService.getRecentBlogs(frontMatter);
                       return { frontMatter, content, recentBlogs };
