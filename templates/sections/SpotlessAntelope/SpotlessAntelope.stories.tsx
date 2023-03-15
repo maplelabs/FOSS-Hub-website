@@ -6,7 +6,6 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import SpotlessAntelope from './index';
-import { discordLink } from '../../../maplelabs.config';
 
 export default {
   title: 'Templates/Section/SpotlessAntelope | Card',
@@ -29,7 +28,7 @@ Template.args = {
     'It is easy to get started if you join our open source discord community',
   button: {
     text: 'Click to join',
-    url: discordLink,
+    url: '',
   },
   image: {
     url: '/images/questions.svg',
