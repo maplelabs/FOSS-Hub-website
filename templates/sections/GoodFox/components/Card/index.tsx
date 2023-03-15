@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import Link from 'next/link';
+
 import BlockIcon from '../../../../../components/BlockIcon';
 import { CardProps } from '../../config';
 import styles from '../../styles.module.css';

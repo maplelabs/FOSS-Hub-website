@@ -23,7 +23,7 @@ export default function ElectricGorilla({ id, scrollSpySelector, logo,  menu}:El
           nav.classList.add(styles['nav-bg-dark']);
           nav.classList.remove(styles['nav-bg']);
         });
-      }, []);
+      }, [scrollSpySelector]);
     return <>
 
     <div data-uk-sticky="start: 0" id={styles['nav']}  className={`${styles["nav-bg"]}`}>
@@ -37,7 +37,7 @@ export default function ElectricGorilla({ id, scrollSpySelector, logo,  menu}:El
                 </div>
                 <div className="uk-navbar-right uk-visible@m ">
                     <ul className='uk-navbar-nav'>
-                       { menu.map((item, index) =>
+                       { menu.map((item) =>
                             <li key={item.title}>
                                 <a href={item.path} data-uk-scroll='offset:80' className="uk-text-capitalize">{item.title}</a>
                             </li>
