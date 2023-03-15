@@ -1,6 +1,6 @@
 ## Guidelines for contributing
 
-The OpenSource Team and Development Team at MapleLabs welcome contributions to this repository. 
+The OpenSource Team and Development Team at MapleLabs welcome contributions to this repository.
 
 If you'd like to make code contributions or content contributions locally, follow the contribution guidelines below.
 
@@ -44,7 +44,7 @@ To contribute to this repo, please follow these steps:
 
 This is a template-driven codebase where we encourage developers to create new reusable templates which can be used to render the website. Please feel free to create generic templates which serve the purpose of rendering the content. Once you develop your template, please test it using the storybook. You can also refer to the storybook for all existing templates.
 
-Please follow these steps to generate the boiler plate code for the template: 
+Please follow these steps to generate the boiler plate code for the template:
 
 ```shell
 cd FOSS-HUB-website/
@@ -52,13 +52,14 @@ yarn
 yarn gen
 ```
 
-Please follow these steps to host the storybook : 
+Please follow these steps to host the storybook :
 
 ```shell
 cd FOSS-HUB-website/
 yarn
 yarn storybook
 ```
+
 The storybook will be running at [`http://localhost:6006`](http://localhost:6006)
 
 ### Want to use the repo to build your website?
@@ -69,13 +70,13 @@ Our website is developed using pre-defined templates which are developed by us. 
 
 Once your templates are ready, test it by running storybook locally.The command to run storybook locally is mentioned above in contribute section.
 
-Now you have to place your templates and your static content for your website in main.config.ts file. Once all your content and templates are placed as per your requirement, your website is ready to launch!! 
+Now you have to place your templates and your static content for your website in main.config.ts file. Once all your content and templates are placed as per your requirement, your website is ready to launch!!
 
 Run your source code to and your website should be up and running!!!
 
 ### Getting Help
 
-If you have any questions or need help with contributing to FOSS-HUB-website, please reach out to us through opensource@maplelabs.com. 
+If you have any questions or need help with contributing to FOSS-HUB-website, please reach out to us through opensource@maplelabs.com.
 We have also have a discord channel which you can use for any of your discussions.
 Link for the discord channel - https://discord.com/channels/1020294105802219530/1020294105802219533
 

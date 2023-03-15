@@ -1,13 +1,13 @@
 .footer {
-    background-color: white;
-    background-image: url('../../../public/images/footer_img.svg');
-    background-repeat: no-repeat; 
-    background-attachment: scroll;
-    /* display: flex;
+  background-color: white;
+  background-image: url('../../../public/images/footer_img.svg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  /* display: flex;
     padding: 2rem 0;
     justify-content: center;
     align-items: center;
     height: 50.53px;
     background-color: #F5F5F5;
     color: black; */
-  }
+}

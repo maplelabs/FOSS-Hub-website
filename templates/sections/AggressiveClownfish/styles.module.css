@@ -12,15 +12,15 @@
   background-position-y: bottom;
   width: 100vw;
 }
-@media only screen and (max-width: 640px){
-  .intro-section .content-height{
-    height:80vh !important;
+@media only screen and (max-width: 640px) {
+  .intro-section .content-height {
+    height: 80vh !important;
   }
 }
-@media only screen and (min-width: 640px){
-.intro-section .content-height{
-  height:72vh !important;
-}
+@media only screen and (min-width: 640px) {
+  .intro-section .content-height {
+    height: 72vh !important;
+  }
 }
 
 .color_white {

@@ -7,9 +7,9 @@ export default function Template({ meta, header, sections, footer }) {
     <div>
       <Head>
         <title>{meta.title}</title>
-        <meta name="description" content={meta.description}></meta>
-        <meta name="robots" content={meta.robots}></meta>
-        <link rel="icon" href={meta.favicon} />
+        <meta name='description' content={meta.description}></meta>
+        <meta name='robots' content={meta.robots}></meta>
+        <link rel='icon' href={meta.favicon} />
       </Head>
       <main>
         {header ? <Header {...header}></Header> : null}
