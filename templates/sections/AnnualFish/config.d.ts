@@ -1,6 +1,3 @@
-/**
- * Files generated using template generator
- */
 export interface AnnualFishProps {
   [k: string]: unknown;
   id: string;

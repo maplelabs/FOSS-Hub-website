@@ -1,6 +1,3 @@
-/**
- * Files generated using template generator
- */
 import Link from 'next/link';
 import React from 'react';
 

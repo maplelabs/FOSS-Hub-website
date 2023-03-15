@@ -1,7 +1,4 @@
 import Image from 'next/image';
-/**
- * Files generated using template generator
- */
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 import uikit from 'uikit';

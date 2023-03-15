@@ -1,13 +1,10 @@
-/**
- * Files generated using template generator
- */
+import Link from 'next/link';
 import React from 'react';
 
+import GridViewIcon from '../../../public/images/grid-view.svg';
+import ListViewIcon from '../../../public/images/list-view.svg';
 import Card from './components/Card';
 import Table from './components/Table';
-import ListViewIcon from '../../../public/images/list-view.svg';
-import GridViewIcon from '../../../public/images/grid-view.svg';
-import Link from 'next/link';
 import { GoodFoxProps } from './config';
 import styles from './styles.module.css';
 

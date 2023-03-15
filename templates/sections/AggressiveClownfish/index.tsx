@@ -1,6 +1,3 @@
-/**
- * Files generated using template generator
- */
 import React from 'react';
 
 import { AggressiveClownfishProps } from './config';

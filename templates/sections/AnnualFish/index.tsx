@@ -1,6 +1,3 @@
-/**
- * Files generated using template generator
- */
 import md from 'markdown-it';
 import Image from 'next/image';
 import Link from 'next/link';

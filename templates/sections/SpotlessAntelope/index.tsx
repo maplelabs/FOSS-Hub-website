@@ -1,10 +1,7 @@
-/**
- * Files generated using template generator
- */
+import Image from 'next/image';
 import React from 'react';
 
 import { SpotlessAntelopeProps } from './config';
-import Image from 'next/image';
 import styles from './styles.module.css';
 
 export default function SpotlessAntelope({
