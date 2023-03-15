@@ -31,7 +31,7 @@ export default function AnnualFish({ id, content, frontMatter, recentBlogs }: An
             </nav>
             <div className='uk-flex uk-position-relative'>
                 <div className='uk-width-4-5@l uk-margin-medium-right'>
-                    <h1 className={' uk-text-bolder uk-margin-small-bottom uk-padding uk-padding-remove-left uk-padding-remove-top '}>{frontMatter.title}</h1>
+                    <h1 className={' uk-text-bolder uk-margin-small-bottom uk-padding uk-padding-remove-bottom uk-padding-remove-left uk-padding-remove-top '}>{frontMatter.title}</h1>
                     <div className="uk-flex uk-flex-middle uk-margin-small-bottom">
                         <Image
                             src={frontMatter.authorAvatar}

@@ -17,7 +17,7 @@ export default function GoodFox({id,title, columnHeaders, listItems}:GoodFoxProp
     <div className="uk-section uk-dark" style={{ marginBottom: '-20px' }}>
       <div className="uk-container">
         <div className="uk-flex uk-flex-between uk-margin-medium-bottom">
-          <div className="uk-h1 uk-text-bolder uk-margin-small-bottom color-midnight-blue">
+          <div className={`uk-h1 uk-text-bolder uk-margin-small-bottom ${styles['color_midnight-blue']}`}>
             {title}
           </div>
           <div className={styles.view_all} hidden={true}>

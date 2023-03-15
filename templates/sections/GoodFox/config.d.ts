@@ -35,6 +35,15 @@ interface Icon {
   icon: number;
   color: { fg: string; bg: string };
 }
+
+interface TableProps {
+  columns: ColumnHeader[],
+  data: ListItems[]
+}
+
+interface CardProps {
+  data: ListItems
+}
 export interface GoodFoxSchema {
   id: string;
   template: 'GoodFox';

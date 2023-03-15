@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { CardProps } from '../../config';
 
-export default function VerticalCard({ blog }) {
+export default function VerticalCard({ blog }: CardProps) {
   return (
     <>
       <div>

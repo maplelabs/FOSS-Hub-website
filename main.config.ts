@@ -91,9 +91,11 @@ const config: Config = {
             title: project.name || project.login,
             description: project.description,
             link: project.html_url,
-            languages: project.languages,
+            languages: project.languages || [],
             icon: project.icon,
-            contributors: project.top_contributors.map((user) => ({
+            tags: project.topics,
+            categories: [],
+            contributors: project.top_contributors?.map((user) => ({
               name: user.login,
               src: user.avatar_url,
               link: user.html_url,
@@ -174,7 +176,7 @@ const config: Config = {
             {
               url: 'https://www.youtube.com/watch?v=JLmei2IUDm0',
               text: 'What, Why And How Of Open Source',
-              thumbnail: '/images/videos/Thumbnail1.png',
+              thumbnail: '/images/videos/what-why-how-opensource.svg',
             },
           ],
         },

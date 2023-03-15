@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { CardProps } from '../../config';
 
-export default function HorizontalCard({ blog }) {
+export default function HorizontalCard({ blog }: CardProps) {
   return (
     <>
       <div

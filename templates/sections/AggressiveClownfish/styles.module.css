@@ -22,3 +22,11 @@
   height:72vh !important;
 }
 }
+
+.color_white {
+  color: #fff !important;
+}
+
+.color_black {
+  color: #000000 !important;
+}

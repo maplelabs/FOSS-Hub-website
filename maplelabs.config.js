@@ -38,7 +38,7 @@ module.exports = {
     featuredVideos : [
         {
             videoLink : 'https://www.youtube.com/watch?v=JLmei2IUDm0',
-            thumbnail: '/images/videos/Thumbnail1.png',
+            thumbnail: '/images/videos/what-why-how-opensource.svg',
             title : 'What, Why And How Of Open Source',
         },
     ],

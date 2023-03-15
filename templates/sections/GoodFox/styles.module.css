@@ -1,4 +1,50 @@
 .view_all{
     background:url('../../../public/images/cornered_btn.svg') 1px 3px no-repeat !important;
     width: 130px;
-  }
+}
+
+.color_midnight-blue {
+  color: #1F284F !important;
+}
+
+.color_lead {
+  color: #17181A !important;
+}
+
+.color_black {
+  color: #000000 !important;
+}
+
+.color_dark-cyan-blue {
+  color: #5a5d62 !important;
+}
+
+.mpl-badge {
+  box-sizing: border-box;
+  /* min-width: 18px; */
+  min-width: max-content;
+  height: 18px;
+  padding: 12px;
+  border-radius: 500px;
+  vertical-align: middle;
+  /* 1 */
+  border: 1px solid #B7BFC7 !important;
+  background: #FAFBFC !important;
+  color: #575757 !important;
+  font-size: 11px;
+  /* 2 */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  text-transform: capitalize;
+}
+
+.contributors:not(:nth-of-type(1)) {
+  border: 2px solid #FFFFFF;
+  margin-left: -10px;
+}
+
+.hover:hover {
+  text-decoration: none !important;
+}

@@ -26,6 +26,10 @@ interface FrontMatter {
   authorAvatar: string;
 }
 
+interface RecentBlogCardProps {
+  blog: BlogItem
+}
+
 export interface AnnualFishSchema {
   id: string;
   template: 'AnnualFish';

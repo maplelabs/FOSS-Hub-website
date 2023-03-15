@@ -1,9 +1,23 @@
 import Link from 'next/link';
-
+import styles from '../../styles.module.css';
 import BlockIcon from '../../../../../components/BlockIcon';
+import { TableProps } from '../../config';
 
-export default function Table({ columns, data }) {
-  
+export default function Table({ columns, data }:TableProps) {
+  data.map((row)=> {
+   row.tags = row.tags?.map((tag)=>
+    { 
+      if(tag !== 'featured' && tag !== 'contributions-welcome' ) {
+        if(tag?.includes('category')) {
+          const category = tag.split('-')
+          category.splice(0,1)
+          row.categories.push(category.join('-'))
+          return;
+        }
+        return tag
+    }
+  })
+  })
     return (
       <div>
         <table className="uk-table uk-table-divider ">
@@ -18,7 +32,7 @@ export default function Table({ columns, data }) {
             {data.map((row, index) => (
               <tr key={index}>
                 <td>
-                 <Link target="_blank" rel="noopener noreferrer" href={row.link} className="hover">
+                <Link target="_blank" rel="noopener noreferrer" href={row.link} className={styles["hover"]}>
                   <div className=" uk-flex uk-flex-row">
                     <div className=" uk-margin-small-right">
                       <BlockIcon {...row.icon} scale={'0.7'} ></BlockIcon>
@@ -27,7 +41,7 @@ export default function Table({ columns, data }) {
                       <h3 className="uk-h4 uk-text-bolder uk-margin-small-bottom">
                         {row.title}
                       </h3>
-                      <div className='uk-text-small color-dark-cyan-blue uk-width-large'>
+                      <div className={`uk-text-small uk-width-large ${styles['color_dark-cyan-blue']}`}>
                         {row.description}
                       </div>
                     </div>
@@ -35,10 +49,10 @@ export default function Table({ columns, data }) {
                   </Link>
                 </td>
                 <td>
-                  <div className=" uk-flex uk-flex-row ">
+                  <div className=" uk-flex uk-flex-wrap ">
                     {row.languages?.map((lan) => (
                       <span key={lan}
-                      className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
+                      className={`uk-light uk-margin-small-bottom uk-margin-small-right ${styles['mpl-badge']}`}
                       >
                         {lan}
                       </span>
@@ -46,26 +60,32 @@ export default function Table({ columns, data }) {
                   </div>
                 </td>
                 <td>
-                  <span className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right">
-                    utilities
+                 <div className=" uk-flex uk-flex-wrap ">
+                  {row.categories?.map((category) => 
+                  <span key={category} className={`uk-light uk-margin-small-bottom uk-margin-small-right ${styles['mpl-badge']}`}>
+                    {category ? category : 'utilities' }
                   </span>
+                  )}
+                  </div>
                 </td>
-                <td className="uk-flex uk-flex-row">
+                <td>
+                <div className=" uk-flex uk-flex-wrap ">
                   {row.tags?.map((topic) => (
-                    topic !== 'Featured' || topic !== 'Contributions-Welcome' &&
+                    topic &&
                     <span key={topic}
-                    className="mpl-badge uk-light uk-margin-small-bottom uk-margin-small-right"
+                    className={`uk-light uk-margin-small-bottom uk-margin-small-right ${styles['mpl-badge']}`}
                     >
                       {topic}
                     </span>
                   ))}
+                  </div>
                 </td>
                 <td>
                   <div className="uk-flex ">
                     {row.contributors?.map((avatar) => (
                         <img
                           key={avatar.link}
-                          className="uk-comment-avatar contributors uk-border-circle"
+                          className={`uk-comment-avatar uk-border-circle ${styles['contributors']}`}
                           uk-tooltip={`title: ${avatar.name}; pos: bottom`}
                           src={avatar.src}
                           width="25"
