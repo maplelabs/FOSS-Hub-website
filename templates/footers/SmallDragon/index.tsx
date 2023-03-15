@@ -38,8 +38,8 @@ export default function SmallDragon({id, address, subSections, copyRight, terms,
                 </div>
             </div>
             <hr />
-            <div className='uk-flex uk-flex-between'>
-                <div className='uk-text-meta'>{copyRight}</div>
+            <div className='uk-flex uk-flex-between uk-flex-wrap'>
+                <div className='uk-text-meta uk-margin-small-bottom'>{copyRight}</div>
                 <div className="uk-grid-divider  uk-text-meta" uk-grid="true">
                     {terms.map((item, index) =>
                         <a key={index} href={item.url}>{item.text}</a>)}
