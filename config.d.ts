@@ -1,4 +1,5 @@
 // SCHEMAS IMPORTS
+import { GitHubServiceSchema } from './services/GitHub/config';
 import { SmallDragonSchema } from './templates/footers/SmallDragon/config';
 import { ElectricGorillaSchema } from './templates/headers/ElectricGorilla/config';
 import { AggressiveClownfishSchema } from './templates/sections/AggressiveClownfish/config';
@@ -19,12 +20,15 @@ interface Config {
     | { [k: string]: Partial<Config> }
     | (() => Promise<{ [k: string]: Partial<Config> }>);
 }
-interface Meta {
+type Meta ={
   title?: string;
   description?: string;
   robots?: string;
   favicon?: string;
 }
+export interface ServiceConfig // eslint-disable-line
+  extends GitHubServiceSchema{}
+
 type HeadersTemplates =
   // HEADERS SCHEMAS
 	ElectricGorillaSchema |
