@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+
 import { CardProps } from '../../config';
 
 export default function HorizontalCard({ blog }: CardProps) {
@@ -17,7 +18,7 @@ export default function HorizontalCard({ blog }: CardProps) {
           <div className="uk-card-body">
             <h3 className="uk-card-title uk-text-bolder">{blog.title}</h3>
             <p>{blog.description}</p>
-            <Link href={`blogs/${blog.slug}`}>
+            <Link href={`${blog.path}/${blog.slug}`}>
               <button className="uk-text-bold uk-button uk-button-link">
                 Read More <span uk-icon="arrow-right"></span>
               </button>

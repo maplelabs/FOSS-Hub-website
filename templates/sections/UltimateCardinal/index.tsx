@@ -1,13 +1,13 @@
 /**
  * Files generated using template generator
  */
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link';
+import React from 'react';
 
-import { UltimateCardinalProps } from "./config";
-import VerticalCard from "./components/VerticalCard";
-import HorizontalCard from "./components/HorizontalCard";
-import styles from "./styles.module.css";
+import HorizontalCard from './components/HorizontalCard';
+import VerticalCard from './components/VerticalCard';
+import { UltimateCardinalProps } from './config';
+import styles from './styles.module.css';
 
 export default function UltimateCardinal({
   id,

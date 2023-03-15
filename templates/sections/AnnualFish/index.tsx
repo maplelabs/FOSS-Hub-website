@@ -2,12 +2,13 @@
  * Files generated using template generator
  */
 import md from 'markdown-it';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+
+import RecentBlogCard from './components/RecentBlogCard';
 import { AnnualFishProps } from './config';
 import styles from './styles.module.css';
-import RecentBlogCard from './components/RecentBlogCard'
-import Image from 'next/image';
 
 export default function AnnualFish({ id, content, frontMatter, recentBlogs }: AnnualFishProps) {
     const [html, setHtml] = useState();
@@ -30,8 +31,8 @@ export default function AnnualFish({ id, content, frontMatter, recentBlogs }: An
                 </ul>
             </nav>
             <div className='uk-flex uk-position-relative'>
-                <div className='uk-width-4-5@l uk-margin-medium-right'>
-                    <h1 className={' uk-text-bolder uk-margin-small-bottom uk-padding uk-padding-remove-bottom uk-padding-remove-left uk-padding-remove-top '}>{frontMatter.title}</h1>
+                <div className='uk-width-4-5@l uk-margin-medium-right@l'>
+                    <h1 className={' uk-text-bolder uk-margin-small-bottom uk-padding@l uk-padding-remove-bottom uk-padding-remove-left uk-padding-remove-top '}>{frontMatter.title}</h1>
                     <div className="uk-flex uk-flex-middle uk-margin-small-bottom">
                         <Image
                             src={frontMatter.authorAvatar}
@@ -50,7 +51,7 @@ export default function AnnualFish({ id, content, frontMatter, recentBlogs }: An
                         <div className='uk-margin-auto-left uk-padding'>{time} min</div>
                     </div>
 
-                    <div className={styles.blog_content + ' uk-padding uk-padding-remove-left uk-padding-remove-top '} dangerouslySetInnerHTML={{ __html: html }} />
+                    <div className={styles.blog_content + ' uk-padding@l uk-padding-remove-left uk-padding-remove-top '} dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
 
                 <div className={styles.sidebar_right + ' uk-visible@l uk-width-2-5@l'}>

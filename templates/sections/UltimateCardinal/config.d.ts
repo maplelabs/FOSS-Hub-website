@@ -14,10 +14,11 @@ interface CardItem {
   title: string;
   slug: string;
   description?: string;
+  path: string;
 }
 
 interface CardProps {
-  blog: CardItem
+  blog: CardItem;
 }
 export interface UltimateCardinalSchema {
   id: string;
