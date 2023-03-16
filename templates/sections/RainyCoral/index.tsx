@@ -31,11 +31,11 @@ export default function RainyCoral({
                 <div className='uk-card uk-card-small uk-card-default uk-card-body uk-dark  uk-margin-small-right'>
                   <Image
                     className='uk-border-circle'
-                    width='40'
-                    height='40'
+                    width='128'
+                    height='128'
                     src={tile.avatar}
                     alt={`${tile.id}`}
-                    style={{ border: '1px solid #D9D9D9' }}
+                    style={{ border: '1px solid #D9D9D9', width: '40px' }}
                   />
                   <h3 className='uk-card-title uk-text-bolder uk-margin-small-top uk-margin-small-bottom'>
                     {tile.title}

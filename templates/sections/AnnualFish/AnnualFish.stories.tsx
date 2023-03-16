@@ -42,6 +42,7 @@ Template.args = {
       thumbnail:
         'https://opensource.com/sites/default/files/lead-images/career_journey_road_gps_path_map_520.png',
       date: '01/01/2023',
+      path: '',
     },
     {
       slug: 'contributing-to-opensource',
@@ -49,6 +50,7 @@ Template.args = {
       thumbnail:
         'https://opensource.com/sites/default/files/lead-images/career_journey_road_gps_path_map_520.png',
       date: '01/01/2023',
+      path: '',
     },
   ],
 };

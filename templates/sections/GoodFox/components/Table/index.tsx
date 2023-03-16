@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import styles from '../../styles.module.css';
+
 import BlockIcon from '../../../../../components/BlockIcon';
 import { TableProps } from '../../config';
+import styles from '../../styles.module.css';
 
 export default function Table({ columns, data }: TableProps) {
   data.map((row) => {
@@ -41,7 +42,7 @@ export default function Table({ columns, data }: TableProps) {
                 >
                   <div className=' uk-flex uk-flex-row'>
                     <div className=' uk-margin-small-right'>
-                      <BlockIcon {...row.icon} scale={'0.7'}></BlockIcon>
+                      <BlockIcon {...row.icon} scale={0.7}></BlockIcon>
                     </div>
                     <div>
                       <h3 className='uk-h4 uk-text-bolder uk-margin-small-bottom'>
