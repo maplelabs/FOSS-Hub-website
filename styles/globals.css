@@ -9,7 +9,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #FAFBFC;
+  background-color: #fafbfc;
   font-family: 'Manrope', sans-serif !important;
 }
 
@@ -23,62 +23,62 @@ a {
 }
 
 .uk-button {
-  border-radius: .5rem !important;
+  border-radius: 0.5rem !important;
   text-transform: none !important;
 }
 
 .uk-card {
-  border-radius: .75rem !important;
+  border-radius: 0.75rem !important;
 }
 
 .uk-navbar-left .uk-divider-vertical {
   height: 40px !important;
-  border-left: 2px solid #B7BFC7;
+  border-left: 2px solid #b7bfc7;
 }
 
 @media only screen and (min-width: 640px) {
   .uk-card-media-right {
-    border-top-right-radius: .75rem !important;
-    border-bottom-right-radius: .75rem !important;
+    border-top-right-radius: 0.75rem !important;
+    border-bottom-right-radius: 0.75rem !important;
   }
 }
 
 @media only screen and (max-width: 640px) {
   .uk-card-media-right {
-    border-top-right-radius: .75rem !important;
-    border-top-left-radius: .75rem !important;
+    border-top-right-radius: 0.75rem !important;
+    border-top-left-radius: 0.75rem !important;
   }
 }
 
 .uk-card-media-top,
-.uk-card-media-top>img {
-  border-top-right-radius: .75rem !important;
-  border-top-left-radius: .75rem !important;
+.uk-card-media-top > img {
+  border-top-right-radius: 0.75rem !important;
+  border-top-left-radius: 0.75rem !important;
 }
 
 .uk-badge:hover {
   text-decoration: none;
 }
 
-.uk-subnav-pill>*> :first-child {
+.uk-subnav-pill > * > :first-child {
   padding: 10px 15px !important;
   background: transparent;
   color: #999;
-  border: 1px solid #B7BFC7 !important;
+  border: 1px solid #b7bfc7 !important;
   border-radius: 30px !important;
 }
 
-.uk-subnav-pill>li>button:focus {
-  color: #FFFFFF;
+.uk-subnav-pill > li > button:focus {
+  color: #ffffff;
   background-color: #222 !important;
 }
 
-.uk-breadcrumb> :nth-child(n+2):not(.uk-first-column)::before {
-  content: ">" !important;
+.uk-breadcrumb > :nth-child(n + 2):not(.uk-first-column)::before {
+  content: '>' !important;
 }
 
 .uk-search-default .uk-search-input {
-  background: #FEFEFE !important;
+  background: #fefefe !important;
   border-radius: 5px !important;
 }
 
@@ -103,20 +103,20 @@ a {
   background-size: 13px;
 }
 
-.uk-link{
-  color: #0362A7E5 !important;
+.uk-link {
+  color: #0362a7e5 !important;
 }
-.height-auto{
+.height-auto {
   height: auto;
 }
-.pos-relative{
+.pos-relative {
   position: relative;
 }
-@media only screen and (max-width: 640px){
-  .uk-heading-small{
+@media only screen and (max-width: 640px) {
+  .uk-heading-small {
     font-size: 2rem !important;
   }
-  .uk-text{
+  .uk-text {
     font-size: 14px !important;
   }
 }

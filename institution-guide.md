@@ -15,22 +15,23 @@ yarn
 yarn dev
 ```
 
-Once you've forked the repository, you can begin configuring your website by using the templates and adding your own content. 
+Once you've forked the repository, you can begin configuring your website by using the templates and adding your own content.
 All the pre-defined templates are present inside templates folder. You can make use of these templates to create your website or create new templates (sections/header/footer).
 
-Generate templates by running the below command : 
+Generate templates by running the below command :
 
 ```bash
 yarn gen
 ```
 
-The templates can be checked using the Storybook feature. Please follow these setps to host storybook : 
+The templates can be checked using the Storybook feature. Please follow these setps to host storybook :
 
 ```bash
 cd FOSS-HUB-website/
 yarn
 yarn storybook
 ```
+
 The storybook will be running at [`http://localhost:6006`](http://localhost:6006)
 
 The main.config.ts file contains all the necessary configuration settings and static content for your website. Make any necessary adjustments to ensure your website accurately reflects your institution.

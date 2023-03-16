@@ -1,8 +1,8 @@
 ## Introduction
 
-Welcome to the FOSS-HUB-website repository! 
+Welcome to the FOSS-HUB-website repository!
 
-This repository is a collection of various templates that you can use to generate your own website. As a contributor, you have the opportunity to create new templates and add them to this repository. As a user of this repository, you can utilize these pre-defined templates and add your own website content by editing the main.config.ts file. With this repository, you have the freedom to create and customize your website to your liking, while also contributing to the open-source community. 
+This repository is a collection of various templates that you can use to generate your own website. As a contributor, you have the opportunity to create new templates and add them to this repository. As a user of this repository, you can utilize these pre-defined templates and add your own website content by editing the main.config.ts file. With this repository, you have the freedom to create and customize your website to your liking, while also contributing to the open-source community.
 
 We encourage you to explore the templates, contribute your own, and create your own website with this repository.
 
@@ -38,4 +38,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Build your Institute's OpenSource Website
 
-Are you a college or institution looking to create your own OpesnSource website? Look no further than FOSS-HUB-website! This repository offers a variety of templates that can be customized to fit your institution's unique needs. Please refer to this [Guide](./institution-guide.md) for further details. 
+Are you a college or institution looking to create your own OpesnSource website? Look no further than FOSS-HUB-website! This repository offers a variety of templates that can be customized to fit your institution's unique needs. Please refer to this [Guide](./institution-guide.md) for further details.

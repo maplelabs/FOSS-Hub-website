@@ -1,14 +1,14 @@
-.view_all{
-    background:url('../../../public/images/cornered_btn.svg') 1px 3px no-repeat !important;
-    width: 130px;
+.view_all {
+  background: url('../../../public/images/cornered_btn.svg') 1px 3px no-repeat !important;
+  width: 130px;
 }
 
 .color_midnight-blue {
-  color: #1F284F !important;
+  color: #1f284f !important;
 }
 
 .color_lead {
-  color: #17181A !important;
+  color: #17181a !important;
 }
 
 .color_black {
@@ -28,8 +28,8 @@
   border-radius: 500px;
   vertical-align: middle;
   /* 1 */
-  border: 1px solid #B7BFC7 !important;
-  background: #FAFBFC !important;
+  border: 1px solid #b7bfc7 !important;
+  background: #fafbfc !important;
   color: #575757 !important;
   font-size: 11px;
   /* 2 */
@@ -41,7 +41,7 @@
 }
 
 .contributors:not(:nth-of-type(1)) {
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   margin-left: -10px;
 }
 

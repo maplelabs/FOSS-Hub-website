@@ -1,18 +1,16 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "no-console":["error", { "allow": ["warn", "error"] }],
-    "@typescript-eslint/no-explicit-any":"error",
-    "@typescript-eslint/no-var-requires":1,
-    "@next/next/no-img-element":0
-  }    
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-var-requires": 1,
+    "@next/next/no-img-element": 0
+  }
 }

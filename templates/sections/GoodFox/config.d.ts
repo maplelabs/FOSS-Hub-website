@@ -1,6 +1,3 @@
-/**
- * Files generated using template generator
- */
 export interface GoodFoxProps {
   [k: string]: unknown;
   id: string;

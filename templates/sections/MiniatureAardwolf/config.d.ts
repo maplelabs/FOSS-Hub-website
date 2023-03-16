@@ -1,6 +1,3 @@
-/**
- * Files generated using template generator
- */
 export interface MiniatureAardwolfProps {
   [k: string]: unknown;
   id: string;
