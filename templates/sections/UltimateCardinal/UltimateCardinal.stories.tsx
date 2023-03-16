@@ -28,6 +28,7 @@ Template.args = {
       author: 'Akhil Nair',
       authorAvatar:
         'https://ui-avatars.com/api/?background=F8C02F&color=4E2E07&name=Akhil Nair&size=128&font-size=0.4',
+      path: '',
     },
     {
       slug: 'contributing-to-opensource',
@@ -37,6 +38,7 @@ Template.args = {
       author: 'Akhil Nair',
       authorAvatar:
         'https://ui-avatars.com/api/?background=F8C02F&color=4E2E07&name=Akhil Nair&size=128&font-size=0.4',
+      path: '',
     },
     {
       slug: 'contributing-to-opensource',
@@ -46,6 +48,7 @@ Template.args = {
       author: 'Akhil Nair',
       authorAvatar:
         'https://ui-avatars.com/api/?background=F8C02F&color=4E2E07&name=Akhil Nair&size=128&font-size=0.4',
+      path: '',
     },
   ],
 };
