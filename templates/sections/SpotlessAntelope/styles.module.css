@@ -1,5 +1,5 @@
 .get-started-section {
-  background-image: url("../../../public/images/curve_bg.svg");
+  background-image: url('../../../public/images/curve_bg.svg');
   background-size: cover;
   background-position-y: bottom;
   width: 100vw;
@@ -13,18 +13,18 @@
       rgba(255, 255, 255, 0) 0%,
       #ffffff 100%
     ),
-    url("../../../public/images/checks.svg");
+    url('../../../public/images/checks.svg');
   background-size: cover;
 }
 
 .color_midnight-blue {
-  color:  #1F284F !important;
+  color: #1f284f !important;
 }
 
 .color_nickel {
   color: #575757 !important;
 }
 
-.height_350{
+.height_350 {
   height: 350px;
 }

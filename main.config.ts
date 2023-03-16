@@ -1,6 +1,6 @@
 import Config from './config';
-import blogService from './services/BlogService';
-import githubService from './services/GithubService';
+import blogService from './services/Blogs';
+import githubService from './services/GitHub';
 
 const config: Config = {
   render: 'static',
@@ -15,7 +15,7 @@ const config: Config = {
     id: 'index-header',
     template: 'ElectricGorilla',
     data: {
-      id: 'nav',   
+      id: 'nav',
       scrollSpySelector: 'intro-section',
       logo: {
         darkMode: '/images/dark-logo.svg',
@@ -86,7 +86,9 @@ const config: Config = {
           ],
         },
         dynamicData: async () => {
-          const [featuredProjects] = await githubService.getHomePageData();
+          const featuredProjects = await githubService.fetchProjects({
+            filterTopics: ['featured', 'contribution-welcome'],
+          });
           const listItems = featuredProjects.map((project) => ({
             title: project.name || project.login,
             description: project.description,
@@ -95,11 +97,12 @@ const config: Config = {
             icon: project.icon,
             tags: project.topics,
             categories: [],
-            contributors: project.top_contributors?.map((user) => ({
-              name: user.login,
-              src: user.avatar_url,
-              link: user.html_url,
-            })),
+            contributors:
+              project.top_contributors?.map((user) => ({
+                name: user.login,
+                src: user.avatar_url,
+                link: user.html_url,
+              })) ?? [],
           }));
           return { listItems };
         },
@@ -131,13 +134,16 @@ const config: Config = {
           title: 'Blogs',
         },
         dynamicData: async () => {
-          const cards = blogService.getBlogs().map(({ slug, frontMatter }) => ({
-            title: frontMatter.title,
-            thumbnail: frontMatter.thumbnail || frontMatter.banner,
-            author: frontMatter.author,
-            authorAvatar: frontMatter.authorAvatar,
-            slug: slug,
-          }));
+          const cards = blogService
+            .getBlogs()
+            .map(({ path, slug, frontMatter }) => ({
+              title: frontMatter.title,
+              thumbnail: frontMatter.thumbnail || frontMatter.banner,
+              author: frontMatter.author,
+              authorAvatar: frontMatter.authorAvatar,
+              slug,
+              path,
+            }));
           return { cards };
         },
       },
@@ -151,18 +157,24 @@ const config: Config = {
             'Meet our contributors who believe in the notion that open source brings the best out in people. Join us in building the future with open source.',
         },
         dynamicData: async () => {
-          const [, topContributors] = await githubService.getHomePageData();
-          const tiles = topContributors.map((item) => ({
-            id: item.login,
-            title: item.name || item.login,
-            subtitle: item._repo[0],
-            avatar: item.avatar_url,
-            link: {
-              icon: 'github',
-              text: 'View on GitHub',
-              url: item.html_url,
-            },
-          }));
+          const projects = await githubService.fetchProjects({
+            filterTopics: ['contributions-welcome'],
+          });
+          const topContributors = await githubService.fetchTopContributors(
+            projects
+          );
+          const tiles =
+            topContributors?.map((item) => ({
+              id: item.login,
+              title: item.name || item.login,
+              subtitle: item._repo[0],
+              avatar: item.avatar_url,
+              link: {
+                icon: 'github',
+                text: 'View on GitHub',
+                url: item.html_url,
+              },
+            })) ?? [];
           return { tiles };
         },
       },
@@ -297,7 +309,7 @@ const config: Config = {
                     template: 'AnnualFish',
                     dynamicData: async ({ params: { slug } }) => {
                       const { frontMatter, content } =
-                        blogService.getBlogContents([...slug].pop());
+                        blogService.getBlogContents(slug.join('/'));
                       const recentBlogs =
                         blogService.getRecentBlogs(frontMatter);
                       return { frontMatter, content, recentBlogs };

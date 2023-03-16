@@ -1,6 +1,3 @@
-/**
- * Files generated using template generator
- */
 export interface SmallDragonProps {
   [k: string]: unknown;
   id?: string;

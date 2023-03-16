@@ -1,9 +1,6 @@
-/**
- * Files generated using template generator
- */
 export interface AnnualFishProps {
   [k: string]: unknown;
-  id: string
+  id: string;
   content: string;
   frontMatter: FrontMatter;
   recentBlogs: BlogItem[];
@@ -14,6 +11,7 @@ interface BlogItem {
   thumbnail: string;
   title: string;
   date: string;
+  path: string;
 }
 
 interface FrontMatter {
@@ -27,7 +25,7 @@ interface FrontMatter {
 }
 
 interface RecentBlogCardProps {
-  blog: BlogItem
+  blog: BlogItem;
 }
 
 export interface AnnualFishSchema {
